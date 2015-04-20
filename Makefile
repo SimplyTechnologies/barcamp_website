@@ -1,0 +1,9 @@
+install:
+	@echo installing backend dependencies...
+	@npm install
+	@echo installing frontend dependencies...
+	@bower install
+
+run:
+	@echo lifting server...
+	@sails lift
