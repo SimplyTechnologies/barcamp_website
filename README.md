@@ -1,3 +1,1 @@
-# HiCloud
-
-a [Sails](http://sailsjs.org) application
+# Barcamp Website
