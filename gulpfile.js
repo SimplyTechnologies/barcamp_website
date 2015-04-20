@@ -9,15 +9,16 @@ var gulp = require('gulp'),
   sh = require('shelljs'),
   plumber = require('gulp-plumber'),
   uglify = require('gulp-uglify'),
-  ts = require('gulp-typescript');
-  sourcemaps = require('gulp-sourcemaps');
+  ts = require('gulp-typescript'),
+  sourcemaps = require('gulp-sourcemaps'),
   paths = {
     ts: ['./app/scripts/**/*.ts'],
     sass: ['./app/assets/sass/**/!(app)*.scss', './app/assets/sass/app.scss'],
-    jade: ['./app/assets/views/**/*.jade']
+    jade: ['./app/assets/views/**/*.jade'],
+    image: ['./app/assets/images/**/*']
   };
 
-gulp.task('default', ['sass', 'jade', 'ts', 'watch']);
+gulp.task('default', ['sass', 'jade', 'ts', 'image', 'watch']);
 
 gulp.task('ts', function() {
   var tsResult = gulp.src(paths.ts)
@@ -63,9 +64,14 @@ gulp.task('jade', function (done) {
     .on('end', done);
 });
 
+gulp.task('image', function () {
+  gulp.src(paths.image).pipe(gulp.dest('./public/build/images'));
+});
+
 gulp.task('watch', ['sass', 'jade', 'ts'], function() {
   gulp.watch(paths.sass, ['sass']);
   gulp.watch(paths.jade, ['jade']);
+  gulp.watch(paths.image, ['image']);
   gulp.watch(paths.ts, ['ts']);
 });
 
