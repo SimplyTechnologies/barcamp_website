@@ -47,7 +47,7 @@
   },
   "scripts": {
     "start": "node app.js",
-    "postinstall": "./node_modules/.bin/gulp build",
+    "postinstall": "./node_modules/.bin/bower install && ./node_modules/.bin/gulp build",
     "debug": "node debug app.js"
   },
   "main": "app.js",
