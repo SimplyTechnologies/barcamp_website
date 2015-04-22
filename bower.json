@@ -10,12 +10,15 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "~1.3.0",
+    "angular": "1.3.0",
     "angular-ui-router": "~0.2.11",
     "angular-route": "~1.3.0",
     "sails.io.js": "~0.10.3",
     "angularSails": "~0.10.0-pre",
     "normalize.css": "*",
     "font-awesome": "*"
+  },
+  "resolutions": {
+    "angular": "1.3.0"
   }
 }

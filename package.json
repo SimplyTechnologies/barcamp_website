@@ -47,12 +47,17 @@
   },
   "scripts": {
     "start": "node app.js",
+    "postinstall": "./node_modules/.bin/bower install && ./node_modules/.bin/gulp build",
     "debug": "node debug app.js"
   },
   "main": "app.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/blah/blah.git"
+  },
+  "engines": {
+    "node": "^0.12.2",
+    "npm": "2.7.3"
   },
   "author": "",
   "license": ""
