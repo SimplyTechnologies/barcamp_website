@@ -19,6 +19,8 @@ var gulp = require('gulp'),
   };
 
 gulp.task('default', ['sass', 'jade', 'ts', 'assets', 'watch']);
+gulp.task('build', ['sass', 'jade', 'ts', 'assets']);
+
 
 gulp.task('ts', function() {
   var tsResult = gulp.src(paths.ts)
