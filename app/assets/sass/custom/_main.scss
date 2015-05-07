@@ -18,7 +18,7 @@ body {
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin-bottom: -590px;
+  margin-bottom: -220px;
 }
 
 
@@ -53,9 +53,12 @@ body {
     }
   }
 
-  .lang a {
-    padding-left: 6px;
-    padding-right: 6px;
+  .lang {
+    margin-left: 25px;
+    a {
+      padding-left: 6px;
+      padding-right: 6px;
+    }
   }
 }
 
@@ -125,6 +128,7 @@ body {
     width: 293px;
     list-style: none;
     position: relative;
+    @include transition(all, 3s, ease);
     img {
       @include border-radius(5px);
       background-color: #ECF0F1;
@@ -185,6 +189,7 @@ body {
     &:hover {
       .user-hover {
         display: block;
+        @include transition(all, 3s, ease);
       }
     }
   }
@@ -197,6 +202,7 @@ body {
 
   }
 }
+
 .strong {
   font-weight: 700;
 }
@@ -207,6 +213,31 @@ body {
     font-size: 20px;
     color: #003366;
   }
+}
+
+.social-icons-footer {
+  margin-top: 20px;
+  margin-left: 80px;
+  .fa {
+    margin-top: 72px;
+    margin-left: 72px;
+    font-size: 56px;
+    color: #fff;
+  }
+
+  a {
+    display: block;
+    float: left;
+    height: 200px;
+    width: 200px;
+  }
+  .fb {
+    background-color: #036;
+  }
+  .tw {
+    background-color: #69c;
+  }
+
 }
 
 .lang {
@@ -239,16 +270,23 @@ body {
 
 
 footer, .push {
-  height: 590px;
+  height: 220px;
 }
 
 footer {
+  background: url("/build/assets/images/footer-bg.jpg") 50% 100% no-repeat;
+  height: 220px;
+  width: auto;
+}
+
+.contact-with-us {
   margin-top: 60px;
   background-color: #2C3E50;
-  background: url("/build/assets/images/footer-bg.png") 50% 100% no-repeat;
-  width: 100%;
+  background: url("/build/assets/images/map-bg.jpg") 50% 100% no-repeat;
+  height: 364px;
+  width: auto;
   .get-in-touch {
-    margin-top: 43px;
+    margin-top: 86px;
     p {
       margin-bottom: 25px;
     }
@@ -284,9 +322,14 @@ footer {
     color: #F90;
     margin-right: 25px;
   }
-  .map {
-    margin-top: 40px;
-  }
 
 }
 
+
+.special-guests.sponsors {
+  margin-bottom: 60px;
+  .user-hover {
+    background-color: #525252;
+  }
+
+}
