@@ -128,12 +128,18 @@ body {
     width: 293px;
     list-style: none;
     position: relative;
+    .logo {
+      width: 293px;
+      height: 179px;
+      display: table-cell;
+      vertical-align: middle;
+    }
     @include transition(all, 3s, ease);
     img {
       @include border-radius(5px);
-      background-color: #ECF0F1;
-      width: 293px;
-      height: 179px;
+      //background-color: #ECF0F1;
+      max-width: 293px;
+     max-height: 179px;
       display: block;
     }
     h3 {
