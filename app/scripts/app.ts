@@ -9,6 +9,8 @@
 
   //Controllers
   app.controller('HomePageCtrl', barcamp.HomeController);
+  app.controller('FaqCtrl', barcamp.FaqController);
+
 
   //Services
 
@@ -29,9 +31,17 @@
           templateUrl: '/build/views/home.html',
           controller: 'HomePageCtrl',
           controllerAs: 'home'
-        });
+        })
+
+      .state('faq', {
+        url: '/faq',
+        templateUrl: '/build/views/faq.html',
+        controller: 'FaqCtrl',
+        controllerAs: 'faq'
+      });
 
       $urlRouterProvider.otherwise('/home');
+
 
     }]);
 })();
