@@ -20,7 +20,9 @@ body {
   height: 100%;
   margin-bottom: -220px;
 }
-
+.btn.disabled {
+  opacity: 0.9;
+}
 
 .container-fixed {
   width: 970px;
@@ -41,7 +43,7 @@ body {
     &.active {
       color: #999999;
     }
-    &:hover {
+    &:hover, &:focus {
       background-color: #fff;
     }
   }
@@ -166,7 +168,7 @@ h2 {
       color: #003366;
       line-height: 18px;
       margin-top: 40px;
-      margin-bottom: 15px;
+      margin-bottom: 8px;
     }
     hr {
       margin-top: 12px;
@@ -187,6 +189,7 @@ h2 {
       }
     }
     .user-hover {
+      text-align: center;
       display: none;
       position: absolute;
       background-color: #C00;
@@ -197,8 +200,8 @@ h2 {
       opacity: 0.8;
       @include border-radius(5px);
       .social-icons {
-        margin-left: 70px;
-        margin-top: 63px;
+        display: inline-block;
+       margin-top: 63px;
         a {
           display: block;
           float: left;
@@ -351,6 +354,12 @@ footer {
 
 
 .special-guests.sponsors {
+  h3 {
+    margin-top: 18px;
+  }
+  hr {
+    margin-top: 5px;
+  }
   margin-bottom: 60px;
   .user-hover {
     background-color: #525252;
@@ -461,4 +470,12 @@ footer {
     }
   }
 
+
+}
+
+
+#map-canvas {
+  width: 500px;
+  height: 400px;
+  background-color: #CCC;
 }

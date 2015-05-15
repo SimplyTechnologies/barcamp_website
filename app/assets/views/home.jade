@@ -3,13 +3,8 @@ section.main-menu.build
     .row
       .col-md-6.col-xs-6
         h2 We’ve created the product that will help your startup to look even better.
-        h1 45 days to go
+        h1(ng-cloak, ng-hide='daysLeft <= 0') {{ daysLeft }} day{{ daysLeft > 1 ? 's' : '' }} to go
       .col-md-offset-6.col-xs-offset-6
-.clearfix
-.container-fluid.register
-  .container.container-fixed
-    h1.pull-left Register for Participation
-    a.btn.btn-default.btn-orange.pull-right(href='https://www.eventbrite.co.uk/e/barcamp-yerevan-2015-tickets-16660816952') Register
 .clearfix
 section.schedule(style='display:none')
   .container.container-fixed
@@ -229,11 +224,11 @@ section.schedule(style='display:none')
                 span Bill Murray
     .to-full-schedule
       a(href='#') to full schedule >
-
-//.container-fluid.register
+.clearfix
+.container-fluid.register
   .container.container-fixed
-    h1.pull-left Enter your e-mail
-    a.btn.btn-default.btn-orange.pull-right(href='#') Subscribe now
+    h1.pull-left Register for Participation
+    a.btn.btn-default.btn-orange.pull-right(href='https://www.eventbrite.co.uk/e/barcamp-yerevan-2015-tickets-16660816952', target='_blank') Register
 .clearfix
 section.special-guests
   .container.container-fixed
@@ -242,119 +237,101 @@ section.special-guests
       ul
         .col-md-4.col-xs-4
           li
-            img(src='/build/assets/images/img-1.png')
-            h3 Vladimir Kudinov
+            img(src='/build/assets/images/arevik.png')
+            h3 Arevik Harutyunyan
             p
-              strong Designer &nbsp;
-              | who makes easy to change and easy to create new elements
-            hr
-            .address
-              a.strong(href='#') http://vladimirkudinov.com
-              span.strong @stSilent
+              strong UI/UX Workshop
             .user-hover
               .social-icons
-                a(href='#')
+                //a(href='#' )
                   i.fa.fa-twitter
-                a(href='#')
+                a(href='https://www.facebook.com/arevharutyunyan', target='_blank')
                   i.fa.fa-facebook-official
-                a(href='#')
-                  i.fa.fa-instagram
-        .col-md-4.col-xs-4
-          li
-            img(src='/build/assets/images/img-2.png')
-            h3 Sergey Shmidt
-            p
-              strong Designer &nbsp;
-              | who makes easy to change and easy to create new elements
-            hr
-            .address
-              a.strong(href='#') http://vladimirkudinov.com
-              span.strong @stSilent
-            .user-hover
-              .social-icons
-                a(href='#')
-                  i.fa.fa-twitter
-                a(href='#')
-                  i.fa.fa-facebook-official
-                a(href='#')
-                  i.fa.fa-instagram
-        .col-md-4.col-xs-4
-          li
-            img(src='/build/assets/images/img-3.png')
-            h3 Edvard Khondkaryan
-            p
-              strong Designer &nbsp;
-              | who makes easy to change and easy to create new elements
-            hr
-            .address
-              a.strong(href='#') http://vladimirkudinov.com
-              span.strong @stSilent
-            .user-hover
-              .social-icons
-                a(href='#')
-                  i.fa.fa-twitter
-                a(href='#')
-                  i.fa.fa-facebook-official
-                a(href='#')
-                  i.fa.fa-instagram
-        .col-md-4.col-xs-4
-          li
-            img(src='/build/assets/images/img-1.png')
-            h3 Vladimir Kudinov
-            p
-              strong Designer &nbsp;
-              | who makes easy to change and easy to create new elements
-            hr
-            .address
-              a.strong(href='#') http://vladimirkudinov.com
-              span.strong @stSilent
-            .user-hover
-              .social-icons
-                a(href='#')
-                  i.fa.fa-twitter
-                a(href='#')
-                  i.fa.fa-facebook-official
-                a(href='#')
-                  i.fa.fa-instagram
-        .col-md-4.col-xs-4
-          li
-            img(src='/build/assets/images/img-2.png')
-            h3 Sergey Shmidt
-            p
-              strong Designer &nbsp;
-              | who makes easy to change and easy to create new elements
-            hr
-            .address
-              a.strong(href='#') http://vladimirkudinov.com
-              span.strong @stSilent
-            .user-hover
-              .social-icons
-                a(href='#')
-                  i.fa.fa-twitter
-                a(href='#')
-                  i.fa.fa-facebook-official
-                a(href='#')
-                  i.fa.fa-instagram
-        .col-md-4.col-xs-4
-          li
-            img(src='/build/assets/images/img-3.png')
-            h3 Edvard Khondkaryan
-            p
-              strong Designer &nbsp;
-              | who makes easy to change and easy to create new elements
-            hr
-            .address
-              a.strong(href='#') http://vladimirkudinov.com
-              span.strong @stSilent
-            .user-hover
-              .social-icons
-                a(href='#')
-                  i.fa.fa-twitter
-                a(href='#')
-                  i.fa.fa-facebook-official
-                a(href='#')
+                a(href='https://www.linkedin.com/pub/arevik-harutyunyan/41/b61/681', target='_blank')
+                  i.fa.fa-linkedin-square
+                //a(href='#')
                   i.fa.fa-instagram
 
+        .col-md-4.col-xs-4
+          li
+            img(src='/build/assets/images/vahe.png')
+            h3 Vahe Evoyan
+            p
+              strong HTTP2
+            .user-hover
+              .social-icons
+                a(href='https://twitter.com/evoyan', target='_blank' )
+                  i.fa.fa-twitter
+                a(href='https://www.facebook.com/vahe.evoyan', target='_blank')
+                  i.fa.fa-facebook-official
+                a(href='https://www.linkedin.com/in/evoyan', target='_blank')
+                  i.fa.fa-linkedin-square
+                a(href='http://instagram.com/vahe_evoyan', target='_blank')
+                  i.fa.fa-instagram
+        .col-md-4.col-xs-4
+          li
+            img(src='/build/assets/images/harut.png')
+            h3 Harut Martirosyan
+            p
+              strong Kafka/Spark/HDFS
+            .user-hover
+              .social-icons
+                a(href='https://twitter.com/inteloid', target='_blank')
+                  i.fa.fa-twitter
+                a(href='https://www.facebook.com/inteloid', target='_blank')
+                  i.fa.fa-facebook-official
+                a(href='https://www.linkedin.com/in/harutyun', target='_blank')
+                  i.fa.fa-linkedin-square
+                a(href='https://instagram.com/inteloid', target='_blank')
+                  i.fa.fa-instagram
+        .col-md-4.col-xs-4
+          li
+            img(src='/build/assets/images/samvel.png')
+            h3 Samvel Martirosyan
+            p
+              strong Data Verification
+            .user-hover
+              .social-icons
+                a(href='https://twitter.com/Kornelij', target='_blank')
+                  i.fa.fa-twitter
+                a(href='https://www.facebook.com/samvel', target='_blank')
+                  i.fa.fa-facebook-official
+                a(href='https://instagram.com/kornelij/', target='_blank')
+                  i.fa.fa-instagram
+                a(href='https://instagram.com/kornelij/', target='_blank')
+                  i.fa.fa-linkedin-square
+        .col-md-4.col-xs-4
+          li
+            img(src='/build/assets/images/alexandr.png')
+            h3 Alexandr Polivanov, Meduza.io
+            //p
+              strong Designer &nbsp;
+            .user-hover
+              .social-icons
+                //a(href='#')
+                  i.fa.fa-twitter
+                a(href='https://www.facebook.com/alexander.polivanov', target='_blank')
+                  i.fa.fa-facebook-official
+                a(href='https://instagram.com/certonontroppo', target='_blank')
+                  i.fa.fa-instagram
+        .col-md-4.col-xs-4
+          li
+            img(src='/build/assets/images/zaven.png')
+            h3 Zaven Navoyan
+            p
+              strong Speech recognition in Armenian language
+            //hr
+            //.address
+              a.strong(href='#') http://vladimirkudinov.com
+              span.strong @stSilent
+            .user-hover
+              .social-icons
+                a(href='https://twitter.com/ZNavoyan', target='_blank')
+                  i.fa.fa-twitter
+                a(href='https://www.facebook.com/zaven.navoyan', target='_blank')
+                  i.fa.fa-facebook-official
+                a(href='https://www.linkedin.com/in/zavennavoyan', target='_blank')
+                  i.fa.fa-linkedin-square
 
 section.contact-with-us
   .container.container-fixed
@@ -362,7 +339,7 @@ section.contact-with-us
       .col-md-6.col-xs-6
         .get-in-touch
           h2 Get in touch with us
-          P As a Harvard professor, he was one of the first to explore the relationship in equilibrium.
+          P 40 Marshal Baghramyan Ave, Yerevan 0019
           //a(href='tel:+1 347 523 34 90')
             i.fa.fa-phone
             span +1 347 523 34 90
@@ -370,6 +347,21 @@ section.contact-with-us
             i.fa.fa-envelope
             span barista@barcamp.am
       .col-md-offset-6.col-xs-offset-6
+    //.row
+      .col-md-12.col-xs-12
+        #map-canvas
+  //.row
+    .col-md-12.col-xs-12
+      div
+        map(center='40.1933398, 44.50441360000002', zoom='15')
+          marker(position='40.1933398, 44.50441360000002')
+          info-window(position='40.1933398, 44.50441360000002', visible='true')
+            span 40 Marshal Baghramyan Ave, Yerevan 0019, Armenia
+
+
+
+
+
 .clearfix
 section.special-guests.sponsors
   .container.container-fixed
@@ -379,12 +371,12 @@ section.special-guests.sponsors
         .col-md-4.col-xs-4
           li
             .logo
-              img(src='/build/assets/images/ucom.png')
+              img(src='/build/assets/images/ucom.jpg')
+            hr
             h3 UCom
             //p
               strong Designer &nbsp;
               | who makes easy to change and easy to create new elements
-            hr
             .address
               a.strong(href='http://ucom.am', target='_blank') http://ucom.am
               //span.strong @stSilent
@@ -399,101 +391,52 @@ section.special-guests.sponsors
         .col-md-4.col-xs-4
           li
             .logo
-              img(src='/build/assets/images/mediainitiative.png')
-            h3 Media Initiatives Center
-            //p
-              strong Designer &nbsp;
-              | who makes easy to change and easy to create new elements
+              img(src='/build/assets/images/mediainitiative.jpg')
             hr
+            h3 Media Initiatives Center
             .address
               a.strong(href='http://www.mediainitiatives.am', target='_blank') http://www.mediainitiatives.am
-              //span.strong @stSilent
-            //.user-hover
-              .social-icons
-                a(href='#')
-                  i.fa.fa-twitter
-                a(href='#')
-                  i.fa.fa-facebook-official
-                a(href='#')
-                  i.fa.fa-instagram
         .col-md-4.col-xs-4
           li
             .logo
-              img(src='/build/assets/images/underwaterapp.png')
-            h3 Underwater apps
-            //p
-              strong Designer &nbsp;
-              | who makes easy to change and easy to create new elements
+              img(src='/build/assets/images/underwater.jpg')
             hr
+            h3 Underwater apps
             .address
               a.strong(href='http://underwaterapps.com', target='_blank') http://underwaterapps.com
-              //span.strong @stSilent
-            //.user-hover
-              .social-icons
-                a(href='#')
-                  i.fa.fa-twitter
-                a(href='#')
-                  i.fa.fa-facebook-official
-                a(href='#')
-                  i.fa.fa-instagram
+
         .col-md-4.col-xs-4
           li
             .logo
-              img(src='/build/assets/images/simply.png')
-            h3 Simply Technologies
-            //p
-              strong Designer &nbsp;
-              | who makes easy to change and easy to create new elements
+              img(src='/build/assets/images/simply.jpg')
             hr
+            h3 Simply Technologies
             .address
               a.strong(href='http://www.simplytechnologies.net', target='_blank') http://www.simplytechnologies.net
-              //span.strong @stSilent
-            //.user-hover
-              .social-icons
-                a(href='#')
-                  i.fa.fa-twitter
-                a(href='#')
-                  i.fa.fa-facebook-official
-                a(href='#')
-                  i.fa.fa-instagram
         .col-md-4.col-xs-4
           li
             .logo
               img(src='/build/assets/images/bdb.png')
-            h3 BDB
-            //p
-              strong Designer &nbsp;
-              | who makes easy to change and easy to create new elements
             hr
+            h3 BDB
             .address
               a.strong(href='http://bdb.am', target='_blank') http://bdb.am
-              //span.strong @stSilent
-            //.user-hover
-              .social-icons
-                a(href='#')
-                  i.fa.fa-twitter
-                a(href='#')
-                  i.fa.fa-facebook-official
-                a(href='#')
-                  i.fa.fa-instagram
+
         .col-md-4.col-xs-4
           li
             .logo
-              img(src='/build/assets/images/pics_art.png')
-            h3 PicsArt
-            //p
-              strong Designer &nbsp;
-              | who makes easy to change and easy to create new elements
+              img(src='/build/assets/images/pics_art.jpg')
             hr
+            h3 PicsArt
             .address
               a.strong(href='http://picsart.com', target='_blank') http://picsart.com
-              //span.strong @stSilent
-            //.user-hover
-              .social-icons
-                a(href='#')
-                  i.fa.fa-twitter
-                a(href='#')
-                  i.fa.fa-facebook-official
-                a(href='#')
-                  i.fa.fa-instagram
+
+        .col-md-4.col-xs-4
+          li
+            .logo
+              img(src='/build/assets/images/workfront.jpg')
+            hr
+            h3 WorkFront
+            .address
+              a.strong(href='http://picsart.com', target='_blank') http://www.workfront.com
 

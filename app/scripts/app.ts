@@ -4,7 +4,9 @@
 
   var app = angular.module('barcamp', [
     'ngRoute',
-    'ui.router'
+    'ui.router',
+    'mgcrea.ngStrap',
+    'ngMap'
   ]);
 
   //Controllers

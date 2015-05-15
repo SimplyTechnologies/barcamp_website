@@ -16,7 +16,10 @@
     "sails.io.js": "~0.10.3",
     "angularSails": "~0.10.0-pre",
     "normalize.css": "*",
-    "font-awesome": "*"
+    "font-awesome": "*",
+    "ngmap": "~1.7.10",
+    "angular-strap": "~2.2.1",
+    "moment": "~2.10.3"
   },
   "resolutions": {
     "angular": "1.3.0"
