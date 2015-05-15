@@ -6,7 +6,7 @@
     'ngRoute',
     'ui.router',
     'mgcrea.ngStrap',
-    'ngMap'
+    //'ngMap'
   ]);
 
   //Controllers
