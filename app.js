@@ -1,59 +1,73 @@
-/**
- * app.js
- *
- * Use `app.js` to run your app without `sails lift`.
- * To start the server, run: `node app.js`.
- *
- * This is handy in situations where the sails CLI is not relevant or useful.
- *
- * For example:
- *   => `node app.js`
- *   => `forever start app.js`
- *   => `node debug app.js`
- *   => `modulus deploy`
- *   => `heroku scale`
- *
- *
- * The same command-line arguments are supported, e.g.:
- * `node app.js --silent --port=80 --prod`
- */
+'use strict';
 
-// Ensure we're in the project directory, so relative paths work as expected
-// no matter where we actually lift from.
-process.chdir(__dirname);
+var express = require('express');
+var path = require('path');
+var logger = require('morgan');
+var cookieParser = require('cookie-parser');
+var bodyParser = require('body-parser');
+var debug = require('debug')('barcamp:app');
+var favicon = require('serve-favicon');
+var expressValidator = require('express-validator');
 
-// Ensure a "sails" can be located:
-(function() {
-  var sails;
-  try {
-    sails = require('sails');
-  } catch (e) {
-    console.error('To run an app using `node app.js`, you usually need to have a version of `sails` installed in the same directory as your app.');
-    console.error('To do that, run `npm install sails`');
-    console.error('');
-    console.error('Alternatively, if you have sails installed globally (i.e. you did `npm install -g sails`), you can use `sails lift`.');
-    console.error('When you run `sails lift`, your app will still use a local `./node_modules/sails` dependency if it exists,');
-    console.error('but if it doesn\'t, the app will run with the global sails instead!');
-    return;
-  }
 
-  // Try to get `rc` dependency
-  var rc;
-  try {
-    rc = require('rc');
-  } catch (e0) {
-    try {
-      rc = require('sails/node_modules/rc');
-    } catch (e1) {
-      console.error('Could not find dependency: `rc`.');
-      console.error('Your `.sailsrc` file(s) will be ignored.');
-      console.error('To resolve this, run:');
-      console.error('npm install rc --save');
-      rc = function () { return {}; };
+debug('loading configuration');
+var config = require('./config');
+
+require('./init')(config);
+
+var routes = require('./routes');
+var auth = require('./lib/auth');
+
+var app = express();
+
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+
+app.set('view engine', 'jade');
+app.set('env', config.env);
+app.set('port', config.port);
+
+app.enable('trust proxy');
+//app.use(favicon(path.resolve(path.join(__dirname, '..', 'dist', 'favicon.ico'))));
+if (app.get('env') !== 'testing') {
+    app.use(logger('dev'));
+}
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(expressValidator());
+
+app.use(cookieParser());
+
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(auth.init);
+app.use(auth.parseAuthToken);
+
+app.use(routes);
+
+debug('Initializing express: /api/v%s server', config.apiVersion);
+var apiServer = require('./api/v' + config.apiVersion);
+
+app.use('/api/v' + config.apiVersion, apiServer);
+
+/// catch 404 and forward to error handler
+app.use(function (req, res, next) {
+    var err = new Error('Not Found');
+    err.status = 404;
+    next(err);
+});
+
+app.use(function (err, req, res, next) {
+    console.error(err.stack);
+
+    res.status(err.status || 500);
+
+    if (config.env === 'local') {
+        res.send({error: err.stack});
+    } else {
+        res.render(err.status || 500);
     }
-  }
+});
 
-
-  // Start server
-  sails.lift(rc('sails'));
-})();
+module.exports = app;
