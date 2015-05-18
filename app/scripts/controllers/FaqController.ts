@@ -1,6 +1,3 @@
-/**
- * Created by Marat on 5/11/2015.
- */
 module barcamp {
 
   export interface  IFaqControllerScope extends ng.IScope {

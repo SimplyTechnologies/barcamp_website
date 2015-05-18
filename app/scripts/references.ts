@@ -13,6 +13,7 @@
 
 /// <reference path="controllers/HomeController.ts"/>
 /// <reference path="controllers/FaqController.ts"/>
+/// <reference path="controllers/TimetableController.ts"/>
 
 /**
  * SERVICES
