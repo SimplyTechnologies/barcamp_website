@@ -334,29 +334,25 @@ section.special-guests
                   i.fa.fa-linkedin-square
 
 section.contact-with-us
-  .container.container-fixed
-    .row
-      .col-md-6.col-xs-6
-        .get-in-touch
-          h2 Get in touch with us
-          P 40 Marshal Baghramyan Ave, Yerevan 0019
-          //a(href='tel:+1 347 523 34 90')
-            i.fa.fa-phone
-            span +1 347 523 34 90
-          a(href='mailto:mr.madbyte@gmail.com')
-            i.fa.fa-envelope
-            span barista@barcamp.am
-      .col-md-offset-6.col-xs-offset-6
-    //.row
-      .col-md-12.col-xs-12
-        #map-canvas
-  //.row
-    .col-md-12.col-xs-12
-      div
-        map(center='40.1933398, 44.50441360000002', zoom='15')
-          marker(position='40.1933398, 44.50441360000002')
-          info-window(position='40.1933398, 44.50441360000002', visible='true')
-            span 40 Marshal Baghramyan Ave, Yerevan 0019, Armenia
+  .contacts-bg
+    .container.container-fixed
+      .row
+        .col-md-6.col-xs-6
+          .get-in-touch
+            h2 Get in touch with us
+            P 40 Marshal Baghramyan Ave, Yerevan 0019
+            //a(href='tel:+1 347 523 34 90')
+              i.fa.fa-phone
+              span +1 347 523 34 90
+            a(href='mailto:mr.madbyte@gmail.com')
+              i.fa.fa-envelope
+              span barista@barcamp.am
+        .col-md-offset-6.col-xs-offset-6
+    .map-canvas
+      map(center='40.1933398, 44.50441360000002', zoom='15')
+        marker(position='40.1933398, 44.50441360000002')
+        //info-window(position='40.1933398, 44.50441360000002', visible='true')
+          span 40 Marshal Baghramyan Ave, Yerevan 0019, Armenia
 
 
 

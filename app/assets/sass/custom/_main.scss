@@ -307,11 +307,26 @@ footer {
 }
 
 .contact-with-us {
+  .contacts-bg {
+    background-color: #2C3E50;
+    height: 364px;
+    width: 100%;
+    position: relative;
+  }
+  .map-canvas {
+
+    map {
+      top:0;
+      right: 0;
+      position: absolute;
+      width: 50%;
+      height: 364px;
+    }
+  }
+
   margin-top: 60px;
-  background-color: #2C3E50;
-  background: url("/build/assets/images/map-bg.jpg") 50% 100% no-repeat;
+ // background: url("/build/assets/images/map-bg.jpg") 50% 100% no-repeat;
   height: 364px;
-  width: auto;
   .get-in-touch {
     margin-top: 86px;
     p {
@@ -474,8 +489,4 @@ footer {
 }
 
 
-#map-canvas {
-  width: 500px;
-  height: 400px;
-  background-color: #CCC;
-}
+
