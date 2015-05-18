@@ -1,8 +1,9 @@
 .faq {
+  margin-top: -49px;
 
   h1 {
     margin-top: 0;
-    margin-bottom: 40px;
+    margin-bottom: 37px;
   }
 
   .faq-content {
@@ -10,18 +11,19 @@
     min-width: 970px;
   }
   ul {
-    min-width: 970px !important;
+    margin-top: 57px;
     padding-left: 0;
     li {
       list-style-type: none;
       margin-bottom: 40px;
+      max-width: 859px;
     }
     &:last-child {
-      margin-bottom: 122px;
+      margin-bottom: 65px;
     }
   }
   h3 {
-    font-size: 36px;
+    font-size: 26px;
     font-weight: 700;
     color: #2c3e50;
     line-height: 36px;
@@ -32,7 +34,50 @@
     color: #2c3e50;
   }
 
+  .send-question {
+    hr {
+      border-top: 2px solid #ebedee;
+      margin-bottom: 66px;
+    }
 
+    form {
+      margin-top: 32px;
+
+      input, textarea {
+        border: 1px solid #a6a6a6;
+        border-radius: 3px;
+        font-size: 16px;
+        outline: none;
+        padding: 21px;
+      }
+
+      input {
+        height: 64px;
+        width: 457px;
+      }
+
+      textarea {
+        height: 164px;
+        margin-top: 24px;
+        max-width: 100%;
+        min-height: 164px;
+        min-width: 100%;
+        width: 100%;
+      }
+
+      button {
+        background-color: #ff6600;
+        border: none;
+        border-radius: 6px;
+        color: #ffffff;
+        font-size: 17px;
+        height: 45px;
+        margin-top: 49px;
+        outline: none;
+        width: 213px;
+      }
+    }
+  }
 }
 
 .empty-content {

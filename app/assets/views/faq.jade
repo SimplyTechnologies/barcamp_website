@@ -4,7 +4,6 @@ section.faq
     h2 Frequently asked
       br
       | questions
-  .container.faq-content
     ul
       li
         h3 I have not received a confirmation email after registration. What should I do?
@@ -33,10 +32,20 @@ section.faq
       li
         h3 What formats should the presentations be in?
         p Bring .ppt presentations and make sure to use Unicode Armenian fonts (type your text using Sylfaen or Arian AMU fonts.
-  .container-fluid.send-question
-    .container.container-fixed
-      h1.pull-left Send your question
-      a.btn.btn-default.btn-orange.pull-right(href='mailto:barista@barcamp.am' ) Send
+
+
+  
+  .container-fluid.container-fixed.send-question
+    hr
+    h3 Send your question
+
+    form
+      input.float-left(type='text', placeholder='name')
+      input.float-right(type='text', placeholder='email')
+      br
+      textarea(placeholder='type your question')
+      br
+      button.float-right Send
   .clearfix
 .empty-content
 
