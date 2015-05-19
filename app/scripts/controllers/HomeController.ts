@@ -4,7 +4,6 @@ module barcamp {
 
   export interface  IHomeControllerScope extends ng.IScope {
     daysLeft: number;
-    prop1: string;
   }
 
   export interface IHomeController {
