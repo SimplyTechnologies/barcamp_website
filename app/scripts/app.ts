@@ -58,7 +58,14 @@
             }
           }
         }
+      })
+      .state('about', {
+            url: '/about',
+            templateUrl: '/build/views/about.html'
+            //controller: 'FaqCtrl',
+            //controllerAs: 'faq'
       });
+
 
       $urlRouterProvider.otherwise('/home');
     }]);

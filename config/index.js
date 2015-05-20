@@ -4,7 +4,7 @@ var url = require('url');
 var path = require('path');
 
 function __mongoConfig() {
-    return process.env.MONGOHQ_URL !== 'undefined' && process.env.MONGOHQ_URL;
+    return process.env.MONGOLAB_URI !== 'undefined' && process.env.MONGOLAB_URI;
 }
 
 
