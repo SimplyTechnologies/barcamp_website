@@ -22,9 +22,6 @@
 			&.active {
 			  color: #003366;
 			}
-			&:hover {
-			  color: #003366;
-			}
 
 			span {
 				font-size: 28px;
@@ -46,7 +43,7 @@
 			font-size: 60px;
 			font-weight: 700;
 			line-height: 60px;
-			margin-bottom: 62px;
+			margin-bottom: 60px;
 
 			.year-img {
 				height: 104px;
@@ -54,17 +51,85 @@
 			}
 		}
 	}
+	.text {
+		margin-bottom: 80px;
 
-	h3 {
-		font-size: 18px;
-		font-weight: 700;
-		color: #2c3e50;
-		line-height: 36px;
+		h3 {
+			color: #2c3e50;
+			font-size: 18px;
+			font-weight: 700;
+			line-height: 36px;
+			margin: 0px;
+		}
+
+		p {
+			color: #2c3e50;
+			font-size: 18px;
+			line-height: 28px;
+			margin-bottom: 20px;
+		}
+
+		p.guests {
+			margin-bottom: 23px;
+			margin-top: 28px;
+		}
+
+		a {
+			color: #336699;
+			font-size: 18px;
+			line-height: 28px;
+			text-decoration: none;
+
+			&:hover {
+				color: #003399;
+			}
+			&:active {
+				color: #003399;
+			}
+		}
 	}
+	.video {
+		margin-bottom: 80px;
 
-	p {
-		font-size: 18px;
-		line-height: normal;
-		color: #2c3e50;
+		h2 {
+			color: #2c3e50;
+			font-size: 30px;
+			font-weight: 700;
+			line-height: 30px;
+			margin-bottom: 36px;
+			margin-top: 0px;
+		}
+	}
+	.imgs {
+		margin-bottom: 80px;
+
+		h2 {
+			color: #2c3e50;
+			font-size: 30px;
+			font-weight: 700;
+			line-height: 30px;
+			margin-bottom: 36px;
+			margin-top: 0px;
+		}
+
+		.img-tmb {
+			box-sizing: content-box;
+			float: left;
+			height: 108.5px;
+			padding-right: 10px;
+			padding-bottom: 10px;
+			width: 108.5px;
+
+			&:nth-child(8n + 1) {
+				padding-right: 0px;
+			}
+			&:last-child {
+				margin-bottom: 80px;
+			}
+
+			img {
+				width: 100%;
+			}
+		}
 	}
 }

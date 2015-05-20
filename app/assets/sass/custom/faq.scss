@@ -54,6 +54,10 @@
       input {
         height: 64px;
         width: 457px;
+
+        &:focus {
+          border: 1px solid #003366;
+        }
       }
 
       textarea {
@@ -63,6 +67,10 @@
         min-height: 164px;
         min-width: 100%;
         width: 100%;
+
+        &:focus {
+          border: 1px solid #003366;
+        }
       }
 
       button {
@@ -70,11 +78,54 @@
         border: none;
         border-radius: 6px;
         color: #ffffff;
+        cursor: pointer;
         font-size: 17px;
         height: 45px;
         margin-top: 49px;
         outline: none;
         width: 213px;
+      }
+
+      .mes-box {
+        height: 195px;
+        margin-top: 49px;
+
+        .faq-success {
+          color: #003366;
+          display: block;
+          font-size: 18px;
+          line-height: 45px;
+        }
+
+        .faq-error {
+          color: #cc0000;
+          display: block;
+          font-size: 18px;
+          line-height: 45px;
+        }
+
+        .faq-invalid {
+          color: #cc0000;
+          display: none;
+          font-size: 18px;
+          line-height: 45px;
+        }
+      }
+    }
+
+    .ng-invalid.ng-submitted {
+      input.ng-invalid {
+        border: 1px solid #cc0000;
+      }
+
+      textarea.ng-invalid {
+        border: 1px solid #cc0000;
+      }
+
+      .mes-box {
+        .faq-invalid {
+          display: block;
+        }
       }
     }
   }

@@ -35,17 +35,20 @@ section.faq
 
 
   
-  .container-fluid.container-fixed.send-question
+  //.container-fluid.container-fixed.send-question
     hr
     h3 Send your question
 
-    form
-      input.float-left(type='text', placeholder='name')
-      input.float-right(type='text', placeholder='email')
+    form(name='questionForm', novalidate, ng-submit='questionForm.$valid && faq.send()')
+      input.float-left(type='text', ng-model='name', placeholder='name', required)
+      input.float-right(type='email', ng-model='email', placeholder='email', required)
       br
-      textarea(placeholder='type your question')
+      textarea(ng-model='text', placeholder='type your question', required)
       br
-      button.float-right Send
+      .mes-box.float-left
+        span.faq-success(ng-show='success == 1') Your question has been successfully submitted.
+        span.faq-error(ng-show='success == 0') Oops, something went wrong. Please try again.
+        span.faq-invalid(ng-show='questionForm.$invalid') Oops, invalid data.
+      button.float-right(type='submit') Send
   .clearfix
 .empty-content
-

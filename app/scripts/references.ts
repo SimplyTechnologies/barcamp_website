@@ -13,10 +13,13 @@
 
 /// <reference path="controllers/HomeController.ts"/>
 /// <reference path="controllers/FaqController.ts"/>
+/// <reference path="controllers/ArchiveController.ts"/>
 
 /**
  * SERVICES
  */
+
+/// <reference path="services/faq.ts"/>
 
 /**
  * INTERCEPTORS

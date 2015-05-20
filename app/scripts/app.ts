@@ -16,6 +16,7 @@
 
 
   //Services
+  app.service('Faq', barcamp.FaqService);
 
   //Directives
 
