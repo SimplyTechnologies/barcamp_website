@@ -48,8 +48,10 @@ section.schedule.timetable
 
         li
 
-        li.completed
-          .table-content
+        li.completed(data-animation='am-fade-and-scale', data-placement="center", bs-modal="modal", data-template='/build/views/schedule-modal.html' )
+          button(data-animation='am-fade-and-scale', data-placement="center", bs-modal="modal", data-template='/build/views/schedule-modal.html' ) bbbb
+
+            .table-content
             p The power of rebuilding
             .time
               span 11 - 12:30 AM
