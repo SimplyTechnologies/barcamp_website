@@ -178,4 +178,29 @@
   height: 360px;
 }
 
+.schedule-modal {
+    min-width: 600px !important;
+    h1 {
+        font-size: 60px;
+    }
 
+    .control-label {
+        color: #2c3e50;
+    }
+
+    .btn-primary  {
+        background-color: #ff6600;
+        border-color: #ff6600;
+    }
+
+    .modal-body img {
+        width: 242px;
+        height: 242px;
+    }
+
+}
+
+.modal-backdrop.am-fade {
+    opacity: 0.4;
+
+}

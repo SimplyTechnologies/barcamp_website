@@ -1,5 +1,5 @@
 .modal(tabindex='-1', role='dialog')
-    .modal-dialog.modal-lg
+    .modal-dialog.modal-lg.schedule-modal
         .modal-content
             .modal-header
                 button.close(type='button', ng-click='$hide()') &times;
@@ -9,45 +9,50 @@
             .modal-body
                 form.form-horizontal(role='form')
                     .form-group
-                        label.col-sm-2.control-label(for='topic1') Photo
-                        .col-sm-6
+                        label.col-sm-2.col-xs-2.control-label(for='topic1') Photo
+                        .col-sm-4.col-xs-4
                             input#url.form-control.input-lg(type='url', placeholder='Enter image url')
-                        .col-sm-4
+                        .col-sm-6.col-xs-6
                             img(src='/build/assets/images/schedule.jpg')
 
                     .form-group
-                        label.col-sm-2.control-label(for='topic1') Topic(Eng)
-                        .col-sm-10
+                        label.col-sm-2.col-xs-2.control-label(for='topic1') Topic(Eng)
+                        .col-sm-10.col-xs-10
                             input#topic1.form-control.input-lg(type='text', placeholder='Enter Topic')
                     .form-group
-                        label.col-sm-2.control-label(for='topic2') Topic(Arm)
-                        .col-sm-10
+                        label.col-sm-2.col-xs-2.control-label(for='topic2') Topic(Arm)
+                        .col-sm-10.col-xs-10
                             input#topic2.form-control.input-lg(type='text', placeholder='Enter Topic')
                     .form-group
-                        label.col-sm-2.control-label(for='name1') Name(Eng)
-                        .col-sm-5
+                        label.col-sm-2.col-xs-2.control-label(for='name1') Name(Eng)
+                        .col-sm-5.col-xs-5
                             input#name1.form-control.input-lg(type='text', placeholder='Name')
-                        .col-sm-5
+                        .col-sm-5.col-xs-5
                             input.form-control.input-lg(type='text', placeholder='Surname')
                     .form-group
-                        label.col-sm-2.control-label(for='name2') Name(Arm)
-                        .col-sm-5
+                        label.col-sm-2.col-xs-2.control-label(for='name2') Name(Arm)
+                        .col-sm-5.col-xs-5
                             input#name2.form-control.input-lg(type='text', placeholder='Name')
-                        .col-sm-5
+                        .col-sm-5.col-xs-5
                             input#surname.form-control.input-lg(type='text', placeholder='Surname')
                     .form-group
-                        label.col-sm-2.control-label(for='location') Location
-                        .col-sm-10
-                            input#location.form-control.input-lg(type='text', placeholder='Room, Hall')
+                        label.col-sm-2.col-xs-2.control-label(for='location') Location
+                        .col-sm-10.col-xs-10
+                            select#location.form-control.input-lg
+                                option Room #204
+                                option Room #205
+                                option Room #206
+                                option Small hall
+                                option Big hall
                     .form-group
-                        label.col-sm-2.control-label(for='date') Date and time
-                        .col-sm-4
+                        label.col-sm-2.col-xs-2.control-label(for='date') Date and time
+                        .col-sm-4.col-xs-4
                             select.input-lg.form-control
                                 option Day 1
                                 option Day 2
-                        .col-sm-3
+                        .col-sm-3.col-xs-3
                             input#date.form-control.input-lg(type='text', placeholder='Start')
-                        .col-sm-3
+                        .col-sm-3.col-xs-3
                             input#date.form-control.input-lg(type='text', placeholder='End')
 
 
