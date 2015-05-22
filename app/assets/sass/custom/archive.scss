@@ -124,7 +124,7 @@
 			padding-bottom: 10px;
 			width: 108.5px;
 
-			&:nth-child(8n + 1) {
+			&:nth-child(8n) {
 				padding-right: 0px;
 			}
 			&:last-child {
@@ -136,4 +136,8 @@
 			}
 		}
 	}
+}
+
+.mrg-bottom25 {
+    margin-bottom: 25px;
 }
