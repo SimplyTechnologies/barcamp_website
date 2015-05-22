@@ -22,7 +22,7 @@ html(lang='en', ng-app='barcamp')
     script(src='//cdnjs.cloudflare.com/ajax/libs/angular-strap/2.1.2/angular-strap.tpl.min.js')
 
 
-  body
+  body(ng-controller='MainController as main')
     .main-content
       include includes/header
       .main(ui-view)
