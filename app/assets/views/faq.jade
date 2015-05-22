@@ -4,7 +4,6 @@ section.faq
     h2 Frequently asked
       br
       | questions
-  .container.faq-content
     ul
       li
         h3 I have not received a confirmation email after registration. What should I do?
@@ -33,10 +32,23 @@ section.faq
       li
         h3 What formats should the presentations be in?
         p Bring .ppt presentations and make sure to use Unicode Armenian fonts (type your text using Sylfaen or Arian AMU fonts.
-  .container-fluid.send-question
-    .container.container-fixed
-      h1.pull-left Send your question
-      a.btn.btn-default.btn-orange.pull-right(href='mailto:barista@barcamp.am' ) Send
+
+
+  
+  //.container-fluid.container-fixed.send-question
+    hr
+    h3 Send your question
+
+    form(name='questionForm', novalidate, ng-submit='questionForm.$valid && faq.send()')
+      input.float-left(type='text', ng-model='name', placeholder='name', required)
+      input.float-right(type='email', ng-model='email', placeholder='email', required)
+      br
+      textarea(ng-model='text', placeholder='type your question', required)
+      br
+      .mes-box.float-left
+        span.faq-success(ng-show='success == 1') Your question has been successfully submitted.
+        span.faq-error(ng-show='success == 0') Oops, something went wrong. Please try again.
+        span.faq-invalid(ng-show='questionForm.$invalid') Oops, invalid data.
+      button.float-right(type='submit') Send
   .clearfix
 .empty-content
-

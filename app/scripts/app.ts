@@ -12,9 +12,11 @@
   //Controllers
   app.controller('HomePageCtrl', barcamp.HomeController);
   app.controller('FaqCtrl', barcamp.FaqController);
+  app.controller('ArchiveCtrl', barcamp.FaqController);
 
 
   //Services
+  app.service('Faq', barcamp.FaqService);
 
   //Directives
 
@@ -40,10 +42,31 @@
         templateUrl: '/build/views/faq.html',
         controller: 'FaqCtrl',
         controllerAs: 'faq'
+      })
+      .state('archive', {
+        url: '/archive',
+        templateUrl: '/build/views/archive.html',
+        controller: 'ArchiveCtrl',
+        controllerAs: 'archive'
+      })
+      .state('archive.year', {
+        url: '/:year',
+        views: {
+          year: {
+            templateUrl: function($stateParams): string {
+              return '/build/views/archive_' + $stateParams.year + '.html';
+            }
+          }
+        }
+      })
+      .state('about', {
+            url: '/about',
+            templateUrl: '/build/views/about.html'
+            //controller: 'FaqCtrl',
+            //controllerAs: 'faq'
       });
 
+
       $urlRouterProvider.otherwise('/home');
-
-
     }]);
 })();

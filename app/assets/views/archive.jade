@@ -1,0 +1,28 @@
+section.archive
+	.container.container-fixed
+		h1 Archive
+
+		.year-links
+			a(ui-sref='archive.year({ year: 2013 })', ui-sref-active="year-link-active")
+				| 2013
+				br
+				span &bull;
+			a(ui-sref='archive.year({ year: 2012 })', ui-sref-active="year-link-active")
+				| 2012
+				br
+				span &bull;
+			a(ui-sref='archive.year({ year: 2011 })', ui-sref-active="year-link-active")
+				| 2011
+				br
+				span &bull;
+			a(ui-sref='archive.year({ year: 2010 })', ui-sref-active="year-link-active")
+				| 2010
+				br
+				span &bull;
+			a(ui-sref='archive.year({ year: 2009 })', ui-sref-active="year-link-active")
+				| 2009
+				br
+				span &bull;
+			hr
+
+		.archive-year(ui-view='year')
