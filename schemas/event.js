@@ -36,7 +36,8 @@ EventSchema.statics.editableFields = [
     'image',
     'location',
     'start',
-    'end'
+    'end',
+    'disabled'
 ];
 
 EventSchema.pre('save', function (next) {

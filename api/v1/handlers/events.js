@@ -34,6 +34,8 @@ EventsHandler.prototype.create = function(req, res, next) {
         return res.status(400).send(errors);
     }
 
+    req.body.disabled && req.sanitize('disabled');
+
     return this.service.create(this.service.sanitize(req.body))
         .then(function (event) {
             res.status(201).send(event);
@@ -50,6 +52,8 @@ EventsHandler.prototype.update = function(req, res, next) {
     if (errors) {
         return res.status(400).send(errors);
     }
+
+    req.body.disabled && req.sanitize('disabled');
 
     return this.service.update(req.event, this.service.sanitize(req.body))
         .then(function (event) {
