@@ -6,7 +6,8 @@
     'ngRoute',
     'ui.router',
     'mgcrea.ngStrap',
-    'ngMap'
+    'ngMap',
+    'pascalprecht.translate'
   ]);
 
   //Controllers
@@ -17,6 +18,7 @@
 
   //Services
   app.service('Faq', barcamp.FaqService);
+  app.service('UrlStorage', barcamp.UrlStorageService);
 
   //Directives
 
@@ -26,8 +28,13 @@
 
   //Interceptor
 
-  app.config(['$stateProvider', '$urlRouterProvider',
-    function ($stateProvider: ng.ui.IStateProvider, $urlRouterProvider) {
+  // Provders
+  app.provider('$appLocale', barcamp.AppLocaleProvider);
+
+
+  app.config(['$stateProvider', '$urlRouterProvider', '$appLocaleProvider',
+    function ($stateProvider: ng.ui.IStateProvider, $urlRouterProvider: ng.ui.IUrlRouterProvider, $appLocaleProvider: barcamp.IAppLocaleProvider) {
+      $appLocaleProvider.initTranslations();
 
       $stateProvider
         .state('home', {

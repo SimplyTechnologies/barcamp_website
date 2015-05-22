@@ -2,10 +2,9 @@
  * THIRD-PARTY
  */
 
-/// <reference path="../typed/angularjs/angular.d.ts"/>
-/// <reference path="../typed/angularjs/angular-route.d.ts"/>
-/// <reference path="../typed/angularjs/angular-ui.d.ts"/>
 /// <reference path="../typed/barcamp-api.d.ts"/>
+/// <reference path="../typed/tsd.d.ts"/>
+/// <reference path="translations.ts"/>
 
 /**
  * CONTROLLERS
@@ -20,6 +19,7 @@
  */
 
 /// <reference path="services/faq.ts"/>
+/// <reference path="services/urlStorage.ts"/>
 
 /**
  * INTERCEPTORS
@@ -36,3 +36,9 @@
 /**
  * CONFIGS
  */
+
+ /**
+ * PROVIDERS
+ */
+
+/// <reference path="providers/appLocale.ts"/>
