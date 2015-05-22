@@ -2,9 +2,12 @@
 
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
-var bluebird = require('bluebird');
+var Q = require('q');
 
-var bcrypt = bluebird.promisifyAll(require('bcrypt'));
+var bcrypt = require('bcrypt');
+var bcryptCompare = Q.denodeify(bcrypt.compare);
+var bcryptHash = Q.denodeify(bcrypt.hash);
+
 
 var UserSchema = new Schema({
     username: {
@@ -32,11 +35,11 @@ UserSchema.pre('save', function (next) {
 });
 
 UserSchema.methods.setPassword = function (password) {
-    return this.encryptPassword(password).bind(this)
+    return this.encryptPassword(password)
         .then(function (hash) {
             this.hashedPassword = hash;
             this._password = password;
-        });
+        }.bind(this));
 };
 
 UserSchema.methods.getPassword = function () {
@@ -44,17 +47,16 @@ UserSchema.methods.getPassword = function () {
 };
 
 UserSchema.methods.authenticate = function (plainText) {
-    return new bluebird.Promise(function (resolve, reject) {
-        resolve(!!this.hashedPassword);
-    }.bind(this))
-        .then(function () {
-            return bcrypt.compareAsync(plainText, this.hashedPassword);
-        }.bind(this));
+    if (!this.hashedPassword) {
+        return Q(false);
+    }
+
+    return bcryptCompare(plainText, this.hashedPassword);
 };
 
 
 UserSchema.methods.encryptPassword = function (password) {
-    return bcrypt.hashAsync(password, 10);
+    return bcryptHash(password, 10);
 };
 
 var transform = function (doc, ret) {
