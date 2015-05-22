@@ -53,7 +53,10 @@
 	}
 	.text {
 		margin-bottom: 80px;
-
+        a {
+            padding-left: 3px;
+            padding-right: 3px;
+        }
 		h3 {
 			color: #2c3e50;
 			font-size: 18px;
@@ -67,6 +70,7 @@
 			font-size: 18px;
 			line-height: 28px;
 			margin-bottom: 20px;
+
 		}
 
 		p.guests {
@@ -120,7 +124,7 @@
 			padding-bottom: 10px;
 			width: 108.5px;
 
-			&:nth-child(8n + 1) {
+			&:nth-child(8n) {
 				padding-right: 0px;
 			}
 			&:last-child {
@@ -132,4 +136,8 @@
 			}
 		}
 	}
+}
+
+.mrg-bottom25 {
+    margin-bottom: 25px;
 }
