@@ -1,12 +1,8 @@
 var config = require('../config');
 require('../init')(config);
 
-var mongoose = require('mongoose');
+var mongoose = require('mongoose-q')(require('mongoose'));
 var User = mongoose.model('User');
-
-var bluebird = require('bluebird');
-bluebird.promisifyAll(User);
-bluebird.promisifyAll(User.prototype);
 
 function createAdmin(username, password) {
     var user = new User({
@@ -16,7 +12,7 @@ function createAdmin(username, password) {
 
     return user.setPassword(password)
         .then(function () {
-            return user.saveAsync();
+            return user.saveQ();
         });
 }
 

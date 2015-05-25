@@ -14,7 +14,7 @@
   app.controller('MainController', barcamp.MainController);
   app.controller('HomePageCtrl', barcamp.HomeController);
   app.controller('FaqCtrl', barcamp.FaqController);
-  app.controller('ArchiveCtrl', barcamp.FaqController);
+  app.controller('ArchiveCtrl', barcamp.ArchiveController);
 
 
   //Services

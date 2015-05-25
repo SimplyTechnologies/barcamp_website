@@ -19,11 +19,11 @@ nav.navbar.navbar-static-top
       li
         a(ui-sref='home', ui-sref-active="active", translate='home.title')
       li
-        a(href='javascript:void(0)', translate='archive.title')
+        a(ui-sref='archive.year({ year: 2013 })', ui-sref-active="active", translate='archive.title')
       li
         a(ui-sref='faq', ui-sref-active="active", translate='faq.title')
       li
-        a(href='javascript:void(0)', translate='blog.title')
+        a(href='https://www.tumblr.com/login?redirect_to=%2Fblog%2Fbarcampam', target='_blank', translate='blog.title')
       li
         a(ui-sref='about', ui-sref-active="active", translate='about.title')
 .clearfix
