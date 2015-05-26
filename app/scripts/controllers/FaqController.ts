@@ -8,6 +8,7 @@ module barcamp {
     email: string;
     text: string;
     success: number;
+    questionForm: any;
   }
 
   export interface IFaqController {
@@ -29,7 +30,6 @@ module barcamp {
     }
 
     send(): void {
-    console.log(this.scope.questionForm);
       this.scope.success = -1;
       this.FaqService.send(this.scope.name, this.scope.email, this.scope.text)
         .then((argument) => {
