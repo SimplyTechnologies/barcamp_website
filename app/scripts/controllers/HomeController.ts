@@ -34,7 +34,6 @@ module barcamp {
             this.speakerService.get()
                 .then((speakers: any) => {
                     speakers = speakers.data;
-                    console.log(speakers);
                     this.scope.speakers = speakers;
                 });
 
