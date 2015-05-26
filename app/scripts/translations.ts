@@ -10,7 +10,8 @@ window.translations = {
 		},
 		home: {
 			title: "HOME",
-			sponsors: "Sponsors"
+			sponsors: "Sponsors",
+			specialGuests: "Special guests"
 		},
 		archive: {
 			title: "ARCHIVE",
@@ -46,7 +47,8 @@ window.translations = {
 		},
 		home: {
 			title: "Գլխավոր",
-			sponsors: "Հովանավորներ"
+			sponsors: "Հովանավորներ",
+			specialGuests: "Հատուկ հյուրեր"
 		},
 		archive: {
 			title: "Արխիվ",
