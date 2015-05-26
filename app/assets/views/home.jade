@@ -235,26 +235,10 @@ section.special-guests
     h1 Special guests
     .row
       ul
-        .col-md-4.col-xs-4
-          li
-            img(src='/build/assets/images/arevik.png')
-            h3 Arevik Harutyunyan
-            p
-              strong UI/UX Workshop
-            .user-hover
-              .social-icons
-                //a(href='#' )
-                  i.fa.fa-twitter
-                a(href='https://www.facebook.com/arevharutyunyan', target='_blank')
-                  i.fa.fa-facebook-official
-                a(href='https://www.linkedin.com/pub/arevik-harutyunyan/41/b61/681', target='_blank')
-                  i.fa.fa-linkedin-square
-                //a(href='#')
-                  i.fa.fa-instagram
 
-        .col-md-4.col-xs-4
+        .col-md-4.col-xs-4(ng-repeat="speaker in speakers")
           li
-            img(src='/build/assets/images/vahe.png')
+            img(ng-src="{{speaker.photo}}")
             h3 Vahe Evoyan
             p
               strong The new HTTP/2 protocol
@@ -268,110 +252,7 @@ section.special-guests
                   i.fa.fa-linkedin-square
                 a(href='http://instagram.com/vahe_evoyan', target='_blank')
                   i.fa.fa-instagram
-        .col-md-4.col-xs-4
-          li
-            img(src='/build/assets/images/harut.png')
-            h3 Harut Martirosyan
-            p
-              strong Kafka/Spark/HDFS
-            .user-hover
-              .social-icons
-                a(href='https://twitter.com/inteloid', target='_blank')
-                  i.fa.fa-twitter
-                a(href='https://www.facebook.com/inteloid', target='_blank')
-                  i.fa.fa-facebook-official
-                a(href='https://www.linkedin.com/in/harutyun', target='_blank')
-                  i.fa.fa-linkedin-square
-                a(href='https://instagram.com/inteloid', target='_blank')
-                  i.fa.fa-instagram
-        .col-md-4.col-xs-4
-          li
-            img(src='/build/assets/images/samvel.png')
-            h3 Samvel Martirosyan
-            p
-              strong Data Verification
-            .user-hover
-              .social-icons
-                a(href='https://twitter.com/Kornelij', target='_blank')
-                  i.fa.fa-twitter
-                a(href='https://www.facebook.com/samvel', target='_blank')
-                  i.fa.fa-facebook-official
-                a(href='https://instagram.com/kornelij/', target='_blank')
-                  i.fa.fa-instagram
-                a(href='https://instagram.com/kornelij/', target='_blank')
-                  i.fa.fa-linkedin-square
-        .col-md-4.col-xs-4
-          li
-            img(src='/build/assets/images/alexandr.png')
-            h3 Alexandr Polivanov, Meduza.io
-            //p
-              strong Designer &nbsp;
-            .user-hover
-              .social-icons
-                //a(href='#')
-                  i.fa.fa-twitter
-                a(href='https://www.facebook.com/alexander.polivanov', target='_blank')
-                  i.fa.fa-facebook-official
-                a(href='https://instagram.com/certonontroppo', target='_blank')
-                  i.fa.fa-instagram
-        .col-md-4.col-xs-4
-          li
-            img(src='/build/assets/images/zaven.png')
-            h3 Zaven Navoyan
-            p
-              strong Speech recognition in Armenian language
-            //hr
-            //.address
-              a.strong(href='#') http://vladimirkudinov.com
-              span.strong @stSilent
-            .user-hover
-              .social-icons
-                a(href='https://twitter.com/ZNavoyan', target='_blank')
-                  i.fa.fa-twitter
-                a(href='https://www.facebook.com/zaven.navoyan', target='_blank')
-                  i.fa.fa-facebook-official
-                a(href='https://www.linkedin.com/in/zavennavoyan', target='_blank')
-                  i.fa.fa-linkedin-square
-        .col-md-4.col-xs-4
-          li
-            img(src='/build/assets/images/ruben.png')
-            h3 Ruben Manukyan
-            p
-              strong Linux Container/Docker
-            //hr
-            //.address
-              a.strong(href='#') http://vladimirkudinov.com
-              span.strong @stSilent
-            .user-hover
-              .social-icons
-                a(href='https://www.facebook.com/hett.mett?fref=ts', target='_blank')
-                  i.fa.fa-facebook-official
-        .col-md-4.col-xs-4
-          li
-            img(src='/build/assets/images/vladimir.png')
-            h3 Vladimir Poghosyan
-            p
-              strong Python for Web Development
-            .user-hover
-              .social-icons
-                a(href='https://www.facebook.com/vladimir.poghosyan.3?fref=ts', target='_blank')
-                  i.fa.fa-facebook-official
-        .col-md-4.col-xs-4
-          li
-            img(src='/build/assets/images/sedrakmkr.png')
-            h3 Sedrak Mkrtchyan
-            p
-              strong Infographics and data visualisation
-            .user-hover
-              .social-icons
-                a(href='https://twitter.com/517design', target='_blank')
-                  i.fa.fa-twitter
-                a(href='https://www.facebook.com/517design', target='_blank')
-                  i.fa.fa-facebook-official
-                a(href='https://www.linkedin.com/in/sedrakmkrtchyan', target='_blank')
-                  i.fa.fa-linkedin-square
-                a(href='https://instagram.com/517design/', target='_blank')
-                    i.fa.fa-instagram
+
 
 section.contact-with-us
   .contacts-bg

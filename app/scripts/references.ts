@@ -20,6 +20,7 @@
  */
 
 /// <reference path="services/faq.ts"/>
+/// <reference path="services/speaker.ts"/>
 /// <reference path="services/urlStorage.ts"/>
 
 /**
