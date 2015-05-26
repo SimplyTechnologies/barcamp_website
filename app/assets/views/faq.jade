@@ -8,17 +8,17 @@ section.faq
 
   .container-fluid.container-fixed.send-question
     hr
-    h3 Send your question
+    h3(translate='faq.sendYourQuestion')
 
     form(name='questionForm', novalidate, ng-submit='questionForm.$valid && faq.send()')
-      input.float-left(type='text', ng-model='name', placeholder='name', required)
-      input.float-right(type='email', ng-model='email', placeholder='email', required)
+      input.float-left(type='text', ng-model='name', placeholder='{{"faq.name" | translate}}', required)
+      input.float-right(type='email', ng-model='email', placeholder='{{"faq.email" | translate}}', required)
       br
-      textarea(ng-model='text', placeholder='type your question', required)
+      textarea(ng-model='text', placeholder='{{"faq.typeYourQuestion" | translate}}', required)
       br
       .mes-box.float-left
-        span.faq-success(ng-show='success == 1 && questionForm.$pristine') Your question has been successfully submitted.
-        span.faq-error(ng-show='success == 0') Oops, something went wrong. Please try again.
-        span.faq-invalid(ng-show='questionForm.$invalid') Oops, invalid data.
-      button.float-right(type='submit') Send
+        span.faq-success(ng-show='success == 1 && questionForm.$pristine', translate='faq.mesSuccess')
+        span.faq-error(ng-show='success == 0', translate='faq.mesWrong')
+        span.faq-invalid(ng-show='questionForm.$invalid', translate='faq.mesInvalid')
+      button.float-right(type='submit', translate='faq.send')
   .clearfix
