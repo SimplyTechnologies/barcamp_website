@@ -7,6 +7,19 @@ function __mongoConfig() {
     return process.env.MONGOLAB_URI !== 'undefined' && process.env.MONGOLAB_URI;
 }
 
+function __mailerConfig() {
+    var username = process.env.SENDGRID_USERNAME;
+    var password =  process.env.SENDGRID_PASSWORD;
+
+    if (username && password) {
+        return {
+            username: username,
+            password: password
+        }
+    }
+
+    return null;
+}
 
 function __mergeSharedConfigs(shared, config) {
     for (var key in shared) {
@@ -26,6 +39,8 @@ function __createConfig() {
     config.env = env;
 
     config.db = __mongoConfig() || config.db;
+
+    config.email = __mailerConfig() || config.email;
 
     config.keys.general = process.env.KEY_GENERAL || config.keys.general;
     config.keys.auth = process.env.KEY_AUTH || config.keys.auth;
