@@ -15,7 +15,7 @@ nav.navbar.navbar-static-top
       li
         a.btn.btn-link(href='javascript:void(0)', role="button", ng-click='main.changeLang("en")', ng-class='{"active disabled": main.getLang() == "en"}', translate='header.eng')
       li
-        a.btn.btn-link.disabled(href='javascript:void(0)', role="button", ng-click='main.changeLang("hy")', ng-class='{"active disabled": main.getLang() == "hy"}', translate='header.arm')
+        a.btn.btn-link(href='javascript:void(0)', role="button", ng-click='main.changeLang("hy")', ng-class='{"active disabled": main.getLang() == "hy"}', translate='header.arm')
     ul.nav.navbar-nav.navbar-right.navigation(role='navigation')
       li
         a(ui-sref='home', ui-sref-active="active", translate='home.title')

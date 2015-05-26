@@ -11,11 +11,22 @@ window.translations = {
 		home: {
 			title: "HOME",
 			sponsors: "Sponsors",
-			specialGuests: "Special guests"
+			specialGuests: "Special guests",
+			mostWantedEvent: "Most wanted event in Armenian IT and New Media is coming end of May",
+			dayToGo: "{{ value }} day{{ value > 1 ? 's' : '' }} to go",
+			regForPartic: "Register for Participation",
+			register: "Register",
+			getInTouchWithUs: "Get in touch with us",
+			address: "40 Marshal Baghramyan Ave, Yerevan 0019"
 		},
 		archive: {
 			title: "ARCHIVE",
 			photoset: "Photoset from the event",
+			text2014: "<p>2014’s most anticipated tech event, BarCamp Yerevan took place in May 31 - June 1 in The American University of Armenia. That year we had more than 2000 participants which proves BarCamp Yerevan to be the biggest tech event in Armenia. Beside presentations BarCamp EVN’14 was full of technical workshops.</p><p><strong>BarCamp Yerevan 2014</strong> implemented with the sponsorship of Ucom, PicsArt, Artbridge, Media Initiatives Center.</p><p>As usual BarCamp Yerevan hosted special guests.<br />Our special guest <strong>Stefan Thomas</strong>, one of the core bitcoin guys, creator of bitcoin.js, weusecoins.com and the CTO of Ripple Labs talked about why's and how's of digital currencies (Bitcoin, Ripple).</p><p>Another guest from Estonia <strong>Eric Anderson</strong> who works with a Startup Wise Guys marketing team, made a 2 day workshop about “How to pitch to your investor”.</p><p>And finally our 3rd guest <strong>Vladislav Lavrov</strong> was an investigative reporter and one of YanukovychLeaks.org website founders. During BarCamp he told how they manage to gather a huge database from the presidential office within 3 days consisting of 25,000 documents.</p>",
+			video2014: "<h2>Enjoy a small video about BarCamp Yerevan 2014.</h2><iframe width='940' height='627' src='https://www.youtube.com/embed/aez-VvecB2U' frameborder='0' allowfullscreen></iframe>",
+			video2014_2: "<h2>And finally check out how our wonderful volunteers did a Harlem shake and had a lot fun.</h2><iframe width='940' height='627' src='https://www.youtube.com/embed/iGX4__4H6RA' frameborder='0' allowfullscreen></iframe>",
+			links2014: "<h3>BarCamp Photoreport:</h3><a href='https://www.facebook.com/media/set/?set=a.668213989918548.1073741828.136504529756166&type=3' target='_blank'>https://www.facebook.com/media/set/?set=a.668213989918548.1073741828.136504529756166&type=3</a>",
+			pic2014: "<h3>Look how we managed to make a group selfie by a drone.</h3><img src='/build/assets/images/2014/group-selfie.jpg'>",
 			text2013: "<p>This year’s coolest tech event, <strong>BarCamp Yerevan 2013 </strong>took place on <strong>May 11-12 </strong>in <strong>The American University of Armenia</strong>. We had interesting presentations and guest speakers, including one from Google. The format of the event was modified with more technological workshops.</p><p class='guests'>Here are our special guests:</p><h3>David Garcia Quintas</h3><p>David Garcia Quintas has been working at <strong>Google </strong>since October 2012 as a software engineer in the ads data platform team. Before working at Google he has worked in the Berkly National Labs (Berkly, California) and in the European Laboratory for Particle Physics (CERN).</p><h3>Mikhail Dunaev</h3><p>Mikhail Dunaev has bean leading the Programming unit at infographics studio in RIA Novosti since 2011. Apart from his main job, he also teaches in the British Higher School of Art and Design and Moscow State University after V. Lomonosov. Mikhail Dunaev has been working on data visualisation and infographics since 2009.</p><h3>Philipp Kats</h3><p>Philipp Kats, Special projects editor at the infographics studio of RIA Novosti. Philipp Kats is the editor at the infographics studio of RIA Novosti. He works on data analysis and visualisation.</p><h3>Anahi Ayala Iacucci</h3><p>Anahi Ayala IacucciAnahi Ayala Iacucci is Internewsâ€™ Innovation Advisor for Africa, specializing in ICT4D, new technologies and crisis mapping.</p><h3>Todd Fabacher</h3><p>Todd Fabacher is a New York based computer enterpreneur, who has run several startups.Â  Mr Fabacher will talk about building successful tech startups.</p>",
 			video2013: "<h2>A Short videoreport about BarCampEVN13</h2><iframe width='940' height='627' src='https://www.youtube.com/embed/AVDKlBLPeE8' frameborder='0' allowfullscreen></iframe>",
 			links2013: "",
@@ -56,11 +67,22 @@ window.translations = {
 		home: {
 			title: "Գլխավոր",
 			sponsors: "Հովանավորներ",
-			specialGuests: "Հատուկ հյուրեր"
+			specialGuests: "Հատուկ հյուրեր",
+			mostWantedEvent: "Հայաստանի ՏՏ և Նոր Մեդիա ոլորտների ամենասպասված իրադարձությունը տեղի կունենա Մայիս ամսվա վերջին օրերին",
+			dayToGo: "Մնաց {{ value }} օր",
+			regForPartic: "Գրանցվել մասնակցության համար",
+			register: "Գրանցվել",
+			getInTouchWithUs: "Հետադարձ կապ",
+			address: "Մարշալ Բաղրամյանի պող. 40, Երևան 0019"
 		},
 		archive: {
 			title: "Արխիվ",
 			photoset: "Ֆոտոշարք",
+			text2014: "",
+			video2014: "",
+			video2014_2: "",
+			links2014: "",
+			pic2014: "",
 			text2013: "<p><strong>“ԲարՔեմփ Երևան 2013″-ը</strong> աննախադեպ էր: Մայիսի 11-12-ը չկոնֆերանսին մասնակցեց ավելի քան 1400 մարդ, թեև գրանցվածների թիվը շատ ավելին էր` շուրջ 1700:  Մասնակիցների կողմից կատարվեց 42 թեմա, 8 թեմա ներկայացրեցին հատուկ հյուրերը:  Տեղի ունեցավ 13 վարպետության դաս:</p><p><strong>“ԲարՔեմփ Երևան 2013″-ի նորությունն էին</strong> ավելի շատ տեխնոլոգիական վարպետության դասերը՝ Workshop-ներ։</p><p><strong>“ԲարՔեմփ Երևան 2013″-ի</strong> հովանավորներն ու աջակիցներն են՝ Լրատվության այլընտրանքային ռեսուրսներ ծրագիրը և Ինտերնյուս Հայաստանը ԱՄՆ ՄԶԳ աջակցությամբ, ռուսաստանյան RIA Novosti գործակալությունը, SFL ընկերությունը, Հայաստանի ամերիկյան համալսարանը։ Միջոցառման գլխավոր գործընկերն է <strong>Օրանժ Արմենիան:</strong></p><p>“ԲարՔեմփ Երևան”-ի մեկնարկի տեսագրությունը: ԲարՔեմփի բացման DJ-ը Վաձ Ղազարյանն էր: Կազմակերպիչներից` խոսեցին Գեղամ Վարդդանյանը, Լուսինե Պառավյնաը եւ Արմեն Գրիգորյանը:</p>",
 			video2013: "<h2>Ինտերակտիվը ԲարՔեմփի մասին</h2><iframe width='940' height='627' src='https://www.youtube.com/embed/AVDKlBLPeE8' frameborder='0' allowfullscreen></iframe>",
 			links2013: "<h3>Լրատվամիջոցները ԲարՔեմփի մասին</h3><p><a href='http://www.azatutyun.am/content/article/24983081.html' target='_blank'>Մեկնարկեց ԲարՔեմփ Երեւան 2013-ը</a></p>",

@@ -2,8 +2,8 @@ section.main-menu.build
     .container.container-fixed
         .row
             .col-md-6.col-xs-6
-                h2 Most wanted event in Armenian IT and New Media is coming end of May
-                h1(ng-cloak, ng-hide='daysLeft <= 0') {{ daysLeft }} day{{ daysLeft > 1 ? 's' : '' }} to go
+                h2(translate='home.mostWantedEvent')
+                h1(ng-cloak, ng-hide='daysLeft <= 0', translate='home.dayToGo' translate-values="{value: daysLeft}")
             .col-md-offset-6.col-xs-offset-6
 .clearfix
 section.schedule(style='display:none')
@@ -227,8 +227,8 @@ section.schedule(style='display:none')
 .clearfix
 .container-fluid.register
     .container.container-fixed
-        h1.pull-left Register for Participation
-        a.btn.btn-default.btn-orange.pull-right(href='https://www.eventbrite.co.uk/e/barcamp-yerevan-2015-tickets-16660816952', target='_blank') Register
+        h1.pull-left(translate='home.regForPartic', ng-class='{"reg-title-hy": currentLang == "hy"}')
+        a.btn.btn-default.btn-orange.pull-right(href='https://www.eventbrite.co.uk/e/barcamp-yerevan-2015-tickets-16660816952', target='_blank', translate='home.register')
 .clearfix
 //section.special-guests
     .container.container-fixed
@@ -400,8 +400,8 @@ section.contact-with-us
             .row
                 .col-md-6.col-xs-6
                     .get-in-touch
-                        h2 Get in touch with us
-                        P 40 Marshal Baghramyan Ave, Yerevan 0019
+                        h2(translate='home.getInTouchWithUs')
+                        P(translate='home.address')
                         a(href='tel: +374 95 391024')
                         //a(href='tel:+1 347 523 34 90')
                           i.fa.fa-phone
