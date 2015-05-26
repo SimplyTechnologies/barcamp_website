@@ -29,12 +29,14 @@ module barcamp {
     }
 
     send(): void {
+    console.log(this.scope.questionForm);
       this.scope.success = -1;
       this.FaqService.send(this.scope.name, this.scope.email, this.scope.text)
         .then((argument) => {
           this.scope.name = '';
           this.scope.email = '';
           this.scope.text = '';
+          this.scope.questionForm.$setPristine();
           this.scope.success = 1;
         })
         .catch((argument) => {

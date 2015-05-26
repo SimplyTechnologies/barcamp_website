@@ -47,9 +47,8 @@ section.faq
       textarea(ng-model='text', placeholder='type your question', required)
       br
       .mes-box.float-left
-        span.faq-success(ng-show='success == 1') Your question has been successfully submitted.
+        span.faq-success(ng-show='success == 1 && questionForm.$pristine') Your question has been successfully submitted.
         span.faq-error(ng-show='success == 0') Oops, something went wrong. Please try again.
         span.faq-invalid(ng-show='questionForm.$invalid') Oops, invalid data.
       button.float-right(type='submit') Send
   .clearfix
-.empty-content
