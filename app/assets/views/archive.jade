@@ -3,30 +3,25 @@ section.archive
 		h1(translate='archive.title')
 
 		.year-links
-			a(ui-sref='archive.year({ year: 2014 })', ui-sref-active="year-link-active")
+			a.btn.btn-link(ui-sref='archive.year({ year: 2014 })', ui-sref-active="selected")
 				| 2014
-				br
-				span &bull;
-			a(ui-sref='archive.year({ year: 2013 })', ui-sref-active="year-link-active")
+				.circle
+			a.btn.btn-link(ui-sref='archive.year({ year: 2013 })', ui-sref-active="selected")
 				| 2013
-				br
-				span &bull;
-			a(ui-sref='archive.year({ year: 2012 })', ui-sref-active="year-link-active")
+				.circle
+			a.btn.btn-link(ui-sref='archive.year({ year: 2012 })', ui-sref-active="selected")
 				| 2012
-				br
-				span &bull;
-			a(ui-sref='archive.year({ year: 2011 })', ui-sref-active="year-link-active")
+				.circle
+			a.btn.btn-link(ui-sref='archive.year({ year: 2011 })', ui-sref-active="selected")
 				| 2011
-				br
-				span &bull;
-			a(ui-sref='archive.year({ year: 2010 })', ui-sref-active="year-link-active")
+				.circle
+			a.btn.btn-link(ui-sref='archive.year({ year: 2010 })', ui-sref-active="selected")
 				| 2010
-				br
-				span &bull;
-			a(ui-sref='archive.year({ year: 2009 })', ui-sref-active="year-link-active")
+				.circle
+			a.btn.btn-link(ui-sref='archive.year({ year: 2009 })', ui-sref-active="selected")
 				| 2009
-				br
-				span &bull;
-			hr
+				.circle
+
+
 
 		.archive-year(ui-view='year')
