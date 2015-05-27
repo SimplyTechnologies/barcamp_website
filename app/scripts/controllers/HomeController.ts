@@ -47,7 +47,7 @@ module barcamp {
                 .then((shcedules) => {
                     shcedules = shcedules.data;
 
-                    this.scope.shcedulesRows = [[], [], []];
+                    this.scope.shcedulesRows = [[null, null, null, null, null], [null, null, null, null, null], [null, null, null, null, null]];
 
                     for (var i: number = 0; i < this.scope.rooms.length; i++) {
                         var vIndex: number = 0;
