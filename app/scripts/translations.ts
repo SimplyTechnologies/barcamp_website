@@ -17,7 +17,10 @@ window.translations = {
 			regForPartic: "Register for Participation",
 			register: "Register",
 			getInTouchWithUs: "Get in touch with us",
-			address: "40 Marshal Baghramyan Ave, Yerevan 0019"
+			address: "40 Marshal Baghramyan Ave, Yerevan 0019",
+			by: "by &nbsp;",
+			now: "NOW",
+			next: "NEXT"
 		},
 		archive: {
 			title: "ARCHIVE",
@@ -73,7 +76,10 @@ window.translations = {
 			regForPartic: "Գրանցվել մասնակցության համար",
 			register: "Գրանցվել",
 			getInTouchWithUs: "Հետադարձ կապ",
-			address: "Մարշալ Բաղրամյանի պող. 40, Երևան 0019"
+			address: "Մարշալ Բաղրամյանի պող. 40, Երևան 0019",
+			by: "",
+			now: "ARM: NOW",
+			next: "ARM: NEXT"
 		},
 		archive: {
 			title: "Արխիվ",
