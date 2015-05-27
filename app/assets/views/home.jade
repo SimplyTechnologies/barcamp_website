@@ -21,20 +21,20 @@ section.schedule(ng-show='daysLeft <= 0')
                     th(ng-repeat='room in rooms') {{room}}
             tbody
                 tr(ng-repeat='shcedulesRow in shcedulesRows', ng-init='rowIndex = $index')
-                    td(ng-repeat='shcedules in shcedulesRow', ng-class='{"bg-crimson-red": rowIndex === 0, "bg-blaze-orange": rowIndex === 1, "bg-feldgrau": rowIndex === 2}')
-                        .schedule-img
-                            img(ng-src="{{shcedules.bg_image_url}}")
-                        .title
+                    td(ng-repeat='shcedule in shcedulesRow track by $index', ng-class='{"bg-crimson-red": rowIndex === 0 && shcedule, "bg-blaze-orange": rowIndex === 1 && shcedule, "bg-feldgrau": rowIndex === 2 && shcedule}')
+                        .schedule-img(ng-show='shcedule')
+                            img(ng-src="{{shcedule.bg_image_url}}")
+                        .title(ng-show='shcedule')
                             h2(translate='home.now', ng-show='rowIndex === 0')
                             h2(translate='home.next', ng-hide='rowIndex === 0')
                             .time
-                                span {{shcedules.time_from.date | amDateFormat: 'HH:mm'}}
-                                span  -
-                                span {{shcedules.time_to.date | amDateFormat: 'HH:mm'}}
-                            p.topic {{shcedules[currentLang].topic}}
+                                span {{shcedule.time_from.date | amDateFormat: 'HH:mm'}}
+                                span  - 
+                                span {{shcedule.time_to.date | amDateFormat: 'HH:mm'}}
+                            p.topic {{shcedule[currentLang].topic}}
                             .creator
                                 span(translate='home.by')
-                                span {{shcedules[currentLang].speaker}}
+                                span {{shcedule[currentLang].speaker}}
                     
         .to-full-schedule
             a(href='#') to full schedule >
