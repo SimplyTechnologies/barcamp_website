@@ -1,7 +1,8 @@
 .archive {
-	margin-top: -69px;
+	margin-top: 0px;
 
 	h1 {
+		margin-top: 0px;
 		margin-bottom: 79px;
 	}
 
@@ -13,7 +14,7 @@
 			display: inline-block;
 			font-size: 36px;
 			font-weight: 700;
-			line-height: 36px;
+			line-height: 38px;
 			margin-left: 10px;
 			margin-right: 41px;
 			text-align: center;
@@ -33,7 +34,8 @@
 
 		hr {
 			border-top: 2px solid #ebedee;
-			margin-top: -19px;
+			margin-bottom: 0px;
+			margin-top: -20px;
 		}
 	}
 

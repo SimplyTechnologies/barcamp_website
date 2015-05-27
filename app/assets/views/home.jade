@@ -10,10 +10,7 @@ section.schedule(ng-show='daysLeft <= 0')
     .container.container-fixed
         .row
             .col-md-12.col-xs-12
-                h1 Schedule
-                h2 We’ve created the product that
-                    br
-                    | will help your startup
+                h1(translate='home.scheduleTitle')
     .container.schedule-container
         table.table
             thead
@@ -21,23 +18,25 @@ section.schedule(ng-show='daysLeft <= 0')
                     th(ng-repeat='room in rooms') {{room}}
             tbody
                 tr(ng-repeat='shcedulesRow in shcedulesRows', ng-init='rowIndex = $index')
-                    td(ng-repeat='shcedules in shcedulesRow', ng-class='{"bg-crimson-red": rowIndex === 0, "bg-blaze-orange": rowIndex === 1, "bg-feldgrau": rowIndex === 2}')
-                        .schedule-img
-                            img(ng-src="{{shcedules.bg_image_url}}")
-                        .title
+                    td(ng-repeat='shcedule in shcedulesRow track by $index', ng-class='{"bg-crimson-red": rowIndex === 0 && shcedule, "bg-blaze-orange": rowIndex === 1 && shcedule, "bg-feldgrau": rowIndex === 2 && shcedule}')
+                        .schedule-img(ng-show='shcedule')
+                            img(ng-src="{{shcedule.bg_image_url}}")
+                        .title(ng-show='shcedule')
                             h2(translate='home.now', ng-show='rowIndex === 0')
                             h2(translate='home.next', ng-hide='rowIndex === 0')
                             .time
-                                span {{shcedules.time_from.date | amDateFormat: 'HH:mm'}}
-                                span  -
-                                span {{shcedules.time_to.date | amDateFormat: 'HH:mm'}}
-                            p.topic {{shcedules[currentLang].topic}}
+                                span {{shcedule.time_from.date | amDateFormat: 'HH:mm'}}
+                                span  - 
+                                span {{shcedule.time_to.date | amDateFormat: 'HH:mm'}}
+                            p.topic {{shcedule[currentLang].topic}}
                             .creator
                                 span(translate='home.by')
-                                span {{shcedules[currentLang].speaker}}
+                                span {{shcedule[currentLang].speaker}}
+                        .no-shcedule(ng-show='!shcedule')
+                            h2(translate='home.noSession')
                     
         .to-full-schedule
-            a(href='#') to full schedule >
+            a(href='#', translate='home.toFullSchedule')
 .clearfix
 .container-fluid.register
     .container.container-fixed
@@ -101,7 +100,7 @@ section.special-guests.sponsors
                 .col-md-4.col-xs-4
                     li
                         a.logo(href='http://ucom.am', target='_blank')
-                            img(src='/build/assets/images/ucom.jpg')
+                            img(src='/build/assets/images/ucom.png')
                         hr
                         h3 UCom
                         //p
@@ -119,9 +118,17 @@ section.special-guests.sponsors
                             a(href='#')
                               i.fa.fa-instagram
                 .col-md-4.col-xs-4
+                  li
+                    a.logo(href='http://www.usaid.gov', target='_blank')
+                      img(src='/build/assets/images/usaid.png')
+                    hr
+                    h3 USAID
+                    .address
+                      a.strong(href='http://www.usaid.gov', target='_blank') http://www.usaid.gov
+                .col-md-4.col-xs-4
                     li
                         a.logo(href='http://www.mediainitiatives.am', target='_blank')
-                            img(src='/build/assets/images/mediainitiative.jpg')
+                            img(src='/build/assets/images/mediainitiative.png')
                         hr
                         h3 Media Initiatives Center
                         .address
@@ -129,7 +136,7 @@ section.special-guests.sponsors
                 .col-md-4.col-xs-4
                     li
                         a.logo(href='http://underwaterapps.com', target='_blank')
-                            img(src='/build/assets/images/underwater.jpg')
+                            img(src='/build/assets/images/underwater.png')
                         hr
                         h3 Underwater apps
                         .address
@@ -138,7 +145,7 @@ section.special-guests.sponsors
                 .col-md-4.col-xs-4
                     li
                         a.logo(href='http://www.simplytechnologies.net', target='_blank')
-                            img(src='/build/assets/images/simply.jpg')
+                            img(src='/build/assets/images/simply.png')
                         hr
                         h3 Simply Technologies
                         .address
@@ -146,7 +153,7 @@ section.special-guests.sponsors
                 .col-md-4.col-xs-4
                     li
                         a.logo(href='http://bdb.am', target='_blank')
-                            img(src='/build/assets/images/bdb.jpg')
+                            img(src='/build/assets/images/bdb.png')
                         hr
                         h3 BDB
                         .address
@@ -154,7 +161,7 @@ section.special-guests.sponsors
                 .col-md-4.col-xs-4
                     li
                         a.logo(href='http://picsart.com', target='_blank')
-                            img(src='/build/assets/images/pics_art.jpg')
+                            img(src='/build/assets/images/pics_art.png')
                         hr
                         h3 PicsArt
                         .address
@@ -163,7 +170,7 @@ section.special-guests.sponsors
                 .col-md-4.col-xs-4
                     li
                         a.logo(href='http://www.workfront.com', target='_blank')
-                            img(src='/build/assets/images/workfront.jpg')
+                            img(src='/build/assets/images/workfront.png')
                         hr
                         h3 Workfront
                         .address
@@ -171,7 +178,7 @@ section.special-guests.sponsors
                 .col-md-4.col-xs-4
                   li
                     a.logo(href='http://www.aua.am', target='_blank')
-                      img(src='/build/assets/images/aua.jpg')
+                      img(src='/build/assets/images/aua.png')
                     hr
                     h3 American University of Armenia
                     .address
@@ -179,16 +186,9 @@ section.special-guests.sponsors
                 .col-md-4.col-xs-4
                   li
                     a.logo(href='http://www.sflpro.com', target='_blank')
-                      img(src='/build/assets/images/sfl.jpg')
+                      img(src='/build/assets/images/sfl.png')
                     hr
                     h3 SFL
                     .address
                       a.strong(href='http://www.sflpro.com', target='_blank') http://www.sflpro.com
-                .col-md-4.col-xs-4
-                  li
-                    a.logo(href='http://www.usaid.gov', target='_blank')
-                      img(src='/build/assets/images/usaid.jpg')
-                    hr
-                    h3 USAID
-                    .address
-                      a.strong(href='http://www.usaid.gov', target='_blank') http://www.usaid.gov
+                
