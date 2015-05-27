@@ -15,6 +15,7 @@
   app.controller('HomePageCtrl', barcamp.HomeController);
   app.controller('FaqCtrl', barcamp.FaqController);
   app.controller('ArchiveCtrl', barcamp.ArchiveController);
+  app.controller('TimetableCtrl', barcamp.TimetableController);
 
 
   //Services
@@ -45,6 +46,13 @@
           templateUrl: '/build/views/home.html',
           controller: 'HomePageCtrl',
           controllerAs: 'home'
+        })
+
+        .state('timetable', {
+          url: '/timetable',
+          templateUrl: '/build/views/timetable.html',
+          controller: 'TimetableCtrl',
+          controllerAs: 'timetable'
         })
 
       .state('faq', {
