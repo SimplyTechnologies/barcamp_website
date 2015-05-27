@@ -1,0 +1,60 @@
+section.schedule.timetable
+    .container.container-fixed
+        .row
+            .col-md-12.col-xs-12
+                h1 Timetable
+
+    .container.timetable-container
+        .timetable
+            .day
+                a.btn.btn-link.selected(href='#') Day 1
+                    .circle
+                a.btn.btn-link(href='#') Day 2
+                    .circle
+
+            ul.timetable-room
+                li time
+                li(ng-repeat="room in rooms") {{room}}
+            .clearfix
+            ul.table-time
+                li
+                    span 9-10 AM
+                li
+                    span 10-11 AM
+                li
+                    span 11-12 AM
+                li
+                    span 12-1 PM
+                li
+                    span 1-2 PM
+                li
+                    span 2-3 PM
+                li
+                    span 3-4 PM
+                li
+                    span 4-5 PM
+                li
+                    span 5-6 PM
+
+            ul(ng-repeat="room in roomKeys", ng-class="room.trim().replace(' ','_').toLowerCase()")
+                li
+                li
+                li
+                li
+                li
+                li
+                li
+                li
+                li
+                li(ng-repeat="event in scheduleRooms[room]").completed(data-animation='am-fade-and-scale', data-placement='center', bs-modal='modal', data-template='/build/views/schedule-modal.html', ng-style="{top:'{{event.top}}', height:'{{event.height}}'}")
+                    .table-content
+                        p {{event[currentLang].topic}}
+                        .time
+                            span {{event.time_from.date | amDateFormat: 'HH:mm'}} - {{event.time_to.date | amDateFormat: 'HH:mm'}}
+                        .creator
+                            span(translate='home.by') &nbsp;
+                            span {{event[currentLang].speaker}}
+
+            .clearfix
+            .empty
+
