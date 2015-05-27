@@ -237,7 +237,7 @@ section.special-guests
             ul
                 .col-md-4.col-xs-4(ng-repeat="speaker in speakers")
                     li
-                        img(ng-src="{{speaker.photo}}")
+                        img(ng-src="{{speaker.photo.split('.').indexOf('png') !== -1 || speaker.photo.split('.').indexOf('jpg') !== -1 ? speaker.photo : '/build/assets/images/user-avatar.jpg'}}")
                         h3 {{speaker[currentLang].name}}
                         p
                             strong {{speaker[currentLang].topic}}
