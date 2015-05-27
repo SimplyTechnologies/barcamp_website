@@ -4,10 +4,12 @@ module barcamp {
         rooms: string[];
         roomKeys: string[];
         scheduleRooms: any;
+        days: number[];
+        selectedDay: number;
     }
 
     export interface ITimetableController {
-        init(): void;
+        getEventByDay(day: number): void;
         timeToPx(time: number): number;
     }
 
@@ -22,11 +24,17 @@ module barcamp {
             this.moment = moment;
             this.scope.rooms = ['Big Hall', 'W1', 'W2', 'P1', 'P2'];
             this.scope.roomKeys = ['big_hall', 'w1', 'w2', 'p1', 'p2'];
-            this.init();
+            this.scope.days = [1, 2, 3, 4, 5];
+            this.scope.selectedDay = 1;
+            this.getEventByDay(this.scope.selectedDay);
         }
 
-        init(): void {
-            this.scheduleService.getAll()
+        getEventByDay(day: number): void {
+            this.scope.selectedDay = day;
+
+            var startTime = this.moment().startOf('day').hour(9).minute(0);
+
+            this.scheduleService.getByDay(this.scope.selectedDay)
                 .then((scheduleList) => {
                     scheduleList = scheduleList.data;
                     scheduleList = [
@@ -98,6 +106,30 @@ module barcamp {
                                 timezone_type: 3,
                                 timezone: "America\/Chicago"
                             }
+                        },
+
+
+                        {
+                            bg_image_url: "http://api.barcamp.am/i/speaker/1_samvel.png",
+                            room: "p1",
+                            en: {
+                                speaker: "gfghggh fggfh",
+                                topic: "Data Verification"
+                            },
+                            hy: {
+                                speaker: "Սամվել Մարտիրոսյան",
+                                topic: "ghfgh"
+                            },
+                            time_from: {
+                                date: "2015-05-27 10:00:00",
+                                timezone_type: 3,
+                                timezone: "America\/Chicago"
+                            },
+                            time_to: {
+                                date: "2015-05-27 12:00:00",
+                                timezone_type: 3,
+                                timezone: "America\/Chicago"
+                            }
                         }
                     ];
 
@@ -108,8 +140,6 @@ module barcamp {
                         p1: [],
                         p2: []
                     };
-
-                    var startTime = moment().startOf('day').hour(9).minute(0);
 
                     scheduleList.forEach((schedule: any) => {
                         var eventStart = this.moment(schedule.time_from.date);
@@ -127,14 +157,11 @@ module barcamp {
                     this.scope.scheduleRooms = scheduleRooms;
 
                 });
-
-
-
         }
 
         timeToPx(time: number): number {
             var h = (time/1000/60/60);
-            return h * 202 + h;
+            return h * 202 + h
         }
     }
 }
