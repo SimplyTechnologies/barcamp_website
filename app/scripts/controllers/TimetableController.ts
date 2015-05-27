@@ -6,6 +6,7 @@ module barcamp {
         scheduleRooms: any;
         days: number[];
         selectedDay: number;
+        eventDate: any;
     }
 
     export interface ITimetableController {
@@ -25,18 +26,15 @@ module barcamp {
             this.scope.rooms = ['Big Hall', 'W1', 'W2', 'P1', 'P2'];
             this.scope.roomKeys = ['big_hall', 'w1', 'w2', 'p1', 'p2'];
             this.scope.days = [1, 2];
+            this.scope.eventDate = {1: new Date('2015-05-30'), 2: new Date('2015-06-01')}; //temporary
             this.scope.selectedDay = 1;
             this.getEventByDay(this.scope.selectedDay);
         }
 
         getEventByDay(day: number): void {
-            this.scope.selectedDay = day;
+            var startTime = this.moment(this.scope.eventDate[day]).startOf('day').hour(9).minute(0);
 
-            //Todo: set date
-            var eventDay = new Date();
-            var startTime = this.moment(eventDay).startOf('day').hour(9).minute(0);
-
-            this.scheduleService.getByDay(this.scope.selectedDay)
+            this.scheduleService.getByDay(day)
                 .then((scheduleList) => {
                     scheduleList = scheduleList.data;
                     scheduleList = [
@@ -75,12 +73,12 @@ module barcamp {
                                 topic: "Դաթա Վերիֆիքեյշն"
                             },
                             time_from: {
-                                date: "2015-05-27 12:30:42.00",
+                                date: "2015-05-30 12:30:42.00",
                                 timezone_type: 3,
                                 timezone: "America\/Chicago"
                             },
                             time_to: {
-                                date: "2015-05-27 13:20:42.00",
+                                date: "2015-05-30 13:20:42.00",
                                 timezone_type: 3,
                                 timezone: "America\/Chicago"
                             }
@@ -158,6 +156,7 @@ module barcamp {
 
                     this.scope.scheduleRooms = scheduleRooms;
 
+                    this.scope.selectedDay = day;
                 });
         }
 

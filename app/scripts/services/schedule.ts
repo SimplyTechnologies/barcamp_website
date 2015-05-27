@@ -16,7 +16,7 @@ module barcamp {
         }
 
         getByDay(day: number):ng.IPromise<any> {
-            return this.http.get('http://api.barcamp.am/schedule', {responseType: 'json'});
+            return this.http.get('http://api.barcamp.am/schedule/' + day, {responseType: 'json'});
         }
     }
 }
