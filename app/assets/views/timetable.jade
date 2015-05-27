@@ -8,6 +8,7 @@ section.schedule.timetable
         .timetable
             .day
                 a.btn.btn-link(ng-repeat="day in days", href="javascript:void(0)", ng-click="timetable.getEventByDay(day)", ng-class="selectedDay === day ? 'selected' : ''") Day {{day}}
+                    .circle
             ul.timetable-room
                 li time
                 li(ng-repeat="room in rooms") {{room}}

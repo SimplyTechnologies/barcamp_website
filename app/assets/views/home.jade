@@ -26,7 +26,7 @@ section.schedule(ng-show='daysLeft <= 0')
                             h2(translate='home.next', ng-hide='rowIndex === 0')
                             .time
                                 span {{shcedule.time_from.date | amDateFormat: 'HH:mm'}}
-                                span  - 
+                                span  -
                                 span {{shcedule.time_to.date | amDateFormat: 'HH:mm'}}
                             p.topic {{shcedule[currentLang].topic}}
                             .creator
@@ -34,9 +34,9 @@ section.schedule(ng-show='daysLeft <= 0')
                                 span {{shcedule[currentLang].speaker}}
                         .no-shcedule(ng-show='!shcedule')
                             h2(translate='home.noSession')
-                    
+
         .to-full-schedule
-            a(href='#', translate='home.toFullSchedule')
+            a(ui-sref='timetable', translate='home.toFullSchedule')
 .clearfix
 .container-fluid.register
     .container.container-fixed
@@ -191,4 +191,4 @@ section.special-guests.sponsors
                     h3 SFL
                     .address
                       a.strong(href='http://www.sflpro.com', target='_blank') http://www.sflpro.com
-                
+

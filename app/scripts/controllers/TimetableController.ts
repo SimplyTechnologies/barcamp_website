@@ -24,7 +24,7 @@ module barcamp {
             this.moment = moment;
             this.scope.rooms = ['Big Hall', 'W1', 'W2', 'P1', 'P2'];
             this.scope.roomKeys = ['big_hall', 'w1', 'w2', 'p1', 'p2'];
-            this.scope.days = [1, 2, 3, 4, 5];
+            this.scope.days = [1, 2];
             this.scope.selectedDay = 1;
             this.getEventByDay(this.scope.selectedDay);
         }
@@ -32,7 +32,9 @@ module barcamp {
         getEventByDay(day: number): void {
             this.scope.selectedDay = day;
 
-            var startTime = this.moment().startOf('day').hour(9).minute(0);
+            //Todo: set date
+            var eventDay = new Date();
+            var startTime = this.moment(eventDay).startOf('day').hour(9).minute(0);
 
             this.scheduleService.getByDay(this.scope.selectedDay)
                 .then((scheduleList) => {
