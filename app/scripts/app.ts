@@ -20,6 +20,7 @@
   //Services
   app.service('Faq', barcamp.FaqService);
   app.service('Speaker', barcamp.SpeakerService);
+  app.service('Schedule', barcamp.ScheduleService);
   app.service('UrlStorage', barcamp.UrlStorageService);
 
   //Directives
