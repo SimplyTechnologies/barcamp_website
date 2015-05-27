@@ -6,37 +6,43 @@
 		margin-bottom: 79px;
 	}
 
+
 	.year-links {
-		height: 106px;
+	  border-bottom: 2px solid #ebedee;
+	  margin-bottom: 66px;
+	  a {
+		margin-left: 10px;
+		margin-right: 41px;
+		padding-left: 0px;
+		padding-right: 0px;
+	    padding-top: 18px;
+	    padding-bottom: 14px;
+	    position: relative;
+	    font-size: 36px;
+	    color: #666666;
+	    font-weight: 700;
+	    &.selected {
+	      color: #003366;
+	    }
+	    &:hover, &:focus {
+	      text-decoration: none;
+	    }
+	  }
+	  .circle {
+	    position: absolute;
+	    left: 37px;
+	    bottom: -7px;
+	    background-color: #666666;
+	    width: 10px;
+	    height: 10px;
+	    border-radius: 50%;
+	    -webkit-border-radius: 50%;
 
-		a {
-			color: #666666;
-			display: inline-block;
-			font-size: 36px;
-			font-weight: 700;
-			line-height: 38px;
-			margin-left: 10px;
-			margin-right: 41px;
-			text-align: center;
-			text-decoration: none;
+	  }
+	  .selected .circle {
+	    background-color: #003366;;
+	  }
 
-			&.active {
-			  color: #003366;
-			}
-
-			span {
-				font-size: 28px;
-			}
-		}
-		.year-link-active {
-			color: #003366;
-		}
-
-		hr {
-			border-top: 2px solid #ebedee;
-			margin-bottom: 0px;
-			margin-top: -20px;
-		}
 	}
 
 	.archive-year {
