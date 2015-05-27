@@ -8,7 +8,7 @@
     margin-bottom: 50px;
   }
   //min-width: 1215px;
-  .table-time, .room-204, .room-205, .room-206, .room-big, .room-small {
+  .table-time, .big_hall, .w1, .w2, .p2, .p1 {
   padding-left: 0;
   float: left;
   list-style-type: none;
@@ -81,6 +81,7 @@
     li {
       text-align: center;
       background-color: #ff6600;
+      height: 202px;
       font-size: 26px;
       color: #fff;
       font-weight: 700;
@@ -93,7 +94,7 @@
     }
 
   }
-  .room-204, .room-205, .room-206, .room-small, .room-big {
+  .big_hall, .w1, .w2, .p1, .p2 {
     position: relative;
     p {
       font-size: 16px;
@@ -123,16 +124,16 @@
 
 }
 
-.room-204 .completed {
-  top :203px !important;
-  height: 303px;
-
-}
-
-.room-small .completed {
-  top :203px !important;
-  height: 404px;
-}
+//.big_hall .completed {
+//  top :203px !important;
+//  height: 303px;
+//
+//}
+//
+//.p1 .completed {
+//  top :203px !important;
+//  height: 404px;
+//}
 
 .day {
   border-bottom: 2px solid #ebedee;
