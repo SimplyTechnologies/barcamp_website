@@ -3,6 +3,10 @@ section.archive
 		h1(translate='archive.title')
 
 		.year-links
+			a(ui-sref='archive.year({ year: 2014 })', ui-sref-active="year-link-active")
+				| 2014
+				br
+				span &bull;
 			a(ui-sref='archive.year({ year: 2013 })', ui-sref-active="year-link-active")
 				| 2013
 				br

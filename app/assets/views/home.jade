@@ -1,4 +1,4 @@
-section.main-menu.build
+section.main-menu.build(ng-hide='daysLeft <= 0')
     .container.container-fixed
         .row
             .col-md-6.col-xs-6
@@ -6,7 +6,7 @@ section.main-menu.build
                 h1(ng-cloak, ng-hide='daysLeft <= 0', translate='home.dayToGo' translate-values="{value: daysLeft}")
             .col-md-offset-6.col-xs-offset-6
 .clearfix
-section.schedule(style='display:none')
+section.schedule(ng-show='daysLeft <= 0')
     .container.container-fixed
         .row
             .col-md-12.col-xs-12
@@ -18,210 +18,24 @@ section.schedule(style='display:none')
         table.table
             thead
                 tr
-                    th room #204
-                    th room #205
-                    th room #206
-                    th.pdr0.pdl0 small hall
-                    th big hall
+                    th(ng-repeat='room in rooms') {{room}}
             tbody
-                tr
-                    td.bg-crimson-red
+                tr(ng-repeat='shcedulesRow in shcedulesRows', ng-init='rowIndex = $index')
+                    td(ng-repeat='shcedules in shcedulesRow', ng-class='{"bg-crimson-red": rowIndex === 0, "bg-blaze-orange": rowIndex === 1, "bg-feldgrau": rowIndex === 2}')
                         .schedule-img
-                            img(src="/build/assets/images/schedule.jpg")
+                            img(ng-src="{{shcedules.bg_image_url}}")
                         .title
-                            h2 Now
+                            h2(translate='home.now', ng-show='rowIndex === 0')
+                            h2(translate='home.next', ng-hide='rowIndex === 0')
                             .time
-                                span 16:30
+                                span {{shcedules.time_from.date | amDateFormat: 'HH:mm'}}
                                 span  -
-                                span 17:30
-                            p.topic Speech recognition in Armenian language
+                                span {{shcedules.time_to.date | amDateFormat: 'HH:mm'}}
+                            p.topic {{shcedules[currentLang].topic}}
                             .creator
-                                span by &nbsp;
-                                span Bill Murray
-                    td.bg-crimson-red
-                        //.schedule-img
-                          img(src="/build/assets/images/schedule.jpg")
-                        .title
-                            h2 Now
-                            .time
-                                span 16:30
-                                span  -
-                                span 17:30
-                            p.topic Speech recognition in Armenian language
-                            .creator
-                                span by &nbsp;
-                                span Bill Murray
-                    td.bg-crimson-red
-                        //.schedule-img
-                          img(src="/build/assets/images/schedule.jpg")
-                        .title
-                            h2 Now
-                            .time
-                                span 16:30
-                                span  -
-                                span 17:30
-                            p.topic Speech recognition in Armenian language
-                            .creator
-                                span by &nbsp;
-                                span Bill Murray
-                    td.bg-crimson-red
-                        //.schedule-img
-                          img(src="/build/assets/images/schedule.jpg")
-                        .title
-                            h2 Now
-                            .time
-                                span 16:30
-                                span  -
-                                span 17:30
-                            p.topic Speech recognition in Armenian language
-                            .creator
-                                span by &nbsp;
-                                span Bill Murray
-                    td.bg-crimson-red
-                        .schedule-img
-                            img(src="/build/assets/images/schedule.jpg")
-                        .title
-                            h2 Now
-                            .time
-                                span 16:30
-                                span  -
-                                span 17:30
-                            p.topic Speech recognition in Armenian language
-                            .creator
-                                span by &nbsp;
-                                span Bill Murray
-                tr
-                    td.bg-blaze-orange
-                        //.schedule-img
-                          img(src="/build/assets/images/schedule.jpg")
-                        .title
-                            h2 Now
-                            .time
-                                span 16:30
-                                span  -
-                                span 17:30
-                            p.topic Speech recognition in Armenian language
-                            .creator
-                                span by &nbsp;
-                                span Bill Murray
-                    td.bg-blaze-orange
-                        //.schedule-img
-                          img(src="/build/assets/images/schedule.jpg")
-                        .title
-                            h2 Now
-                            .time
-                                span 16:30
-                                span  -
-                                span 17:30
-                            p.topic Speech recognition in Armenian language
-                            .creator
-                                span by &nbsp;
-                                span Bill Murray
-                    td.bg-blaze-orange
-                        .schedule-img
-                            img(src="/build/assets/images/schedule.jpg")
-                        .title
-                            h2 Now
-                            .time
-                                span 16:30
-                                span  -
-                                span 17:30
-                            p.topic Speech recognition in Armenian language
-                            .creator
-                                span by &nbsp;
-                                span Bill Murray
-                    td.bg-blaze-orange
-                        //.schedule-img
-                          img(src="/build/assets/images/schedule.jpg")
-                        .title
-                            h2 Now
-                            .time
-                                span 16:30
-                                span  -
-                                span 17:30
-                            p.topic Speech recognition in Armenian language
-                            .creator
-                                span by &nbsp;
-                                span Bill Murray
-                    td.bg-blaze-orange
-                        //.schedule-img
-                          img(src="/build/assets/images/schedule.jpg")
-                        .title
-                            h2 Now
-                            .time
-                                span 16:30
-                                span  -
-                                span 17:30
-                            p.topic Speech recognition in Armenian language
-                            .creator
-                                span by &nbsp;
-                                span Bill Murray
-                tr
-                    td.bg-feldgrau
-                        //.schedule-img
-                          img(src="/build/assets/images/schedule.jpg")
-                        .title
-                            h2 Now
-                            .time
-                                span 16:30
-                                span  -
-                                span 17:30
-                            p.topic Speech recognition in Armenian language
-                            .creator
-                                span by &nbsp;
-                                span Bill Murray
-                    td.bg-feldgrau
-                        //.schedule-img
-                          img(src="/build/assets/images/schedule.jpg")
-                        .title
-                            h2 Now
-                            .time
-                                span 16:30
-                                span  -
-                                span 17:30
-                            p.topic Speech recognition in Armenian language
-                            .creator
-                                span by &nbsp;
-                                span Bill Murray
-                    td.bg-feldgrau
-                        //.schedule-img
-                          img(src="/build/assets/images/schedule.jpg")
-                        .title
-                            h2 Now
-                            .time
-                                span 16:30
-                                span  -
-                                span 17:30
-                            p.topic Speech recognition in Armenian language
-                            .creator
-                                span by &nbsp;
-                                span Bill Murray
-                    td.bg-feldgrau
-                        //.schedule-img
-                          img(src="/build/assets/images/schedule.jpg")
-                        .title
-                            h2 Now
-                            .time
-                                span 16:30
-                                span  -
-                                span 17:30
-                            p.topic Speech recognition in Armenian language
-                            .creator
-                                span by &nbsp;
-                                span Bill Murray
-                    td.bg-feldgrau
-                        .schedule-img
-                            img(src="/build/assets/images/schedule.jpg")
-                        .title
-                            h2 Now
-                            .time
-                                span 16:30
-                                span  -
-                                span 17:30
-                            p.topic Speech recognition in Armenian language
-                            .creator
-                                span by &nbsp;
-                                span Bill Murray
+                                span(translate='home.by')
+                                span {{shcedules[currentLang].speaker}}
+                    
         .to-full-schedule
             a(href='#') to full schedule >
 .clearfix
@@ -370,4 +184,11 @@ section.special-guests.sponsors
                     h3 SFL
                     .address
                       a.strong(href='http://www.sflpro.com', target='_blank') http://www.sflpro.com
-
+                .col-md-4.col-xs-4
+                  li
+                    a.logo(href='http://www.usaid.gov', target='_blank')
+                      img(src='/build/assets/images/usaid.jpg')
+                    hr
+                    h3 USAID
+                    .address
+                      a.strong(href='http://www.usaid.gov', target='_blank') http://www.usaid.gov

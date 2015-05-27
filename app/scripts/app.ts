@@ -7,7 +7,8 @@
     'ui.router',
     'mgcrea.ngStrap',
     'ngMap',
-    'pascalprecht.translate'
+    'pascalprecht.translate',
+    'angularMoment'
   ]);
 
   //Controllers
@@ -34,7 +35,6 @@
 
   // Provders
   app.provider('$appLocale', barcamp.AppLocaleProvider);
-
 
   app.config(['$stateProvider', '$urlRouterProvider', '$appLocaleProvider',
     function ($stateProvider: ng.ui.IStateProvider, $urlRouterProvider: ng.ui.IUrlRouterProvider, $appLocaleProvider: barcamp.IAppLocaleProvider) {
