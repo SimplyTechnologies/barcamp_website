@@ -62,7 +62,6 @@ module barcamp {
                         }
                     }
 
-                    console.log(this.scope.shcedulesRows);
                 });
 
             this.scope.daysLeft = endDay - today;
