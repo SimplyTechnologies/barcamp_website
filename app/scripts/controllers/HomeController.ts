@@ -18,18 +18,21 @@ module barcamp {
         private speakerService:barcamp.ISpeakerService;
         private scheduleService:barcamp.IScheduleService;
         private translate: any;
+        private moment: any;
 
         constructor($scope:barcamp.IHomeControllerScope,
                     $translate: any,
                     Speaker:barcamp.ISpeakerService,
-                    Schedule:barcamp.IScheduleService) {
+                    Schedule:barcamp.IScheduleService,
+                    moment: any) {
 
             this.scope = $scope;
             this.speakerService = Speaker;
             this.scheduleService = Schedule;
             this.translate = $translate;
+            this.moment = moment;
             this.scope.keys = Object.keys;
-            this.scope.rooms = ['Big Hall', 'W1', 'W2', 'P1', 'P2'];
+            this.scope.rooms = ['Big Hall', '208E', '213W', '113W', '114W'];
             this.init();
         }
 
@@ -50,7 +53,8 @@ module barcamp {
                         var vIndex: number = 0;
                         for (var j: number = 0; j < shcedules.length && vIndex < 3; j++) {
                             if(shcedules[j].room == this.scope.rooms[i]) {
-                                if(moment().diff(shcedules[j].time_from.date, 'seconds') < 0 && vIndex == 0) {
+                                var startTime = this.moment(shcedules[j].time_from.date);
+                                if(this.moment().diff(startTime, 'seconds') < 0 && vIndex == 0) {
                                     vIndex++;
                                 }
 

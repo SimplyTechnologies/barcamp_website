@@ -23,8 +23,8 @@ module barcamp {
             this.scope = $scope;
             this.scheduleService = Schedule;
             this.moment = moment;
-            this.scope.rooms = ['Big Hall', 'W1', 'W2', 'P1', 'P2'];
-            this.scope.roomKeys = ['big_hall', 'w1', 'w2', 'p1', 'p2'];
+            this.scope.rooms = ['Big Hall', '208E', '213W', '113W', '114W'];
+            this.scope.roomKeys = ['_big_hall', '_208e', '_213w', '_113w', '_114w'];
             this.scope.days = [1, 2];
             this.scope.eventDate = {1: new Date('2015-05-30'), 2: new Date('2015-05-31')}; //temporary
             this.scope.selectedDay = 1;
@@ -39,11 +39,11 @@ module barcamp {
                     scheduleList = scheduleList.data;
 
                     var scheduleRooms = {
-                        big_hall : [],
-                        w1: [],
-                        w2: [],
-                        p1: [],
-                        p2: []
+                        _big_hall : [],
+                        _208e: [],
+                        _213w: [],
+                        _113w: [],
+                        _114w: []
                     };
 
                     scheduleList.forEach((schedule: any) => {
@@ -56,7 +56,11 @@ module barcamp {
                         schedule.height = height + 'px';
                         schedule.top = top + 'px';
 
-                        scheduleRooms[schedule.room.trim().replace(' ','_').toLowerCase()].push(schedule);
+                        var roomKey = '_' + schedule.room.trim().replace(' ','_').toLowerCase();
+
+                        if (scheduleRooms[roomKey]) {
+                            scheduleRooms[roomKey].push(schedule);
+                        }
                     });
 
                     this.scope.scheduleRooms = scheduleRooms;

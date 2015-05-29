@@ -43,7 +43,8 @@ section.schedule.timetable
                 li
                 li
                 li
-                li.completed(ng-repeat="event in scheduleRooms[room]", data-animation='am-fade-and-scale', data-placement='center', bs-modal='modal', data-template='/build/views/schedule-modal.html', ng-style="{top:'{{event.top}}', height:'{{event.height}}'}")
+                //li.completed(ng-repeat="event in scheduleRooms[room]", data-animation='am-fade-and-scale', data-placement='center', bs-modal='modal', data-template='/build/views/schedule-modal.html', ng-style="{top:'{{event.top}}', height:'{{event.height}}'}")
+                li.completed(ng-repeat="event in scheduleRooms[room]", ng-style="{top:'{{event.top}}', height:'{{event.height}}'}")
                     .table-content
                         p {{event[currentLang].topic}}
                         .time
