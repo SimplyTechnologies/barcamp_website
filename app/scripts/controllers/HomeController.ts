@@ -7,6 +7,8 @@ module barcamp {
         keys: any;
         rooms: any;
         shcedulesRows: any;
+        $parent: any;
+        showHomeSchedule: boolean;
     }
 
     export interface IHomeController {
@@ -33,6 +35,10 @@ module barcamp {
             this.moment = moment;
             this.scope.keys = Object.keys;
             this.scope.rooms = ['Big Hall', '208E', '213W', '113W', '114W'];
+
+            var d = new Date();
+            var h = d.getHours();
+            this.scope.showHomeSchedule = (this.scope.$parent.daysLeft <= 0) && (h >= 9 && h < 18);
             this.init();
         }
 

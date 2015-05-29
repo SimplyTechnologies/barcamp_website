@@ -6,7 +6,7 @@ section.main-menu.build(ng-hide='daysLeft <= 0')
                 h1(ng-cloak, ng-hide='daysLeft <= 0', translate='home.dayToGo' translate-values="{value: daysLeft}")
             .col-md-offset-6.col-xs-offset-6
 .clearfix
-section.schedule(ng-show='daysLeft <= 0')
+section.schedule(ng-show='false')
     .container.container-fixed
         .row
             .col-md-12.col-xs-12
@@ -18,22 +18,23 @@ section.schedule(ng-show='daysLeft <= 0')
                     th(ng-repeat='room in rooms') {{room}}
             tbody
                 tr(ng-repeat='shcedulesRow in shcedulesRows', ng-init='rowIndex = $index')
-                    td(ng-repeat='shcedule in shcedulesRow track by $index', ng-class='{"bg-crimson-red": rowIndex === 0 && shcedule, "bg-blaze-orange": rowIndex === 1 && shcedule, "bg-feldgrau": rowIndex === 2 && shcedule}')
-                        .schedule-img(ng-show='shcedule')
+                    td(ng-repeat='shcedule in shcedulesRow track by $index', ng-class='{"bg-crimson-red": rowIndex === 0, "bg-blaze-orange": rowIndex === 1, "bg-feldgrau": rowIndex === 2}')
+                        //.schedule-img(ng-show='shcedule')
                             img(ng-src="{{shcedule.bg_image_url}}")
-                        .title(ng-show='shcedule')
-                            h2(translate='home.now', ng-show='rowIndex === 0')
-                            h2(translate='home.next', ng-hide='rowIndex === 0')
-                            .time
-                                span {{shcedule.time_from.date | amDateFormat: 'HH:mm'}}
-                                span  -
-                                span {{shcedule.time_to.date | amDateFormat: 'HH:mm'}}
-                            p.topic {{shcedule[currentLang].topic}}
-                            .creator
-                                span(translate='home.by')
-                                span {{shcedule[currentLang].speaker}}
-                        .no-shcedule(ng-show='!shcedule')
-                            h2(translate='home.noSession')
+                        .title
+                            div(ng-show='shcedule')
+                                h2(translate='home.now', ng-show='rowIndex === 0')
+                                h2(translate='home.next', ng-hide='rowIndex === 0')
+                                .time
+                                    span {{shcedule.time_from.date | amDateFormat: 'HH:mm'}}
+                                    span  -
+                                    span {{shcedule.time_to.date | amDateFormat: 'HH:mm'}}
+                                p.topic {{shcedule[currentLang].topic}}
+                                .creator
+                                    //span(translate='home.by')
+                                    span {{shcedule[currentLang].speaker}}
+                            div(ng-show='!shcedule')
+                                h2(translate='home.noSession')
 
         .to-full-schedule
             a(ui-sref='timetable', translate='home.toFullSchedule')
