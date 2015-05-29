@@ -3,7 +3,6 @@
 module barcamp {
 
     export interface  IHomeControllerScope extends ng.IScope {
-        daysLeft: number;
         speakers: any;
         keys: any;
         rooms: any;
@@ -35,8 +34,6 @@ module barcamp {
         }
 
         init():void {
-            var endDay:number = new Date(2015, 5, 30).getDate();
-            var today:number = new Date().getDate();
 
             this.speakerService.get()
                 .then((speakers: any) => {
@@ -63,8 +60,6 @@ module barcamp {
                     }
 
                 });
-
-            this.scope.daysLeft = endDay - today;
         }
 
     }

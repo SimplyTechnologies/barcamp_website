@@ -11,7 +11,7 @@ window.translations = {
 		home: {
 			title: "HOME",
 			sponsors: "Sponsors",
-			specialGuests: "Special guests",
+			specialGuests: "Speakers",
 			mostWantedEvent: "Most wanted event in Armenian IT and New Media is coming end of May",
 			dayToGo: "{{ value }} day{{ value > 1 ? 's' : '' }} to go",
 			regForPartic: "Register for Participation",
