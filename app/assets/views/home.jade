@@ -6,6 +6,16 @@ section.main-menu.build(ng-hide='daysLeft <= 0')
                 h1(ng-cloak, ng-hide='daysLeft <= 0', translate='home.dayToGo' translate-values="{value: daysLeft}")
             .col-md-offset-6.col-xs-offset-6
 .clearfix
+section.live-stream
+    .container.container-fixed
+        .row
+            .col-md-12.col-xs-12
+                h1(translate='home.stream')
+            .col-md-12.col-xs-12
+                a(ng-repeat="k in keys(streamUri)", ng-bind="streamUri[k][0]", ng-click="home.changeStream(k)", ng-class="currentStream === k ? 'active' : ''")
+
+    content.container
+        iframe( width="560", height="315", src="{{streamUri[currentStream][1]}}",  frameborder="0" allowfullscreen)
 //section.schedule(ng-show='showHomeSchedule')
     .container.container-fixed
         .row

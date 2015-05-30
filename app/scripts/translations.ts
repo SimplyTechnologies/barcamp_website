@@ -23,7 +23,8 @@ window.translations = {
 			next: "NEXT",
 			scheduleTitle: "Schedule",
 			toFullSchedule: "to full schedule >",
-			noSession: "No session"
+			noSession: "No session",
+            stream: "Live Stream"
 		},
 		archive: {
 			title: "ARCHIVE",
@@ -85,7 +86,8 @@ window.translations = {
 			next: "Հաջորդ",
 			scheduleTitle: "Ժամանակացույց",
 			toFullSchedule: "Ամբողջական ժամանակացույց >",
-			noSession: "Ազատ է"
+			noSession: "Ազատ է",
+            stream: "Ուղիղ հեռարձակում"
 		},
 		archive: {
 			title: "ԱՐԽԻՎ",

@@ -9,10 +9,13 @@ module barcamp {
         shcedulesRows: any;
         $parent: any;
         showHomeSchedule: boolean;
+        streamUri: any;
+        currentStream: string;
     }
 
     export interface IHomeController {
         init(): void;
+        changeStream(roomKey: string): void;
     }
 
     export class HomeController implements IHomeController {
@@ -21,11 +24,13 @@ module barcamp {
         private scheduleService:barcamp.IScheduleService;
         private translate: any;
         private moment: any;
+        private sce: any;
 
         constructor($scope:barcamp.IHomeControllerScope,
                     $translate: any,
                     Speaker:barcamp.ISpeakerService,
                     Schedule:barcamp.IScheduleService,
+                    $sce: any,
                     moment: any) {
 
             this.scope = $scope;
@@ -33,8 +38,17 @@ module barcamp {
             this.scheduleService = Schedule;
             this.translate = $translate;
             this.moment = moment;
+            this.sce = $sce;
+
             this.scope.keys = Object.keys;
             this.scope.rooms = ['Big Hall', '208E', '213W', '113W', '114W'];
+            this.scope.streamUri = {
+                _big_hall: ['Big Hall', this.sce.trustAsResourceUrl('https://www.youtube.com/embed/mZ9AdNGbbFg')],
+                _208e: ['208E',this.sce.trustAsResourceUrl('https://www.youtube.com/embed/97O6U8J9wxw')],
+                _213w: ['213W', this.sce.trustAsResourceUrl('https://www.youtube.com/embed/kwK-PVSQftY')]
+            };
+
+            this.scope.currentStream = "_big_hall";
 
             var d = new Date();
             var h = d.getHours();
@@ -70,6 +84,10 @@ module barcamp {
                     }
 
                 });
+        }
+
+        changeStream(roomKey: string): void {
+            this.scope.currentStream = roomKey;
         }
 
     }
