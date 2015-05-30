@@ -15,7 +15,7 @@ section.live-stream
                 a(ng-repeat="k in keys(streamUri)", ng-bind="streamUri[k][0]", ng-click="home.changeStream(k)", ng-class="currentStream === k ? 'active' : ''")
 
     content.container
-        iframe( width="560", height="315", src="{{streamUri[currentStream][1]}}",  frameborder="0" allowfullscreen)
+        iframe( width="970", height="450", src="{{streamUri[currentStream][1]}}",  frameborder="0" allowfullscreen)
 //section.schedule(ng-show='showHomeSchedule')
     .container.container-fixed
         .row
