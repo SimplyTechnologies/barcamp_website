@@ -6,7 +6,7 @@ section.main-menu.build(ng-hide='daysLeft <= 0')
                 h1(ng-cloak, ng-hide='daysLeft <= 0', translate='home.dayToGo' translate-values="{value: daysLeft}")
             .col-md-offset-6.col-xs-offset-6
 .clearfix
-section.schedule(ng-show='false')
+//section.schedule(ng-show='showHomeSchedule')
     .container.container-fixed
         .row
             .col-md-12.col-xs-12
@@ -38,7 +38,7 @@ section.schedule(ng-show='false')
 
         .to-full-schedule
             a(ui-sref='timetable', translate='home.toFullSchedule')
-.clearfix
+//.clearfix
 //.container-fluid.register
     .container.container-fixed
         h1.pull-left(translate='home.regForPartic', ng-class='{"reg-title-hy": currentLang == "hy"}')
