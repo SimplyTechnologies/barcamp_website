@@ -18,6 +18,8 @@ module.exports = {
     },
 
     production: {
-        db: ''
+        db: '',
+        keys: {},
+        email: {}
     }
 };

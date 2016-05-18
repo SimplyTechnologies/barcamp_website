@@ -23,9 +23,12 @@ module barcamp {
             this.appLocale = $appLocale;
             this.translate = $translate;
             this.rootScope.currentLang = this.translate.proposedLanguage() || this.translate.use();
-            var endDay:number = new Date(2015, 5, 30).getDate();
-            var today:number = new Date().getDate();
-            this.scope.daysLeft = endDay - today;
+            var endDay:number = new Date(2016, 5, 18).getTime();
+            var today:number = new Date().getTime();
+            var timeDiff = Math.abs(today - endDay);            
+            // this.scope.daysLeft = endDay - today;
+            this.scope.daysLeft = Math.ceil(timeDiff / (1000 * 3600 * 24)); 
+            console.log(this.scope.daysLeft);
         }
 
         changeLang(lang:string):void {

@@ -1,4 +1,4 @@
-//section.main-menu.build(ng-hide='daysLeft <= 0')
+section.main-menu.build(ng-hide='daysLeft <= 0')
     .container.container-fixed
         .row
             .col-md-6.col-xs-6
@@ -44,7 +44,7 @@
         h1.pull-left(translate='home.regForPartic', ng-class='{"reg-title-hy": currentLang == "hy"}')
         a.btn.btn-default.btn-orange.pull-right(href='https://www.eventbrite.co.uk/e/barcamp-yerevan-2015-tickets-16660816952', target='_blank', translate='home.register')
 .clearfix
-section.special-guests
+//- section.special-guests
     .container.container-fixed
         h1(translate='home.specialGuests')
         .row
@@ -66,7 +66,7 @@ section.special-guests
                                 a(ng-if="speaker.socialnetworks.instagram" ng-href="{{speaker.socialnetworks.instagram}}", target='_blank')
                                     i.fa.fa-instagram
 
-section.contact-with-us
+//- section.contact-with-us
     .contacts-bg
         .container.container-fixed
             .row
@@ -93,7 +93,7 @@ section.contact-with-us
 
 
 .clearfix
-section.special-guests.sponsors
+//- section.special-guests.sponsors
     .container.container-fixed
         h1(translate='home.sponsors')
         .row
