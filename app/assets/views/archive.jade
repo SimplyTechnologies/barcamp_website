@@ -3,6 +3,9 @@ section.archive
 		h1(translate='archive.title')
 
 		.year-links
+			a.btn.btn-link(ui-sref='archive.year({ year: 2015 })', ui-sref-active="selected")
+				| 2015
+				.circle
 			a.btn.btn-link(ui-sref='archive.year({ year: 2014 })', ui-sref-active="selected")
 				| 2014
 				.circle

@@ -12,7 +12,7 @@ window.translations = {
 			title: "HOME",
 			sponsors: "Sponsors",
 			specialGuests: "Speakers",
-			mostWantedEvent: "Most wanted event in Armenian IT and New Media is coming end of May",
+			mostWantedEvent: "Most wanted event in Armenian IT and New Media is coming soon.",
 			dayToGo: "{{ value }} day{{ value > 1 ? 's' : '' }} to go",
 			regForPartic: "Register for Participation",
 			register: "Register",
@@ -42,7 +42,8 @@ window.translations = {
 			video2010: "<h2>Videoreport about “BarCamp Yerevan 2010”</h2><iframe width='940' height='627' src='https://www.youtube.com/embed/XB6R84ekUKM' frameborder='0' allowfullscreen><iframe>",
 			text2009: "<p>First<strong> BarCamp Yerevan </strong>event took place on<strong> April 17-19 </strong>in<strong> 2009: </strong>More than 400 young people with different professional background took part in the event. The official tag of the event was #barcampevn09:</p><p> <strong>BarCamp Yerevan 2009 </strong>implemented with the sponsorship of<a href='http://www.osi.am' target='_blank'> Open Society Institute Assistance Foundation Armenia, </a><a href='http://www.osce.org/yerevan' target='_blank'> OSCE Office, </a><a href='http://www.icon.am' target='_blank'> Icon Communications </a>and<a href='http://www.web.am' target='_blank'> Web, </a><a href='http://www.internews.am' target='_blank'> Internews Armenia.</a></p>",
 			video2009: "<h2>Video Stories form “BarCamp Yerevan 2009”</h2><iframe class='mrg-bottom25' width='940' height='627' src='https://www.youtube.com/embed/fRYL_T1WuT0' frameborder='0' allowfullscreen></iframe><iframe width='940' height='627' src='https://www.youtube.com/embed/OgoA2ygAWZ8' frameborder='0' allowfullscreen></iframe>",
-			links2009: ""
+			links2009: "",
+			text2015: "<p>7th BarCamp Yerevan took place on May 30-31, 2015 at AUA, and it was technologically more saturated then before. <br> Over 2500 particiapants, 50+ fascinating talks and 457 people preferring their T-Shirts \"L\" size. JobFair rollet out. <br> BarCamp happened with sponsorship of Ucom, PicsArt, Workfront, SFL as well as partnership with Media Initiatives Center, Underwater Apps, Simply Technologies, Balasanyan Design Bureau and American University of Armenia. <br> Various topics were presented and discussed: Elasticsearch, Hadoop, HBase, EcmaScript, Python, Dockers, just to name a few. <br> Barcamp, also became a place to wellcome Media guests: Alexander Polivanov from Meduza, Leslie Thornton from Arizona State University, Nino Macharashvili from JumpStart Georgia, Yelena Kiryushina from Dojd and for sure Sam, who spoke about tittirits. ;) </p>"
 		},
 		blog: {
 			title: "BLOG"
