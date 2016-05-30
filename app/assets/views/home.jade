@@ -1,12 +1,12 @@
 section.main-menu.build(ng-hide='daysLeft <= 0')
     .container.container-fixed
         .row
-            .col-md-6.col-xs-6
+            .col-md-10.col-md-push-1.col-xs-6
                 h2(translate='home.mostWantedEvent')
                 h1(ng-cloak, ng-hide='daysLeft <= 0', translate='home.dayToGo' translate-values="{value: daysLeft}")
             .col-md-offset-6.col-xs-offset-6
 .clearfix
-//section.schedule(ng-show='showHomeSchedule')
+section.schedule(ng-show='showHomeSchedule')
     .container.container-fixed
         .row
             .col-md-12.col-xs-12
@@ -18,7 +18,7 @@ section.main-menu.build(ng-hide='daysLeft <= 0')
                     th(ng-repeat='room in rooms') {{room}}
             tbody
                 tr(ng-repeat='shcedulesRow in shcedulesRows', ng-init='rowIndex = $index')
-                    td(ng-repeat='shcedule in shcedulesRow track by $index', ng-class='{"bg-crimson-red": rowIndex === 0, "bg-blaze-orange": rowIndex === 1, "bg-feldgrau": rowIndex === 2}')
+                    td(ng-repeat='shcedule in shcedulesRow track by $index', ng-class='{"bg-cream": rowIndex === 0, "bg-orange": rowIndex === 1, "bg-blue": rowIndex === 2}')
                         //.schedule-img(ng-show='shcedule')
                             img(ng-src="{{shcedule.bg_image_url}}")
                         .title
@@ -38,13 +38,13 @@ section.main-menu.build(ng-hide='daysLeft <= 0')
 
         .to-full-schedule
             a(ui-sref='timetable', translate='home.toFullSchedule')
-//.clearfix
-//.container-fluid.register
+.clearfix
+.container-fluid.register
     .container.container-fixed
         h1.pull-left(translate='home.regForPartic', ng-class='{"reg-title-hy": currentLang == "hy"}')
-        a.btn.btn-default.btn-orange.pull-right(href='https://www.eventbrite.co.uk/e/barcamp-yerevan-2015-tickets-16660816952', target='_blank', translate='home.register')
+        a.btn.btn-default.btn-orange.pull-right(href='http://www.eventbrite.co.uk/e/barcamp-yerevan-2016-tickets-24108420936', target='_blank', translate='home.subscribe')
 .clearfix
-//- section.special-guests
+//section.special-guests
     .container.container-fixed
         h1(translate='home.specialGuests')
         .row
@@ -66,38 +66,20 @@ section.main-menu.build(ng-hide='daysLeft <= 0')
                                 a(ng-if="speaker.socialnetworks.instagram" ng-href="{{speaker.socialnetworks.instagram}}", target='_blank')
                                     i.fa.fa-instagram
 
-//- section.contact-with-us
-    .contacts-bg
-        .container.container-fixed
-            .row
-                .col-md-6.col-xs-6
-                    .get-in-touch
-                        h2(translate='home.getInTouchWithUs')
-                        P(translate='home.address')
-                        a(href='tel: +374 95 391024')
-                        //a(href='tel:+1 347 523 34 90')
-                          i.fa.fa-phone
-                          span +1 347 523 34 90
-                        a(href='mailto:barista@barcamp.am')
-                            i.fa.fa-envelope
-                            span barista@barcamp.am
-                .col-md-offset-6.col-xs-offset-6
-        .map-canvas
-            map(center='40.1933398, 44.50441360000002', zoom='15')
-                marker(position='40.1933398, 44.50441360000002')
-                //info-window(position='40.1933398, 44.50441360000002', visible='true')
-                  span 40 Marshal Baghramyan Ave, Yerevan 0019, Armenia
-
-
-
-
-
 .clearfix
-//- section.special-guests.sponsors
+section.special-guests.sponsors
     .container.container-fixed
         h1(translate='home.sponsors')
         .row
             ul
+                .col-md-4.col-xs-4
+                    li
+                        a.logo(href='http://www.simplytechnologies.net', target='_blank')
+                            img(src='/build/assets/images/simply.png')
+                        hr
+                        h3 Simply Technologies
+                        .address
+                            a.strong(href='http://www.simplytechnologies.net', target='_blank') http://www.simplytechnologies.net
                 .col-md-4.col-xs-4
                     li
                         a.logo(href='http://ucom.am', target='_blank')
@@ -119,14 +101,6 @@ section.main-menu.build(ng-hide='daysLeft <= 0')
                             a(href='#')
                               i.fa.fa-instagram
                 .col-md-4.col-xs-4
-                  li
-                    a.logo(href='http://www.usaid.gov', target='_blank')
-                      img(src='/build/assets/images/usaid.png')
-                    hr
-                    h3 USAID
-                    .address
-                      a.strong(href='http://www.usaid.gov', target='_blank') http://www.usaid.gov
-                .col-md-4.col-xs-4
                     li
                         a.logo(href='http://www.mediainitiatives.am', target='_blank')
                             img(src='/build/assets/images/mediainitiative.png')
@@ -136,38 +110,21 @@ section.main-menu.build(ng-hide='daysLeft <= 0')
                             a.strong(href='http://www.mediainitiatives.am', target='_blank') http://www.mediainitiatives.am
                 .col-md-4.col-xs-4
                     li
-                        a.logo(href='http://underwaterapps.com', target='_blank')
-                            img(src='/build/assets/images/underwater.png')
-                        hr
-                        h3 Underwater apps
-                        .address
-                            a.strong(href='http://underwaterapps.com', target='_blank') http://underwaterapps.com
-
-                .col-md-4.col-xs-4
-                    li
-                        a.logo(href='http://www.simplytechnologies.net', target='_blank')
-                            img(src='/build/assets/images/simply.png')
-                        hr
-                        h3 Simply Technologies
-                        .address
-                            a.strong(href='http://www.simplytechnologies.net', target='_blank') http://www.simplytechnologies.net
-                .col-md-4.col-xs-4
-                    li
-                        a.logo(href='http://bdb.am', target='_blank')
-                            img(src='/build/assets/images/bdb.png')
-                        hr
-                        h3 BDB
-                        .address
-                            a.strong(href='http://bdb.am', target='_blank') http://bdb.am
-                .col-md-4.col-xs-4
-                    li
                         a.logo(href='http://picsart.com', target='_blank')
-                            img(src='/build/assets/images/pics_art.png')
+                            img(src='/build/assets/images/logos/PicsArt.png').width-80-p
                         hr
                         h3 PicsArt
                         .address
                             a.strong(href='http://picsart.com', target='_blank') http://picsart.com
 
+                .col-md-4.col-xs-4
+                    li
+                        a.logo(href="https://www.betconstruct.com/", target="_blank")
+                            img(src="/build/assets/images/logos/betconstruct.png")
+                        hr
+                        h3 BetConstruct
+                        .address
+                            a.strong(href="https://www.betconstruct.com/", target="_blank") https://www.betconstruct.com
                 .col-md-4.col-xs-4
                     li
                         a.logo(href='http://www.workfront.com', target='_blank')
@@ -179,7 +136,7 @@ section.main-menu.build(ng-hide='daysLeft <= 0')
                 .col-md-4.col-xs-4
                   li
                     a.logo(href='http://www.aua.am', target='_blank')
-                      img(src='/build/assets/images/aua.png')
+                      img(src='/build/assets/images/logos/aua.png').width-80-p
                     hr
                     h3 American University of Armenia
                     .address
@@ -192,4 +149,64 @@ section.main-menu.build(ng-hide='daysLeft <= 0')
                     h3 SFL
                     .address
                       a.strong(href='http://www.sflpro.com', target='_blank') http://www.sflpro.com
+                .col-md-4.col-xs-4
+                    li
+                        a.logo(href="http://www.vivaronews.am", target="_blank")
+                            img(src="/build/assets/images/logos/vivaronews.png").width-70-p
+                        hr
+                        h3 Vivaro News
+                        .address
+                            a.strong(href='http://www.vivaronews.am', target='_blank') http://www.vivaronews.am
+                .col-md-4.col-xs-4
+                    li
+                        a.logo(href="http://www.startuparmenia.org", target="_blank")
+                            img(src="/build/assets/images/logos/startup_armenia.jpg").width-70-p
+                        hr
+                        h3 Startup Armenia
+                        .address
+                            a.strong(href='http://www.startuparmenia.org', target='_blank') http://www.startuparmenia.org
+                .col-md-4.col-xs-4
+                    li
+                        a.logo(href="http://ipmarketing.am", target="_blank")
+                            img(src="/build/assets/images/logos/ip.png").width-70-p
+                        hr
+                        h3 IP Marketing
+                        .address
+                            a.strong(href='http://ipmarketing.am', target='_blank') http://ipmarketing.am
+                .col-md-4.col-xs-4
+                    li
+                        a.logo(href="#" onclick="return false")
+                            img(src="/build/assets/images/logos/burger.png").width-70-p
+                        hr
+                        h3 TMS Burger
+                .col-md-4.col-xs-4
+                    li
+                        a.logo(href="http://www.synisys.com", target="_blank")
+                            img(src="/build/assets/images/logos/synergy.png").width-70-p
+                        hr
+                        h3 Synergy International System
+                        .address
+                            a.strong(href='http://www.synisys.com', target='_blank') http://www.synisys.com
+.clearfix
+section.contact-with-us
+    .contacts-bg
+        .container.container-fixed
+            .row
+                .col-md-6.col-xs-6
+                    .get-in-touch
+                        h2(translate='home.getInTouchWithUs')
+                        P(translate='home.address')
+                        a(href='tel: +374 95 391024')
+                        //a(href='tel:+1 347 523 34 90')
+                          i.fa.fa-phone
+                          span +1 347 523 34 90
+                        a(href='mailto:barista@barcamp.am')
+                            i.fa.fa-envelope
+                            span barista@barcamp.am
+                .col-md-offset-6.col-xs-offset-6
+        .map-canvas
+            map(center='40.1933398, 44.50441360000002', zoom='15')
+                marker(position='40.1933398, 44.50441360000002')
+                //info-window(position='40.1933398, 44.50441360000002', visible='true')
+                  span 40 Marshal Baghramyan Ave, Yerevan 0019, Armenia
 

@@ -57,6 +57,7 @@ module barcamp {
 
                     for (var i: number = 0; i < this.scope.rooms.length; i++) {
                         var vIndex: number = 0;
+                        //noinspection TypeScriptUnresolvedVariable
                         for (var j: number = 0; j < shcedules.length && vIndex < 3; j++) {
                             if(shcedules[j].room == this.scope.rooms[i]) {
                                 var startTime = this.moment(shcedules[j].time_from.date);

@@ -13,6 +13,7 @@
 /// <reference path="controllers/MainController.ts"/>
 /// <reference path="controllers/HomeController.ts"/>
 /// <reference path="controllers/FaqController.ts"/>
+/// <reference path="controllers/LiveStreamController.ts"/>
 /// <reference path="controllers/ArchiveController.ts"/>
 /// <reference path="controllers/TimetableController.ts"/>
 

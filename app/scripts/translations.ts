@@ -11,12 +11,18 @@ window.translations = {
 		home: {
 			title: "HOME",
 			sponsors: "Sponsors",
-			specialGuests: "Speakers",
+			specialGuests: "Special guests",
 			mostWantedEvent: "Most wanted event in Armenian IT and New Media is coming soon.",
+			productThatHelpStartups: "We\'ve created the product that will help your startup to look even better",
+			enterYourEmail: "Enter your e-mail",
+			subscribe: "Subscribe now",
 			dayToGo: "{{ value }} day{{ value > 1 ? 's' : '' }} to go",
 			regForPartic: "Register for Participation",
 			register: "Register",
+            livestream: "Livestream",
 			getInTouchWithUs: "Get in touch with us",
+            name_lastname: "Name / Last Name",
+            email: "E-mail",
 			address: "40 Marshal Baghramyan Ave, Yerevan 0019",
 			by: "by &nbsp;",
 			now: "NOW",
@@ -48,6 +54,13 @@ window.translations = {
 		blog: {
 			title: "BLOG"
 		},
+        livestreams: {
+            v1: "<iframe width='940' height='627' src='https://www.youtube.com/embed/aez-VvecB2U' frameborder='0' allowfullscreen></iframe>",
+            v2: "<iframe width='420' height='400' src='https://www.youtube.com/embed/iGX4__4H6RA' frameborder='0' allowfullscreen></iframe>",
+            v3: "<iframe width='420' height='400' src='https://www.youtube.com/embed/AVDKlBLPeE8' frameborder='0' allowfullscreen></iframe>",
+            v4: "<iframe width='420' height='400' src='https://www.youtube.com/embed/XB6R84ekUKM' frameborder='0' allowfullscreen></iframe>",
+            v5: "<iframe width='420' height='400' src='https://www.youtube.com/embed/fRYL_T1WuT0' frameborder='0' allowfullscreen></iframe>",
+        },
 		about: {
 			title: "ABOUT",
 			text: "<li><p>“BarCamp Yerevan” was first held on April 17-19, 2009. Armenian IT and new media specialists fell in love with the new type of “unconference” and each successive BarCamp, in 2010, 2011, 2012 and 2013 attracted more and more people. In 2009 we only had 400 participants. Last year, in 2013, the number of developers, hackers, geeks, bloggers, journalists and online activists exceeded 1200. Check out this video to get a glimpse of what it felt to be in “BarCamp Yerevan 2011″. Our favorite bit is the afterparty of course ;)</p><img src='/build/assets/images/we.jpg' class='we'><p>“BarCamp Yerevan 2015″ will be held pretty soon. We strongly urge you to <a href='https://www.eventbrite.co.uk/e/barcamp-yerevan-2015-tickets-16660816952' target='_blank'>REGISTER</a> in order to take part in the event.</p></li><li><h3>What is the BarCamp?</h3><p>BarCamp is a brand new event, originating in the Silicon Valley of USA in 2005 that has become widespread throughout the world.</p><p>Filling in presentation wall<br/>BarCamp is usually a “œnon-conference” in the sphere of information technology or “œIT,” new media and Internet. A “œnon-conference” is the unofficial, informal part of the conference supporting open discussions and a free exchange of ideas and opinions</p><p>First BarCamp in History<br/>The philosophy of BarCamp is the following: all presentations are given by participants themselves, with no formally invited guest speakers and without the formality of traditional conference. Most revealing, the schedule of events is “œproduced” by the participants of the conference and is formed only after the conference opens, as participants add the presentations they want to hold on a white board.</p></li><li><h3>Our region</h3><p>The first ever BarCamp in the former Soviet Union was organized in Kyiv in October 2007. It brought together about 300 people from Ukraine, Belarus, Kazakhstan, Latvia, Russia, Kyrgyzstan, Poland, and other countries from the region and featured around 45 presentations.</p><p>After BarCamp Kiev, there was “œBarCamp Baltics” in Riga (February 2008) and “œBarcamp Caucasus” in Tbilisi (June 2008). The wave of BarCamps continues.</p></li><li><h3>Target Group</h3><p>The main target audience of the BarCamp is Web project managers, entrepreneurs, new media activists, designers, educators and all business professionals who are building the next generation Web.</p></li>"
@@ -76,6 +89,9 @@ window.translations = {
 			sponsors: "Հովանավորներ",
 			specialGuests: "Հատուկ հյուրեր",
 			mostWantedEvent: "Հայաստանի ՏՏ և Նոր Մեդիա ոլորտների ամենասպասված իրադարձությունը տեղի կունենա Մայիս ամսվա վերջին օրերին",
+            productThatHelpStartups: "Մենք ստեղծել ենք մի ապրանքը, որը կօգնի ձեր Ստարտափին, նույնիսկ ավելի լավ տեսք ունենալ",
+            name_lastname: "Անուն / Ազգանուն",
+            email: "Էլ-փոստ",
 			dayToGo: "Մնաց {{ value }} օր",
 			regForPartic: "Գրանցվել մասնակցության համար",
 			register: "Գրանցվել",
@@ -85,6 +101,7 @@ window.translations = {
 			now: "Այժմ",
 			next: "Հաջորդ",
 			scheduleTitle: "Ժամանակացույց",
+            livestream: "Ուղիղ հեռարձակում",
 			toFullSchedule: "Ամբողջական ժամանակացույց >",
 			noSession: "Ազատ է"
 		},

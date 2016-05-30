@@ -17,6 +17,7 @@
   app.controller('FaqCtrl', barcamp.FaqController);
   app.controller('ArchiveCtrl', barcamp.ArchiveController);
   app.controller('TimetableCtrl', barcamp.TimetableController);
+  app.controller('LiveStreamCtrl', barcamp.LiveStreamController);
 
 
   //Services
@@ -54,6 +55,11 @@
           controller: 'TimetableCtrl',
           controllerAs: 'timetable'
         })
+      .state('livestream', {
+          url: "/livestream",
+          templateUrl: "/build/views/livestream.html",
+          controller: "LiveStreamCtrl as vm"
+      })
 
       .state('faq', {
         url: '/faq',

@@ -1,6 +1,7 @@
+.clearfix
+.main-logo.link(ui-sref='home')
 nav.navbar.navbar-static-top
   .container.container-fixed
-    a.home_link(ui-sref='home')
     ul.nav.navbar-nav.social-icons
       li
         a.btn.btn-link(href='https://twitter.com/barcampam', target='_blank')
@@ -8,8 +9,8 @@ nav.navbar.navbar-static-top
       li
         a.btn.btn-link(href='https://www.facebook.com/barcampevn?fref=ts', target='_blank')
           i.fa.fa-facebook-official
-      //li
-        a(href='#')
+      li
+        a(href='https://www.instagram.com/barcamp_yerevan', target='_blank')
           i.fa.fa-instagram
     ul.nav.navbar-nav.lang
       li
@@ -24,10 +25,10 @@ nav.navbar.navbar-static-top
       li
         a(ui-sref='archive.year({ year: 2015 })', ui-sref-active="active", translate='archive.title')
       li
+        a(ui-sref="livestream", ui-sref-active="active", translate="home.livestream")
+      li
         a(ui-sref='faq', ui-sref-active="active", translate='faq.title')
       li
         a(href='https://www.tumblr.com/login?redirect_to=%2Fblog%2Fbarcampam', target='_blank', translate='blog.title')
       li
         a(ui-sref='about', ui-sref-active="active", translate='about.title')
-.clearfix
-.main-logo
