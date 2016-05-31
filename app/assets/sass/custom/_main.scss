@@ -9,7 +9,7 @@ html, body {
   margin-top: 184px;
 }
 body {
-  min-width: 970px;
+  //min-width: 970px;
   font-family: HelveticaNeueLTPro, Arial, sans-serif;
   color: #666666;
   line-height: 1.2;
@@ -31,14 +31,47 @@ body {
 }
 
 .container-fixed {
-  width: 970px;
+  //width: 970px;
   margin: 0 auto;
 }
+#navbar {
+    width: 100%;
+    background: #2C3D50;
 
+    ul {
+        width: 100%;
+
+        li {
+            &:hover {
+                background-color: #2C3D50;
+            }
+            display: block;
+            width: 100%;
+            text-align: center;
+
+            a {
+                color: #eeeeee;
+
+            }
+        }
+    }
+}
 .navbar {
   min-height: 30px;
   margin-bottom: 0;
   height: 30px;
+
+  .menu-btn {
+      button {
+          margin: 0;
+          .icon-bar {
+              background-color: #000000;
+              height: 4px;
+              border-radius: 4px;
+          }
+      }
+  }
+
   li a {
     padding: 10px;
     font-size: 14px;
@@ -70,6 +103,16 @@ body {
   }
 }
 
+@keyframes slideUp {
+    0% { height: auto }
+    100% {height: 0 !important;}
+}
+
+.slideUp {
+    animation-duration: 100ms;
+    animation: slideUp;
+    display: none !important;
+}
 
 .main-logo {
   background: url("/build/assets/images/2016/bc_2016.header.png") 50% 100% no-repeat;
@@ -102,11 +145,11 @@ h2 {
 
 }
 .build {
-  height: 318px;
   width: 100%;
   position: relative;
   z-index: -1;
-  margin-top:-179px;
+  margin-top: -179px;
+  margin-bottom: 60px;
 }
 
 .register {

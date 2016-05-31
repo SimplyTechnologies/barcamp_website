@@ -1,34 +1,59 @@
 .clearfix
-.main-logo.link(ui-sref='home')
+.main-logo.link(ui-sref='home').hidden-xs
 nav.navbar.navbar-static-top
-  .container.container-fixed
-    ul.nav.navbar-nav.social-icons
-      li
-        a.btn.btn-link(href='https://twitter.com/barcampam', target='_blank')
-          i.fa.fa-twitter
-      li
-        a.btn.btn-link(href='https://www.facebook.com/barcampevn?fref=ts', target='_blank')
-          i.fa.fa-facebook-official
-      li
-        a(href='https://www.instagram.com/barcamp_yerevan', target='_blank')
-          i.fa.fa-instagram
-    ul.nav.navbar-nav.lang
-      li
-        a.btn.btn-link(href='javascript:void(0)', role="button", ng-click='main.changeLang("en")', ng-class='{"active disabled": main.getLang() == "en"}', translate='header.eng')
-      li
-        a.btn.btn-link(href='javascript:void(0)', role="button", ng-click='main.changeLang("hy")', ng-class='{"active disabled": main.getLang() == "hy"}', translate='header.arm')
-    ul.nav.navbar-nav.navbar-right.navigation(role='navigation')
-      li
-        a(ui-sref='home', ui-sref-active="active", translate='home.title')
-      li(ng-show='daysLeft <= 0')
-        a(ui-sref='timetable', ui-sref-active="active") timetable
-      li
-        a(ui-sref='archive.year({ year: 2015 })', ui-sref-active="active", translate='archive.title')
-      li
-        a(ui-sref="livestream", ui-sref-active="active", translate="home.livestream")
-      li
-        a(ui-sref='faq', ui-sref-active="active", translate='faq.title')
-      li
-        a(href='https://www.tumblr.com/login?redirect_to=%2Fblog%2Fbarcampam', target='_blank', translate='blog.title')
-      li
-        a(ui-sref='about', ui-sref-active="active", translate='about.title')
+  .container
+      .navbar-header
+          ul.nav.navbar-nav.social-icons
+              li.menu-btn.visible-xs
+                button.navbar-toggle.collapsed(ng-click="main.toggleMenu()")
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+              li
+                  a.btn.btn-link(href='https://twitter.com/barcampam', target='_blank')
+                      i.fa.fa-twitter
+              li
+                  a.btn.btn-link(href='https://www.facebook.com/barcampevn?fref=ts', target='_blank')
+                      i.fa.fa-facebook-official
+              li
+                  a(href='https://www.instagram.com/barcamp_yerevan', target='_blank')
+                      i.fa.fa-instagram
+          ul.nav.navbar-nav.lang
+              li
+                  a.btn.btn-link(href='javascript:void(0)', role="button", ng-click='main.changeLang("en")', ng-class='{"active disabled": main.getLang() == "en"}', translate='header.eng')
+              li
+                  a.btn.btn-link(href='javascript:void(0)', role="button", ng-click='main.changeLang("hy")', ng-class='{"active disabled": main.getLang() == "hy"}', translate='header.arm')
+      .navbar-collapse.collapse
+          ul.nav.navbar-nav.navbar-right.hidden-xs.navigation(role='navigation' aria-expanded="false")
+              li
+                  a(ui-sref='home', ui-sref-active="active", translate='home.title')
+              li(ng-show='daysLeft <= 0')
+                  a(ui-sref='timetable', ui-sref-active="active") timetable
+              li
+                  a(ui-sref='archive.year({ year: 2015 })', ui-sref-active="active", translate='archive.title')
+              li
+                  a(ui-sref="livestream", ui-sref-active="active", translate="home.livestream")
+              li
+                  a(ui-sref='faq', ui-sref-active="active", translate='faq.title')
+              li
+                  a(ui-sref='about', ui-sref-active="active", translate='about.title')
+
+
+      #navbar.navbar-collapse.hidden-lg.hidden-md.hidden-sm.slideUp
+          ul.nav.navbar-nav.navigation
+              li(ng-click="main.toggleMenu()")
+                  a(ui-sref='home', ui-sref-active="active", translate='home.title')
+              li(ng-show='daysLeft <= 0')
+                  a(ui-sref='timetable', ui-sref-active="active") timetable
+              li(ng-click="main.toggleMenu()")
+                  a(ui-sref='archive.year({ year: 2015 })', ui-sref-active="active", translate='archive.title')
+              li(ng-click="main.toggleMenu()")
+                  a(ui-sref="livestream", ui-sref-active="active", translate="home.livestream")
+              li(ng-click="main.toggleMenu()")
+                  a(ui-sref='faq', ui-sref-active="active", translate='faq.title')
+              li(ng-click="main.toggleMenu()")
+                  a(ui-sref='about', ui-sref-active="active", translate='about.title')
+
+
+
+.main-logo.link(ui-sref='home').hidden-lg.hidden-md.hidden-sm

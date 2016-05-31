@@ -1,0 +1,55 @@
+$xs-size: 768px;
+$md-size: 992px;
+$lg-size: 1200px;
+
+// extra small
+@media (max-width: $xs-size) {
+
+    .btn-registration {
+        float: none !important;
+    }
+    .text-center-xs {
+        text-align: center;
+    }
+    .width-auto-xs {
+        width: auto !important;
+    }
+    .special-guests {
+        h1 {
+            font-size: 45px !important;
+        }
+        li {
+            .logo {
+                display: inline-block !important;
+
+                img {
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        }
+    }
+    .navbar {
+        .social-icons {
+            margin-left: 0 !important;
+        }
+    }
+    .navbar-toggle {
+        display: block;
+
+    }
+}
+// small
+@media (min-width: $xs-size) {
+
+}
+// medium
+@media (max-width: $md-size) {
+
+}
+
+// large
+@media (min-width: $lg-size) {
+
+}

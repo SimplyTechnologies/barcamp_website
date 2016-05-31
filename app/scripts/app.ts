@@ -27,6 +27,7 @@
   app.service('UrlStorage', barcamp.UrlStorageService);
 
   //Directives
+    app.directive('MenuDropdown', barcamp.MenuDropdown.Factory());
 
   //Filters
 

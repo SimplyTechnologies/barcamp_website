@@ -34,6 +34,9 @@
  * DIRECTIVES
  */
 
+/// <reference path="directives/MenuDropdown.ts"/>
+
+
 /**
  * FILTERS
  */
