@@ -5,6 +5,22 @@ $lg-size: 1200px;
 // extra small
 @media (max-width: $xs-size) {
 
+    .livestream-title {
+        font-size: 40px !important;
+    }
+    h2 {
+        font-size: 34px !important;
+    }
+    .feedback {
+        font-size: 20px !important
+    }
+
+    .map-canvas {
+        map {
+            height: 250px !important;
+        }
+    }
+
     .btn-registration {
         float: none !important;
     }
@@ -16,7 +32,7 @@ $lg-size: 1200px;
     }
     .special-guests {
         h1 {
-            font-size: 45px !important;
+            font-size: 40px !important;
         }
         li {
             .logo {
@@ -50,6 +66,15 @@ $lg-size: 1200px;
 }
 // medium
 @media (max-width: $md-size) {
+
+    form[name="questionForm"] {
+        input {
+            width: 100% !important;
+            float: none;
+            margin-bottom: 40px;
+        }
+    }
+
     .navbar {
         .social-icons {
             margin-left: 0!important;
