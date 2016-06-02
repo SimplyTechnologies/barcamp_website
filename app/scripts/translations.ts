@@ -207,6 +207,13 @@ window.translations = {
 		blog: {
 			title: "Բլոգ"
 		},
+        livestreams: {
+            v1: "<iframe width='940' height='627' src='https://www.youtube.com/embed/aez-VvecB2U' frameborder='0' allowfullscreen></iframe>",
+            v2: "<iframe width='420' height='400' src='https://www.youtube.com/embed/iGX4__4H6RA' frameborder='0' allowfullscreen></iframe>",
+            v3: "<iframe width='420' height='400' src='https://www.youtube.com/embed/AVDKlBLPeE8' frameborder='0' allowfullscreen></iframe>",
+            v4: "<iframe width='420' height='400' src='https://www.youtube.com/embed/XB6R84ekUKM' frameborder='0' allowfullscreen></iframe>",
+            v5: "<iframe width='420' height='400' src='https://www.youtube.com/embed/fRYL_T1WuT0' frameborder='0' allowfullscreen></iframe>",
+        },
 		about: {
 			title: "ՄԵՐ ՄԱՍԻՆ",
 			text: "<li><p>“ԲարՔեմփ Երևանը” առաջին անգամ անցկացվեց 2009 թվականի ապրիլի 17-19-ը։ Նոր ձևաչափով չկոնֆերանսը գրավեց տեղեկատվական տեխնոլոգիաների և նոր մեդիայի ոլորտի մասնագետներին և յուրաքանչյուր հաջորդ “ԲարՔեմփ Երևան” միջոցառումներին` 2010, 2011, 2012, 2013 թվականներին, հետաքրքրվողների և մասնակիցների թիվը սկսեց աճել։ Եթե 2009-ին մենք ունեցանք 400 մասնակից, 2011-ին ավելի քան 800, ապա 2013-ին “ԲարՔեմփ Երևան”-ի մասնակիցների թիվը գերազանցեց 1500-ը:</p><img src='/build/assets/images/we.jpg' class='we'></li><li><h3>Ի՞նչ է ԲարՔեմփը</h3><p>ԲարՔեմփը միջոցառումներ կազմակերպելու նոր ձևաչափ է, որն առաջին անգամ կիրառվել է 2005 թ-ին ԱՄՆ-ում՝ Silicon Valley-ում, և հետո ստացել է լայն տարածում ամբողջ աշխարհում։</p><p>Սովորաբար ԲարՔեմփ են անվանում Տեղեկատվական Տեխնոլոգիաների, Ինտերնետի և Նոր Մեդիաների թեմաներով չկոնֆերանսները։ Չկոնֆերանս, քանի որ միջոցառումն անցնում է ոչ ֆորմալ մթնոլորտում, ինչը ապահովում է բաց քննարկումներ և մտքերի ազատ փոխանակում։</p>" +
