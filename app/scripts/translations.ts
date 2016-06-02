@@ -100,7 +100,7 @@ window.translations = {
 		},
 		faq: {
 			title: "FAQ",
-			frequentlyAsked: "Frequently asked<br/>questions",
+			frequentlyAsked: "Frequently asked questions.",
 			questions: "<li>" +
             "<h3>I received a confirmation letter from Eventbrite. What should I do?</h3>" +
             "<p>Congrats, that means your registration was successful. Either save the mail or delete it, you'll get a reminder couple of days before BarCamp. Bring your tickets, you can print them or bring the digital copy, that is your mail or attached pdf. </p>" +

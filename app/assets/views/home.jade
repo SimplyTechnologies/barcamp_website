@@ -3,7 +3,7 @@ section.main-menu.build(ng-hide='daysLeft <= 0')
         .row
             .col-md-10.col-md-push-1.col-xs-10.col-xs-push-1
                 h2(translate='home.mostWantedEvent').width-auto-xs
-                h1(ng-cloak, ng-hide='daysLeft <= 0', translate='home.dayToGo' translate-values="{value: daysLeft}")
+                h1(ng-cloak, ng-hide='daysLeft <= 0', translate='home.dayToGo' translate-values="{value: daysLeft}").line-height-60
             .col-md-offset-6.col-xs-offset-6
 .clearfix
 
@@ -117,24 +117,20 @@ section.special-guests.sponsors
 
 
             .col-md-4.col-sm-6.col-xs-12
-                .row
-                    .col-md-6
-                        li.text-center-xs.width-auto-xs
-                            a.logo(href="https://www.betconstruct.com/", target="_blank")
-                                img(src="/build/assets/images/logos/betconstruct.png").width-60-p
-                            hr
-                            h3 BetConstruct
-                            .address
-                                a.strong.font-size-13-md.font-size-13-sm(href="https://www.betconstruct.com/", target="_blank") https://www.betconstruct.com
+                li.text-center-xs.width-auto-xs
+                    a.logo(href='#', onclick="return false")
+                        img(src='/build/assets/images/logos/bc_vivaro.png')
+                    hr
+                    h3.m-b-0.m-t-10
+                        span.m-r-10 BetConstruct
+                        a.strong.address-inline(href='https://www.betconstruct.com/', target='_blank') https://www.betconstruct.com
+                    h3.m-t-0
+                        span.m-r-10 Vivaro News
+                        a.strong.address-inline(href='http://www.vivaronews.am', target='_blank') http://www.vivaronews.am
 
-                    .col-md-5
-                        li.text-center-xs.width-auto-xs
-                            a.logo(href="http://www.vivaronews.am", target="_blank")
-                                img(src="/build/assets/images/logos/vivaronews.png").width-50-p
-                            hr
-                            h3 Vivaro News
-                            .address
-                                a.strong.font-size-13-md.font-size-13-sm(href='http://www.vivaronews.am', target='_blank') http://www.vivaronews.am
+
+                    .address
+
             .col-md-4.col-sm-6.col-xs-12
                 li.text-center-xs.width-auto-xs
                     a.logo(href="http://www.synisys.com", target="_blank")
@@ -212,6 +208,14 @@ section.special-guests.sponsors
                     h3 IP Marketing
                     .address
                         a.strong(href='http://ipmarketing.am', target='_blank') http://ipmarketing.am
+            .col-md-4.col-sm-6.col-xs-12
+                li.text-center-xs.width-auto-xs
+                    a.logo(href="http://www.mediamax.am", target="_blank")
+                        img(src="/build/assets/images/logos/mediamax.jpg")
+                    hr
+                    h3 Mediamax
+                    .address
+                        a.strong(href='http://www.mediamax.am', target='_blank') http://www.mediamax.am
 .clearfix
 //    get in touch with us
 section.contact-with-us

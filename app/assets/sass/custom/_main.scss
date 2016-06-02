@@ -8,6 +8,36 @@ html, body {
 .margin-top-184 {
   margin-top: 184px;
 }
+
+.margin-top-120 {
+    margin-top: 120px;
+}
+.m-t-10 {
+    margin-top: 10px !important;
+}
+.m-r-10 {
+    margin-right: 10px;
+}
+
+.m-b-0 {
+    margin-bottom: 0 !important;
+}
+
+.m-t-0 {
+    margin-top: 0 !important;
+}
+
+.address-inline {
+    display: inline;
+    color: #666;
+    font-size: 14px;
+    line-height: 39px;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
 body {
   //min-width: 970px;
   font-family: HelveticaNeueLTPro, Arial, sans-serif;
@@ -479,6 +509,10 @@ img {
     &.width-50-p {
         width: 50%;
     }
+}
+
+.line-height-60 {
+    line-height: 60px !important;
 }
 
 .video-wrapper {
