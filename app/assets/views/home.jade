@@ -6,12 +6,13 @@ section.main-menu.build(ng-hide='daysLeft <= 0')
                 h1(ng-cloak, ng-hide='daysLeft <= 0', translate='home.dayToGo' translate-values="{value: daysLeft}")
             .col-md-offset-6.col-xs-offset-6
 .clearfix
+
 section.schedule(ng-show='showHomeSchedule')
     .container.container-fixed
         .row
-            .col-md-12.col-xs-12
+            .col-md-12
                 h1(translate='home.scheduleTitle')
-    .container.schedule-container
+    .container.schedule-container.table-responsive
         table.table
             thead
                 tr
@@ -116,15 +117,24 @@ section.special-guests.sponsors
 
 
             .col-md-4.col-sm-6.col-xs-12
-                li.text-center-xs.width-auto-xs
-                    a.logo(href="https://www.betconstruct.com/", target="_blank")
-                        img(src="/build/assets/images/logos/betconstruct.png")
-                    hr
-                    h3 BetConstruct
-                    .address
-                        a.strong(href="https://www.betconstruct.com/", target="_blank") https://www.betconstruct.com
+                .row
+                    .col-md-6
+                        li.text-center-xs.width-auto-xs
+                            a.logo(href="https://www.betconstruct.com/", target="_blank")
+                                img(src="/build/assets/images/logos/betconstruct.png").width-60-p
+                            hr
+                            h3 BetConstruct
+                            .address
+                                a.strong.font-size-13-md.font-size-13-sm(href="https://www.betconstruct.com/", target="_blank") https://www.betconstruct.com
 
-
+                    .col-md-5
+                        li.text-center-xs.width-auto-xs
+                            a.logo(href="http://www.vivaronews.am", target="_blank")
+                                img(src="/build/assets/images/logos/vivaronews.png").width-50-p
+                            hr
+                            h3 Vivaro News
+                            .address
+                                a.strong.font-size-13-md.font-size-13-sm(href='http://www.vivaronews.am', target='_blank') http://www.vivaronews.am
             .col-md-4.col-sm-6.col-xs-12
                 li.text-center-xs.width-auto-xs
                     a.logo(href="http://www.synisys.com", target="_blank")
@@ -153,15 +163,6 @@ section.special-guests.sponsors
                     .address
                         a.strong(href='http://www.simplytechnologies.net', target='_blank') http://www.simplytechnologies.net
 
-
-            .col-md-4.col-sm-6.col-xs-12
-                li.text-center-xs.width-auto-xs
-                    a.logo(href="http://www.vivaronews.am", target="_blank")
-                        img(src="/build/assets/images/logos/vivaronews.png").width-70-p
-                    hr
-                    h3 Vivaro News
-                    .address
-                        a.strong(href='http://www.vivaronews.am', target='_blank') http://www.vivaronews.am
 
         h1(translate="home.partners").text-center-xs
         .row

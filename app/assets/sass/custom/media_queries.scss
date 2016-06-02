@@ -37,16 +37,27 @@ $lg-size: 1200px;
     }
     .navbar-toggle {
         display: block;
-
+    }
+    .no-padding-xs {
+        padding: 0;
     }
 }
 // small
 @media (min-width: $xs-size) {
-
+    .font-size-13-sm {
+        font-size: 13px !important;
+    }
 }
 // medium
 @media (max-width: $md-size) {
-
+    .navbar {
+        .social-icons {
+            margin-left: 0!important;
+        }
+    }
+    .font-size-13-md {
+        font-size: 13px !important;
+    }
 }
 
 // large
