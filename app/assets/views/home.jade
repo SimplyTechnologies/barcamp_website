@@ -73,17 +73,9 @@ section.schedule(ng-show='showHomeSchedule')
 //    sponsors
 section.special-guests.sponsors
     .container.container-fixed
-        h1(translate='home.sponsors').text-center-xs
+        h1(translate='home.generalSponsor').text-center-xs
         .row
-            .col-md-4.col-sm-6.col-xs-12
-                li.text-center-xs.width-auto-xs
-                    a.logo(href='http://www.simplytechnologies.net', target='_blank')
-                        img(src='/build/assets/images/simply.png')
-                    hr
-                    h3 Simply Technologies
-                    .address
-                        a.strong(href='http://www.simplytechnologies.net', target='_blank') http://www.simplytechnologies.net
-            .col-md-4.col-sm-6.col-xs-12
+            .col-md-4.col-md-push-4.col-sm-6.col-sm-push-3.col-xs-12
                 li.text-center-xs.width-auto-xs
                     a.logo(href='http://ucom.am', target='_blank')
                         img(src='/build/assets/images/ucom.png')
@@ -103,31 +95,8 @@ section.special-guests.sponsors
                           i.fa.fa-facebook-official
                         a(href='#')
                           i.fa.fa-instagram
-            .col-md-4.col-sm-6.col-xs-12
-                li.text-center-xs.width-auto-xs
-                    a.logo(href='http://www.mediainitiatives.am', target='_blank')
-                        img(src='/build/assets/images/mediainitiative.png')
-                    hr
-                    h3 Media Initiatives Center
-                    .address
-                        a.strong(href='http://www.mediainitiatives.am', target='_blank') http://www.mediainitiatives.am
-            .col-md-4.col-sm-6.col-xs-12
-                li.text-center-xs.width-auto-xs
-                    a.logo(href='http://picsart.com', target='_blank')
-                        img(src='/build/assets/images/logos/PicsArt.png').width-80-p
-                    hr
-                    h3 PicsArt
-                    .address
-                        a.strong(href='http://picsart.com', target='_blank') http://picsart.com
-
-            .col-md-4.col-sm-6.col-xs-12
-                li.text-center-xs.width-auto-xs
-                    a.logo(href="https://www.betconstruct.com/", target="_blank")
-                        img(src="/build/assets/images/logos/betconstruct.png")
-                    hr
-                    h3 BetConstruct
-                    .address
-                        a.strong(href="https://www.betconstruct.com/", target="_blank") https://www.betconstruct.com
+        h1(translate="home.sponsors").text-center-xs
+        .row
             .col-md-4.col-sm-6.col-xs-12
                 li.text-center-xs.width-auto-xs
                     a.logo(href='http://www.workfront.com', target='_blank')
@@ -138,20 +107,53 @@ section.special-guests.sponsors
                         a.strong(href='http://www.workfront.com', target='_blank') http://www.workfront.com
             .col-md-4.col-sm-6.col-xs-12
                 li.text-center-xs.width-auto-xs
-                    a.logo(href='http://www.aua.am', target='_blank')
-                        img(src='/build/assets/images/logos/aua.png').width-80-p
+                    a.logo(href='http://www.sflpro.com', target='_blank')
+                        img(src='/build/assets/images/logos/sfl.png')
                     hr
-                    h3 American University of Armenia
+                    h3 SFL
                     .address
-                        a.strong(href='http://www.aua.am', target='_blank') http://www.aua.am
+                        a.strong(href='http://www.sflpro.com', target='_blank') http://www.sflpro.com
+
+
             .col-md-4.col-sm-6.col-xs-12
                 li.text-center-xs.width-auto-xs
-                    a.logo(href="http://ipmarketing.am", target="_blank")
-                        img(src="/build/assets/images/logos/ip.png").width-70-p
+                    a.logo(href="https://www.betconstruct.com/", target="_blank")
+                        img(src="/build/assets/images/logos/betconstruct.png")
                     hr
-                    h3 IP Marketing
+                    h3 BetConstruct
                     .address
-                        a.strong(href='http://ipmarketing.am', target='_blank') http://ipmarketing.am
+                        a.strong(href="https://www.betconstruct.com/", target="_blank") https://www.betconstruct.com
+
+
+            .col-md-4.col-sm-6.col-xs-12
+                li.text-center-xs.width-auto-xs
+                    a.logo(href="http://www.synisys.com", target="_blank")
+                        img(src="/build/assets/images/logos/synergy.png").width-70-p
+                    hr
+                    h3 Synergy International System
+                    .address
+                        a.strong(href='http://www.synisys.com', target='_blank') http://www.synisys.com
+
+            .col-md-4.col-sm-6.col-xs-12
+                li.text-center-xs.width-auto-xs
+                    a.logo(href='http://picsart.com', target='_blank')
+                        img(src='/build/assets/images/logos/PicsArt.png').width-80-p
+                    hr
+                    h3 PicsArt
+                    .address
+                        a.strong(href='http://picsart.com', target='_blank') http://picsart.com
+
+
+            .col-md-4.col-sm-6.col-xs-12
+                li.text-center-xs.width-auto-xs
+                    a.logo(href='http://www.simplytechnologies.net', target='_blank')
+                        img(src='/build/assets/images/simply.png')
+                    hr
+                    h3 Simply Technologies
+                    .address
+                        a.strong(href='http://www.simplytechnologies.net', target='_blank') http://www.simplytechnologies.net
+
+
             .col-md-4.col-sm-6.col-xs-12
                 li.text-center-xs.width-auto-xs
                     a.logo(href="http://www.vivaronews.am", target="_blank")
@@ -160,22 +162,26 @@ section.special-guests.sponsors
                     h3 Vivaro News
                     .address
                         a.strong(href='http://www.vivaronews.am', target='_blank') http://www.vivaronews.am
+
+        h1(translate="home.partners").text-center-xs
+        .row
             .col-md-4.col-sm-6.col-xs-12
                 li.text-center-xs.width-auto-xs
-                    a.logo(href="http://www.startuparmenia.org", target="_blank")
-                        img(src="/build/assets/images/logos/startup_armenia.jpg").width-70-p
+                    a.logo(href='http://www.mediainitiatives.am', target='_blank')
+                        img(src='/build/assets/images/mediainitiative.png')
                     hr
-                    h3 Startup Armenia
+                    h3 Media Initiatives Center
                     .address
-                        a.strong(href='http://www.startuparmenia.org', target='_blank') http://www.startuparmenia.org
+                        a.strong(href='http://www.mediainitiatives.am', target='_blank') http://www.mediainitiatives.am
+
             .col-md-4.col-sm-6.col-xs-12
                 li.text-center-xs.width-auto-xs
-                    a.logo(href='http://www.sflpro.com', target='_blank')
-                        img(src='/build/assets/images/logos/sfl.png')
+                    a.logo(href='http://www.aua.am', target='_blank')
+                        img(src='/build/assets/images/logos/aua.png').width-80-p
                     hr
-                    h3 SFL
+                    h3 American University of Armenia
                     .address
-                        a.strong(href='http://www.sflpro.com', target='_blank') http://www.sflpro.com
+                        a.strong(href='http://www.aua.am', target='_blank') http://www.aua.am
 
             .col-md-4.col-sm-6.col-xs-12
                 li.text-center-xs.width-auto-xs
@@ -185,14 +191,26 @@ section.special-guests.sponsors
                     h3 TMS Burger
                     .address
                         a.strong(href='https://www.facebook.com/TMSBurger', target='_blank') https://www.facebook.com/TMSBurger
+
+        h1(translate="home.informationSponsors").text-center-xs
+        .row
             .col-md-4.col-sm-6.col-xs-12
                 li.text-center-xs.width-auto-xs
-                    a.logo(href="http://www.synisys.com", target="_blank")
-                        img(src="/build/assets/images/logos/synergy.png").width-70-p
+                    a.logo(href="http://www.startuparmenia.org", target="_blank")
+                        img(src="/build/assets/images/logos/startup_armenia.jpg").width-70-p
                     hr
-                    h3 Synergy International System
+                    h3 Startup Armenia
                     .address
-                        a.strong(href='http://www.synisys.com', target='_blank') http://www.synisys.com
+                        a.strong(href='http://www.startuparmenia.org', target='_blank') http://www.startuparmenia.org
+
+            .col-md-4.col-sm-6.col-xs-12
+                li.text-center-xs.width-auto-xs
+                    a.logo(href="http://ipmarketing.am", target="_blank")
+                        img(src="/build/assets/images/logos/ip.png").width-70-p
+                    hr
+                    h3 IP Marketing
+                    .address
+                        a.strong(href='http://ipmarketing.am', target='_blank') http://ipmarketing.am
 .clearfix
 //    get in touch with us
 section.contact-with-us
