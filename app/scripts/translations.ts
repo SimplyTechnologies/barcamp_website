@@ -29,6 +29,7 @@ window.translations = {
 			address: "40 Marshal Baghramyan Ave, Yerevan 0019",
 			by: "by &nbsp;",
 			now: "NOW",
+            timable: "Timable",
 			next: "NEXT",
 			scheduleTitle: "Schedule",
 			toFullSchedule: "to full schedule >",
@@ -76,27 +77,62 @@ window.translations = {
         },
 		about: {
 			title: "ABOUT",
-			text: "<li>" +
-            "<p>\"BarCamp Yerevan\" was first held on April 17-19, 2009. Armenian IT and new media specialists fell in love with the new type of \"unconference\" and each successive BarCamp, in 2010, 2011, 2012, 2013, 2014, 2015 attracted more and more people. In 2009 we only had 400 participants. Last year, in 2015, the number of developers, hackers, geeks, bloggers, journalists and online activists reached 2500. Check out this video to get a glimpse of what it felt to be in \"BarCamp Yerevan 2011\". Our favorite bit is the afterparty of course ;)</p>" +
+            text: "<li>" +
+            "<p>\"BarCamp Yerevan\" was first held on April 17-19, 2009. " +
+            "Armenian IT and new media specialists fell in love with the new type of \"unconference\" " +
+            "and each successive BarCamp, in 2010, 2011, 2012, 2013, 2014, 2015 attracted more and more people. " +
+            "In 2009 we only had 400 participants. Last year, in 2015, the number of developers, hackers, geeks, " +
+            "bloggers, journalists and online activists reached 2500. " +
+            "Check out this video to get a glimpse of what it felt to be in \"BarCamp Yerevan 2011″. " +
+            "Our favorite bit is the afterparty of course ;) </p>" +
             "<img src='/build/assets/images/we.jpg' class='we img-responsive'>" +
-            "<p>“BarCamp Yerevan 2016″ will be held pretty soon" +
             "</li>" +
-            "<li>" +
-            "<h3>What is the BarCamp?</h3>" +
-            "<p>BarCamp is a brand new event, originating in the Silicon Valley of USA in 2005 that has become widespread throughout the world.</p>" +
-            "<p>Filling in presentation wall<br/>BarCamp is usually a “œnon-conference” in the sphere of information technology or “œIT,” new media and Internet. A “œnon-conference” is the unofficial, informal part of the conference supporting open discussions and a free exchange of ideas and opinions</p>" +
-            "<p>First BarCamp in History<br/>" +
-            "The philosophy of BarCamp is the following: all presentations are given by participants themselves, with no formally invited guest speakers and without the formality of traditional conference. Most revealing, the schedule of events is “produced” by the participants of the conference and is formed only after the conference opens, as participants add the presentations they want to hold on a white board.</p>" +
-            "</li>" +
-            "<li>" +
-            "<h3>Our region</h3>" +
-            "<p>The first ever BarCamp in the former Soviet Union was organized in Kyiv in October 2007. It brought together about 300 people from Ukraine, Belarus, Kazakhstan, Latvia, Russia, Kyrgyzstan, Poland, and other countries from the region and featured around 45 presentations.</p>" +
-            "<p>After BarCamp Kiev, there was “œBarCamp Baltics” in Riga (February 2008) and “œBarcamp Caucasus” in Tbilisi (June 2008). The wave of BarCamps continues.</p>" +
-            "</li>" +
-            "<li>" +
-            "<h3>Target Group</h3>" +
-            "<p>The main target audience of the BarCamp is engineers/developers/programmers of all flavors, project managers, entrepreneurs, new media activists, designers, educators and all professionals who are building the next generation Web.</p>" +
-            "</li>"
+            "<li><p>\"BarCamp Yerevan 2016″ will be held pretty soon. </p></li>" +
+            "<li><h3> What is BarCamp? </h3></li>" +
+            "<li><p>BarCamp is a brand new event, originating in the Silicon Valley of USA in 2005 " +
+            "that has become widespread throughout the world. </p></li>" +
+            "<li><p>Filling in presentation wall<br> " +
+            "BarCamp is usually a \"non-conference\" in the sphere of information technology or \"IT,\" " +
+            "new media and Internet. A \"non-conference\" is the unofficial, informal part of the conference " +
+            "supporting open discussions and a free exchange of ideas and opinions.</p></li>" +
+            "<li><p>First BarCamp in History <br> " +
+            "The philosophy of BarCamp is the following: all presentations are given by " +
+            "participants themselves, with no formally invited guest speakers and without the formality of traditional conference. " +
+            "Most revealing, the schedule of events is \"produced\" by the participants of the " +
+            "conference and is formed only after the conference opens, as participants add the presentations " +
+            "they want to hold on a white board. We also have workshops and guest speakers, whose talks are " +
+            "announced beforehand. </p></li>" +
+            "<li><h3>Our region</h3></li>" +
+            "<li><p>The first ever BarCamp near to us was organised in Kiev in October 2007. " +
+            "It brought together about 300 people from Ukraine, Belarus, Kazakhstan, Latvia, Russia, " +
+            "Kyrgyzstan, Poland, and other countries from the region and featured around 45 presentations.</p> </li>" +
+            "<li><p>After “BarCamp Kiev”, there was \"BarCamp Baltics\" in Riga (February 2008) and \"Barcamp Caucasus\" in Tbilisi (June 2008). " +
+            "The wave of BarCamps continues.</p></li>" +
+            "<li><h3>Target Group</h3></li>" +
+            "<li><p>The main target audience of the BarCamp is engineers/developers/programmers of all flavors, " +
+            "project managers, entrepreneurs, new media activists, designers, educators and all professionals who are " +
+            "building the next generation Web.</p></li>"
+            // text: "<li>" +
+            // "<p>\"BarCamp Yerevan\" was first held on April 17-19, 2009. Armenian IT and new media specialists fell in love with the new type of \"unconference\" and each successive BarCamp, in 2010, 2011, 2012, 2013, 2014, 2015 attracted more and more people. In 2009 we only had 400 participants. Last year, in 2015, the number of developers, hackers, geeks, bloggers, journalists and online activists reached 2500. Check out this video to get a glimpse of what it felt to be in \"BarCamp Yerevan 2011\". Our favorite bit is the afterparty of course ;)</p>" +
+            // "<img src='/build/assets/images/we.jpg' class='we img-responsive'>" +
+            // "<p>“BarCamp Yerevan 2016″ will be held pretty soon" +
+            // "</li>" +
+            // "<li>" +
+            // "<h3>What is the BarCamp?</h3>" +
+            // "<p>BarCamp is a brand new event, originating in the Silicon Valley of USA in 2005 that has become widespread throughout the world.</p>" +
+            // "<p>Filling in presentation wall<br/>BarCamp is usually a “œnon-conference” in the sphere of information technology or “œIT,” new media and Internet. A “œnon-conference” is the unofficial, informal part of the conference supporting open discussions and a free exchange of ideas and opinions</p>" +
+            // "<p>First BarCamp in History<br/>" +
+            // "The philosophy of BarCamp is the following: all presentations are given by participants themselves, with no formally invited guest speakers and without the formality of traditional conference. Most revealing, the schedule of events is “produced” by the participants of the conference and is formed only after the conference opens, as participants add the presentations they want to hold on a white board.</p>" +
+            // "</li>" +
+            // "<li>" +
+            // "<h3>Our region</h3>" +
+            // "<p>The first ever BarCamp in the former Soviet Union was organized in Kyiv in October 2007. It brought together about 300 people from Ukraine, Belarus, Kazakhstan, Latvia, Russia, Kyrgyzstan, Poland, and other countries from the region and featured around 45 presentations.</p>" +
+            // "<p>After BarCamp Kiev, there was “œBarCamp Baltics” in Riga (February 2008) and “œBarcamp Caucasus” in Tbilisi (June 2008). The wave of BarCamps continues.</p>" +
+            // "</li>" +
+            // "<li>" +
+            // "<h3>Target Group</h3>" +
+            // "<p>The main target audience of the BarCamp is engineers/developers/programmers of all flavors, project managers, entrepreneurs, new media activists, designers, educators and all professionals who are building the next generation Web.</p>" +
+            // "</li>"
 		},
 		faq: {
 			title: "FAQ",
@@ -157,7 +193,7 @@ window.translations = {
             partners: "Գործընկերներ",
             informationSponsors: "Ինֆորմացիոն  Հովանավորներ",
 			specialGuests: "Հատուկ հյուրեր",
-			mostWantedEvent: "Շուտով տեղի կունենա Հայաստանի ՏՏ և Նոր Մեդիա ոլորտների ամենասպասված իրադարձությունը",
+			mostWantedEvent: "Հայաստանի ՏՏ և Նոր Մեդիա ոլորտների ամենասպասված իրադարձությունը",
             productThatHelpStartups: "Մենք ստեղծել ենք մի ապրանքը, որը կօգնի ձեր Ստարտափին, նույնիսկ ավելի լավ տեսք ունենալ",
             name_lastname: "Անուն / Ազգանուն",
             email: "Էլ-փոստ",
@@ -167,7 +203,8 @@ window.translations = {
 			getInTouchWithUs: "Հետադարձ կապ",
 			address: "Մարշալ Բաղրամյանի պող. 40, Երևան 0019",
 			by: "",
-			now: "Այժմ",
+            timable: "Ժամանակացույց",
+            now: "Այժմ",
 			next: "Հաջորդ",
 			scheduleTitle: "Ժամանակացույց",
             livestream: "Ուղիղ հեռարձակում",
@@ -216,9 +253,42 @@ window.translations = {
         },
 		about: {
 			title: "ՄԵՐ ՄԱՍԻՆ",
-			text: "<li><p>“ԲարՔեմփ Երևանը” առաջին անգամ անցկացվեց 2009 թվականի ապրիլի 17-19-ը։ Նոր ձևաչափով չկոնֆերանսը գրավեց տեղեկատվական տեխնոլոգիաների և նոր մեդիայի ոլորտի մասնագետներին և յուրաքանչյուր հաջորդ “ԲարՔեմփ Երևան” միջոցառումներին` 2010, 2011, 2012, 2013 թվականներին, հետաքրքրվողների և մասնակիցների թիվը սկսեց աճել։ Եթե 2009-ին մենք ունեցանք 400 մասնակից, 2011-ին ավելի քան 800, ապա 2013-ին “ԲարՔեմփ Երևան”-ի մասնակիցների թիվը գերազանցեց 1500-ը:</p><img src='/build/assets/images/we.jpg' class='we img-responsive'></li><li><h3>Ի՞նչ է ԲարՔեմփը</h3><p>ԲարՔեմփը միջոցառումներ կազմակերպելու նոր ձևաչափ է, որն առաջին անգամ կիրառվել է 2005 թ-ին ԱՄՆ-ում՝ Silicon Valley-ում, և հետո ստացել է լայն տարածում ամբողջ աշխարհում։</p><p>Սովորաբար ԲարՔեմփ են անվանում Տեղեկատվական Տեխնոլոգիաների, Ինտերնետի և Նոր Մեդիաների թեմաներով չկոնֆերանսները։ Չկոնֆերանս, քանի որ միջոցառումն անցնում է ոչ ֆորմալ մթնոլորտում, ինչը ապահովում է բաց քննարկումներ և մտքերի ազատ փոխանակում։</p>" +
-            "<p>ԲարՔեմփի փիլիսոփայությունը հետևյալն է՝ չկան հատուկ հրավիրված բանախոսներ, մասնակիցներն իրենք են զեկուցումներ անում, և քննարկում դրանք։ Հակառակ ավանդական կոնֆերանսի՝ այստեղ օրակարգը ձևավորվում է մասնակիցների կողմից և վերջնական տեսք է ստանում միայն միջոցառման բացումից հետո. մասնակիցները սպիտակ թղթի վրա ըստ ժամերի դասավորում են իրենց զեկուցումների թեմաները։ ԲարՔեմփի ժամանակ մենք ունենում ենք նաև Հրավիրված մասնագետներ և աշխատարաններ (workshop), որոնց մասին հայտարարվում է նախօրոք։</p>" +
-            "</li><li><h3>Մեր տարածաշրջանում</h3><p>Նախկին Խորհրդային Միության տարածքում առաջին ԲարՔեմփը կազմակերպվել է Կիևում 2007թ.-ի հոկտեմբերին, որին ասնակցում էր ավելի քան 300 մարդ՝ Ուկրաինայից, Բելառուսից, Ղրղզստանից, Լատվիայից, Ռուսաստանից, Ղազախստանից, Լեհաստանից և այլ երկրներից։</p><p>“ԲարՔեմփ Կիև”-ին 2008թ.-ի փետրվարին հաջորդեց “ԲարՔեմփ Բալթիքսը” Ռիգայում, հունիսին՝ “ԲարՔեմփ Կովկասը” Թբիլիսիում։ ԲարՔեմփերի ալիքը շարունակվում է։</p></li><li><h3>Թիրախ Խումբ</h3><p>ԲարՔեմփի հիմնական թիրախ խումբը կազմում են բոլոր համերի ու հոտերի ծրագրավորողները/ճարտարագետները,  նոր մեդիաների, ՏՏ, ինտերնետ և թվային տեխնոլոգիաներում ներգրավված ընկերությունների այլ մասնագետները, ղեկավարները, գործարարները, ուսանողները, ակտիվիստները, դասախոսները, բլոգերներն ու լրագրողները և բոլոր նրանք, ով ստեղծում է նոր սերնդի համաշխարհային Սարդոստայնը։ </p></li>"
+            text: "<li>" +
+            "<p>«ԲարՔեմփ Երևանը» առաջին անգամ անցկացվեց 2009 թվականի ապրիլի 17-19-ը։ " +
+            "Նոր ձևաչափով չկոնֆերանսը գրավեց տեղեկատվական տեխնոլոգիաների և նոր մեդիայի ոլորտի մասնագետներին " +
+            "և յուրաքանչյուր հաջորդ «ԲարՔեմփ Երևան» միջոցառումներին հետաքրքրվողների և մասնակիցների թիվը սկսեց աճել։ " +
+            "Եթե 2009-ին մենք ունեցանք 400 մասնակից, 2015-ին մասնակիցների թիվը գերազանցեց 2500-ը: </p>" +
+            "<img src='/build/assets/images/we.jpg' class='we img-responsive'>" +
+            "</li>" +
+            " <li><h3>Ի՞նչ է ԲարՔեմփը</h3> </li> " +
+            " <li> <p>ԲարՔեմփը միջոցառումներ կազմակերպելու նոր ձևաչափ է, " +
+            "որն առաջին անգամ կիրառվել է 2005 թ-ին ԱՄՆ-ում՝ Silicon Valley-ում, " +
+            "և հետո ստացել է լայն տարածում ամբողջ աշխարհում։ </p> </li>" +
+            "<li><p>Սովորաբար ԲարՔեմփ են անվանում տեղեկատվական տեխնոլոգիաների, " +
+            "ինտերնետի և նոր մեդիաների թեմաներով չկոնֆերանսները։ Չկոնֆերանս, " +
+            "քանի որ միջոցառումն անցնում է ոչ ֆորմալ մթնոլորտում, " +
+            "ինչը ապահովում է բաց քննարկումներ և մտքերի ազատ փոխանակում։ </p></li>" +
+            "<li><p>ԲարՔեմփի փիլիսոփայությունը հետևյալն է՝ չկան հատուկ հրավիրված բանախոսներ, " +
+            "մասնակիցներն իրենք են զեկուցումներ անում, և քննարկում դրանք։ " +
+            "Հակառակ ավանդական կոնֆերանսի՝ այստեղ օրակարգը ձևավորվում է մասնակիցների կողմից " +
+            "և վերջնական տեսք է ստանում միայն միջոցառման բացումից հետո. " +
+            "մասնակիցները սպիտակ թղթի վրա ըստ ժամերի դասավորում են իրենց զեկուցումների թեմաները։ " +
+            "ԲարՔեմփի ժամանակ մենք ունենում ենք նաև Հրավիրված մասնագետներ և աշխատարաններ (workshop), " +
+            "որոնց մասին հայտարարվում է նախօրոք։ </p></li>" +
+            "<li><h3> Մեր տարածաշրջանում </h3></li>" +
+            "<li><p> Մեզ ընթերակա տարածքում առաջին ԲարՔեմփը կազմակերպվել է Կիևում 2007թ.-ի հոկտեմբերին, " +
+            "որին մասնակցում էր ավելի քան 300 մարդ՝ " +
+            "Ուկրաինայից, Բելառուսից, Ղրղզստանից, Լատվիայից, Ռուսաստանից, Ղազախստանից, Լեհաստանից և այլ երկրներից։ </p></li>" +
+            "<li><p>«ԲարՔեմփ Կիև»-ին 2008թ.-ի փետրվարին հաջորդեց «ԲարՔեմփ Բալթիքսը» Ռիգայում, հունիսին՝ «ԲարՔեմփ Կովկասը» Թբիլիսիում։ " +
+            "ԲարՔեմփերի ալիքը շարունակվում է։ </p></li>" +
+            "<li><h3>Թիրախ Խումբ </h3></li>" +
+            "<li><p>ԲարՔեմփի հիմնական թիրախ խումբը կազմում են բոլոր համերի ու հոտերի ծրագրավորողները/ճարտարագետները, " +
+            "նոր մեդիաների, ՏՏ, ինտերնետ և թվային տեխնոլոգիաներում ներգրավված ընկերությունների այլ մասնագետները, ղեկավարները, " +
+            "գործարարները, ուսանողները, ակտիվիստները, դասախոսները, բլոգերներն ու լրագրողները և բոլոր նրանք, " +
+            "ով ստեղծում է նոր սերնդի համաշխարհային Սարդոստայնը։ </p></li>"
+            // text: "<li><p>“ԲարՔեմփ Երևանը” առաջին անգամ անցկացվեց 2009 թվականի ապրիլի 17-19-ը։ Նոր ձևաչափով չկոնֆերանսը գրավեց տեղեկատվական տեխնոլոգիաների և նոր մեդիայի ոլորտի մասնագետներին և յուրաքանչյուր հաջորդ “ԲարՔեմփ Երևան” միջոցառումներին` 2010, 2011, 2012, 2013 թվականներին, հետաքրքրվողների և մասնակիցների թիվը սկսեց աճել։ Եթե 2009-ին մենք ունեցանք 400 մասնակից, 2011-ին ավելի քան 800, ապա 2013-ին “ԲարՔեմփ Երևան”-ի մասնակիցների թիվը գերազանցեց 1500-ը:</p><img src='/build/assets/images/we.jpg' class='we img-responsive'></li><li><h3>Ի՞նչ է ԲարՔեմփը</h3><p>ԲարՔեմփը միջոցառումներ կազմակերպելու նոր ձևաչափ է, որն առաջին անգամ կիրառվել է 2005 թ-ին ԱՄՆ-ում՝ Silicon Valley-ում, և հետո ստացել է լայն տարածում ամբողջ աշխարհում։</p><p>Սովորաբար ԲարՔեմփ են անվանում Տեղեկատվական Տեխնոլոգիաների, Ինտերնետի և Նոր Մեդիաների թեմաներով չկոնֆերանսները։ Չկոնֆերանս, քանի որ միջոցառումն անցնում է ոչ ֆորմալ մթնոլորտում, ինչը ապահովում է բաց քննարկումներ և մտքերի ազատ փոխանակում։</p>" +
+            // "<p>ԲարՔեմփի փիլիսոփայությունը հետևյալն է՝ չկան հատուկ հրավիրված բանախոսներ, մասնակիցներն իրենք են զեկուցումներ անում, և քննարկում դրանք։ Հակառակ ավանդական կոնֆերանսի՝ այստեղ օրակարգը ձևավորվում է մասնակիցների կողմից և վերջնական տեսք է ստանում միայն միջոցառման բացումից հետո. մասնակիցները սպիտակ թղթի վրա ըստ ժամերի դասավորում են իրենց զեկուցումների թեմաները։ ԲարՔեմփի ժամանակ մենք ունենում ենք նաև Հրավիրված մասնագետներ և աշխատարաններ (workshop), որոնց մասին հայտարարվում է նախօրոք։</p>" +
+            // "</li><li><h3>Մեր տարածաշրջանում</h3><p>Նախկին Խորհրդային Միության տարածքում առաջին ԲարՔեմփը կազմակերպվել է Կիևում 2007թ.-ի հոկտեմբերին, որին ասնակցում էր ավելի քան 300 մարդ՝ Ուկրաինայից, Բելառուսից, Ղրղզստանից, Լատվիայից, Ռուսաստանից, Ղազախստանից, Լեհաստանից և այլ երկրներից։</p><p>“ԲարՔեմփ Կիև”-ին 2008թ.-ի փետրվարին հաջորդեց “ԲարՔեմփ Բալթիքսը” Ռիգայում, հունիսին՝ “ԲարՔեմփ Կովկասը” Թբիլիսիում։ ԲարՔեմփերի ալիքը շարունակվում է։</p></li><li><h3>Թիրախ Խումբ</h3><p>ԲարՔեմփի հիմնական թիրախ խումբը կազմում են բոլոր համերի ու հոտերի ծրագրավորողները/ճարտարագետները,  նոր մեդիաների, ՏՏ, ինտերնետ և թվային տեխնոլոգիաներում ներգրավված ընկերությունների այլ մասնագետները, ղեկավարները, գործարարները, ուսանողները, ակտիվիստները, դասախոսները, բլոգերներն ու լրագրողները և բոլոր նրանք, ով ստեղծում է նոր սերնդի համաշխարհային Սարդոստայնը։ </p></li>"
 		},
 		faq: {
 			title: "ՀՏՀ",

@@ -28,8 +28,8 @@ nav.navbar.navbar-static-top
           ul.nav.navbar-nav.navbar-right.hidden-xs.navigation(role='navigation' aria-expanded="false")
               li
                   a(ui-sref='home', ui-sref-active="active", translate='home.title')
-              li(ng-show='daysLeft <= 0')
-                  a(ui-sref='timetable', ui-sref-active="active") timetable
+              li(ng-show='(daysLeft <= 0)', class="display-none", ng-class="{ 'display-auto': !(daysLeft <= 0)}")
+                  a(ui-sref='timetable', ui-sref-active="active", translate="home.timable")
               li
                   a(ui-sref='archive.year({ year: 2015 })', ui-sref-active="active", translate='archive.title')
               li
@@ -54,7 +54,5 @@ nav.navbar.navbar-static-top
                   a(ui-sref='faq', ui-sref-active="active", translate='faq.title')
               li(ng-click="main.toggleMenu()")
                   a(ui-sref='about', ui-sref-active="active", translate='about.title')
-
-
 
 .main-logo.link(ui-sref='home').hidden-lg.hidden-md.hidden-sm

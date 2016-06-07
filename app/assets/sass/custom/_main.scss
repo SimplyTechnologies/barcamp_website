@@ -196,16 +196,33 @@ h2 {
     font-weight: 500;
     line-height: 40px;
   }
-  a {
-    margin-top: 60px;
+  a, button {
+
+    margin-top: 43px;
+    display: inline-block;
+    vertical-align: middle;
+    height: 75px;
+    width: 40%;
+    overflow: hidden;
+
+    span {
+        display: block;
+        font-size: 22px;
+        margin-top: 12px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: normal;
+    }
   }
 }
 
+.display-none {
+    display: none;
+}
 
-
-
-
-
+.display-auto {
+    display: auto !important;
+}
 
 .special-guests {
   ul {

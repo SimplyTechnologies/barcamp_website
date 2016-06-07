@@ -41,6 +41,10 @@ section.schedule(ng-show='showHomeSchedule')
             a(ui-sref='timetable', translate='home.toFullSchedule')
 .clearfix
 .container-fluid.register
+    .col-xs-12.text-center
+        a.text-center.btn.btn-default.btn-orange.btn-registration(href='http://www.eventbrite.co.uk/e/barcamp-yerevan-2016-tickets-24108420936', target='_blank')
+            span(translate='home.regForPartic')
+//- .container-fluid.register
     .container.container-fixed
         .row
             .col-lg-8.col-sm-9.hidden-xs
@@ -122,10 +126,10 @@ section.special-guests.sponsors
                         img(src='/build/assets/images/logos/bc_vivaro.png')
                     hr
                     h3.m-b-0.m-t-10
-                        span.m-r-10 BetConstruct
+                        span.m-r-10.display-block-xs BetConstruct
                         a.strong.address-inline(href='https://www.betconstruct.com/', target='_blank') https://www.betconstruct.com
                     h3.m-t-0
-                        span.m-r-10 Vivaro News
+                        span.m-r-10.display-block-xs Vivaro News
                         a.strong.address-inline(href='http://www.vivaronews.am', target='_blank') http://www.vivaronews.am
 
 
