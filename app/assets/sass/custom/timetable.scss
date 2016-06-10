@@ -1,8 +1,17 @@
 .timetable-container {
-  min-width: 1248px;
+  //min-width: 1248px;
 }
 
 .timetable {
+
+    .scheduled-room {
+        width: 202px;
+        min-height: 202px;
+        padding: 12px;
+        margin: 1px;
+        position: relative;
+        margin-left: 0;
+    }
 
   h1 {
     margin-bottom: 50px;
@@ -62,7 +71,7 @@
       padding-left: 12px;
       margin: 1px;
       width: 202px;
-      border-bottom: 16px solid #990000;
+      //border-bottom: 16px solid #990000;
       font-size: 30px;
       color: #000000;
       font-weight: 700;
@@ -70,9 +79,6 @@
       float: left;
       margin-left: 0;
       margin-bottom: 0;
-      &:first-child {
-        border-color: #003366;
-      }
 
     }
   }
@@ -117,7 +123,7 @@
     }
 
     li {
-      background-color: #efefef;
+      //background-color: #efefef;
     }
 
   }

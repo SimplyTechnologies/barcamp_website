@@ -8,6 +8,7 @@ module barcamp {
         rooms: any;
         shcedulesRows: any;
         $parent: any;
+        schedules: Array<Object>;
         showHomeSchedule: boolean;
     }
 
@@ -51,11 +52,40 @@ module barcamp {
                     return this.scheduleService.get();
                 })
                 .then((shcedules) => {
-                    shcedules = shcedules.data;
 
-                    this.scope.shcedulesRows = [[null, null, null, null, null], [null, null, null, null, null], [null, null, null, null, null]];
+                    shcedules = shcedules.data;
+                    /**
+                     * @example {shcedules} Array
+                     * [{
+                     *  room: "208E",
+                     *  time_from: {
+                     *      date: Date
+                     *  },
+                     *  time_to: {
+                     *      date: Date
+                     *  },
+                     *  hy: {
+                     *      topic: String
+                     *  },
+                     *  en: {
+                     *      topic: String
+                     *  }
+                     * }]
+                     *
+                     * */
+                    this.scope.shcedulesRows = [
+                        [null, null, null, null, null],
+                        [null, null, null, null, null],
+                        [null, null, null, null, null]
+                    ];
+
+                    this.scope.schedules = [];
 
                     for (var i: number = 0; i < this.scope.rooms.length; i++) {
+                        var _object = {
+                            room: this.scope.rooms[i],
+                            schedules: [null, null, null]
+                        };
                         var vIndex: number = 0;
                         //noinspection TypeScriptUnresolvedVariable
                         for (var j: number = 0; j < shcedules.length && vIndex < 3; j++) {
@@ -65,11 +95,12 @@ module barcamp {
                                     vIndex++;
                                 }
 
+                                _object.schedules.push(shcedules[j]);
                                 this.scope.shcedulesRows[vIndex++][i] = shcedules[j];
                             }
                         }
+                        this.scope.schedules.push(_object);
                     }
-
                 });
         }
 

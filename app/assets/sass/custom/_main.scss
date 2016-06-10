@@ -183,6 +183,30 @@ h2 {
   margin-bottom: 60px;
 }
 
+.size-60-responsive {
+    font-size: 60px;
+}
+
+.color-black {
+    color: #000000;
+}
+
+.schedule-container-xs {
+    .room {
+        color: black;
+    }
+    .to-full-schedule {
+        font-size: 36px;
+        font-weight: 700;
+        display: inline-block;
+        color: #003366;
+        line-height: 43px;
+        margin: 40px 0;
+    }
+    .mobile-schedules {
+        height: 243px;;
+    }
+}
 .register {
   background-color: $pink;
   background-repeat: repeat-x;
@@ -202,13 +226,14 @@ h2 {
     display: inline-block;
     vertical-align: middle;
     height: 75px;
-    width: 40%;
+    //width: 40%;
     overflow: hidden;
 
     span {
         display: block;
-        font-size: 22px;
-        margin-top: 12px;
+        font-size: 32px;
+        margin-top: 9px;
+        padding: 0 20px;
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: normal;

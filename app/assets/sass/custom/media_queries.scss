@@ -5,22 +5,23 @@ $lg-size: 1200px;
 // extra small
 @media (max-width: $xs-size) {
 
-    .livestream-title {
-        font-size: 40px !important;
-    }
     h2 {
         font-size: 34px !important;
+    }
+    .size-60-responsive {
+        font-size: 39px !important;
+    }
+    .livestream-title {
+        font-size: 40px !important;
     }
     .feedback {
         font-size: 20px !important
     }
-
     .map-canvas {
         map {
             height: 250px !important;
         }
     }
-
     .btn-registration {
         float: none !important;
     }
@@ -57,6 +58,9 @@ $lg-size: 1200px;
     .no-padding-xs {
         padding: 0;
     }
+    .display-block-xs {
+        display: block;
+    }
     .register {
         a {
             width: 100% !important;
@@ -66,20 +70,18 @@ $lg-size: 1200px;
             }
         }
     }
-    .display-block-xs {
-        display: block;
-    }
+
 }
 // small
 @media (min-width: $xs-size) {
     .font-size-13-sm {
         font-size: 13px !important;
     }
-    .register {
+    /*.register {
         a {
-            width: 50% !important;
+            width: 40% !important;
         }
-    }
+    }*/
 }
 // medium
 @media (max-width: $md-size) {
