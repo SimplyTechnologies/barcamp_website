@@ -29,7 +29,7 @@ window.translations = {
 			address: "40 Marshal Baghramyan Ave, Yerevan 0019",
 			by: "by &nbsp;",
 			now: "NOW",
-            timable: "Timable",
+            timable: "Timetable",
 			next: "NEXT",
 			scheduleTitle: "Schedule",
 			toFullSchedule: "to full schedule >",

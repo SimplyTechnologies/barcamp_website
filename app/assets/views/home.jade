@@ -82,8 +82,8 @@ section.special-guests
         h1(translate='home.specialGuests').text-center-xs
         .row
             ul
-                .col-md-4.col-xs-4(ng-repeat="speaker in speakers")
-                    li
+                .col-lg-4.col-sm-6.col-xs-12(ng-repeat="speaker in speakers")
+                    li.text-center-xs.width-auto-xs
                         img(ng-src="{{ speaker.photo || '/build/assets/images/user-avatar.jpg' }}")
                         h3 {{speaker[currentLang].name}}
                         p

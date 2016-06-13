@@ -45,7 +45,7 @@ nav.navbar.navbar-static-top
               li(ng-click="main.toggleMenu()")
                   a(ui-sref='home', ui-sref-active="active", translate='home.title')
               li(ng-show='daysLeft <= 5')
-                  a(ui-sref='timetable', ui-sref-active="active") timetable
+                  a(ui-sref='timetable', ui-sref-active="active" translate="home.timable")
               li(ng-click="main.toggleMenu()")
                   a(ui-sref='archive.year({ year: 2015 })', ui-sref-active="active", translate='archive.title')
               li(ng-click="main.toggleMenu()")

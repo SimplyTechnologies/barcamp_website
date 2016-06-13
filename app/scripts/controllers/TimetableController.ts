@@ -32,6 +32,7 @@ module barcamp {
             this.scope.eventDate = {1: new Date('2016-06-18'), 2: new Date('2016-06-19')}; //temporary
             this.scope.selectedDay = 1;
             this.scope.getSchedules = this.getSchedules;
+            this.scope.selectedRoom = this.scope.roomKeys[0];
             this.getEventByDay(this.scope.selectedDay);
         }
 
