@@ -63,7 +63,7 @@ section.schedule(ng-show='showHomeSchedule')
             a(ui-sref='timetable', translate='home.toFullSchedule')
 .clearfix
 
-//sponsors
+//registration
 .container-fluid.register.no-padding-xs
     .col-xs-12.text-center
         a.text-center.btn.btn-default.btn-orange.btn-registration(href='http://www.eventbrite.co.uk/e/barcamp-yerevan-2016-tickets-24108420936', target='_blank')
@@ -75,15 +75,16 @@ section.schedule(ng-show='showHomeSchedule')
                 h1.pull-left(translate='home.regForPartic', ng-class='{"reg-title-hy": currentLang == "hy"}').hidden-xs
             .col-lg-4.col-sm-3.col-xs-12.text-center-xs
                 a.btn.btn-default.btn-orange.pull-right.btn-registration(href='http://www.eventbrite.co.uk/e/barcamp-yerevan-2016-tickets-24108420936', target='_blank', translate='home.register')
+
 .clearfix
-//- section.special-guests
+section.special-guests
     .container.container-fixed
-        h1(translate='home.specialGuests')
+        h1(translate='home.specialGuests').text-center-xs
         .row
             ul
                 .col-md-4.col-xs-4(ng-repeat="speaker in speakers")
                     li
-                        img(ng-src="{{speaker.photo.split('.').indexOf('png') !== -1 || speaker.photo.split('.').indexOf('jpg') !== -1 ? speaker.photo : '/build/assets/images/user-avatar.jpg'}}")
+                        img(ng-src="{{ speaker.photo || '/build/assets/images/user-avatar.jpg' }}")
                         h3 {{speaker[currentLang].name}}
                         p
                             strong {{speaker[currentLang].topic}}

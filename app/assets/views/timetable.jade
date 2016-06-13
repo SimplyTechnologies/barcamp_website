@@ -9,22 +9,13 @@ section.schedule.timetable
             .day
                 a.btn.btn-link(ng-repeat="day in days", href="javascript:void(0)", ng-click="timetable.getEventByDay(day)", ng-class="selectedDay === day ? 'selected' : ''") Day {{day}}
                     .circle
-            .t-t.hidden-xs
+            .t-t.hidden-xs.to-center
                 ul.timetable-room
                     li(ng-repeat="room in rooms") {{room}}
                 .clearfix
                 ul(ng-repeat="room in roomKeys", ng-class="room.trim().replace(' ','_').toLowerCase()")
-                    li.bg-cream
-                    li.bg-cream
-                    li.bg-cream
-                    li.bg-cream
-                    li.bg-cream
-                    li.bg-cream
-                    li.bg-cream
-                    li.bg-cream
-                    li.bg-cream
-                    //li.completed(ng-repeat="event in scheduleRooms[room]", data-animation='am-fade-and-scale', data-placement='center', bs-modal='modal', data-template='/build/views/schedule-modal.html', ng-style="{top:'{{event.top}}', height:'{{event.height}}'}")
-                    li.completed(ng-repeat="event in scheduleRooms[room]", ng-style="{top:'{{event.top}}', height:'{{event.height}}'}")
+
+                    li.bg-cream(ng-repeat="event in getSchedules(room)")
                         .table-content
                             p {{event[currentLang].topic}}
                             .time
@@ -32,22 +23,22 @@ section.schedule.timetable
                             .creator
                                 //span(translate='home.by') &nbsp;
                                 span {{event[currentLang].speaker}}
+                    //li.completed(ng-repeat="event in scheduleRooms[room]", data-animation='am-fade-and-scale', data-placement='center', bs-modal='modal', data-template='/build/views/schedule-modal.html', ng-style="{top:'{{event.top}}', height:'{{event.height}}'}")
+
 
             .t-t-xs.visible-xs
-                select.form-control
-                    option
-                        | Room 1
-                    option
-                        | Room 2
-                    option
-                        | Room 3
+                select.form-control(ng-model="selectedRoom", ng-options="room as (room.trim().replace('_', ' ') | uppercase) for room in roomKeys")
                 .row
                     .col-xs-6.col-xs-push-3
                         .row
-                            .col-xs-12.scheduled-room.bg-cream
-                            .col-xs-12.scheduled-room.bg-cream
-                            .col-xs-12.scheduled-room.bg-cream
-                            .col-xs-12.scheduled-room.bg-cream
+                            .col-xs-12.scheduled-room.bg-cream(ng-repeat="event in scheduleRooms[selectedRoom]")
+                                .table-content
+                                    p {{event[currentLang].topic}}
+                                    .time
+                                        span {{event.time_from.date | amDateFormat: 'HH:mm'}} - {{event.time_to.date | amDateFormat: 'HH:mm'}}
+                                    .creator
+                                        //span(translate='home.by') &nbsp;
+                                        span {{event[currentLang].speaker}}
 
             .clearfix
             .empty

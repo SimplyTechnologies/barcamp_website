@@ -7,6 +7,9 @@ module barcamp {
         days: number[];
         selectedDay: number;
         eventDate: any;
+        getSchedules: any;
+        selectedRoom: string;
+        selectedRoomsSchedules: Array<Object>;
     }
 
     export interface ITimetableController {
@@ -23,11 +26,12 @@ module barcamp {
             this.scope = $scope;
             this.scheduleService = Schedule;
             this.moment = moment;
-            this.scope.rooms = ['Big Hall', '208E', '213W', '113W', '114W'];
-            this.scope.roomKeys = ['_big_hall', '_208e', '_213w', '_113w', '_114w'];
+            this.scope.rooms = ['Big Hall', '208E', '213W', '113W'];
+            this.scope.roomKeys = ['_big_hall', '_208e', '_213w', '_113w'];
             this.scope.days = [1, 2];
             this.scope.eventDate = {1: new Date('2016-06-18'), 2: new Date('2016-06-19')}; //temporary
             this.scope.selectedDay = 1;
+            this.scope.getSchedules = this.getSchedules;
             this.getEventByDay(this.scope.selectedDay);
         }
 
@@ -43,7 +47,6 @@ module barcamp {
                         _208e: [],
                         _213w: [],
                         _113w: [],
-                        _114w: []
                     };
 
                     scheduleList.forEach((schedule: any) => {
@@ -72,6 +75,23 @@ module barcamp {
         timeToPx(time: number): number {
             var h = (time/1000/60/60);
             return h * 202 + h
+        }
+
+        getSchedules(room: string): Object {
+            //noinspection TypeScriptUnresolvedVariable
+            var schedule = this.scheduleRooms[room];
+            if (!schedule || !schedule.length) {
+                return [0, 1, 2, 3, 4, 5, 6, 7, 8];
+            }
+            var length = schedule.length;
+
+            if (length < 9) {
+                while(length < 9) {
+                    schedule.push(Math.random() * 100);
+                    length++;
+                }
+            }
+            return schedule;
         }
     }
 }

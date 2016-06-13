@@ -77,11 +77,9 @@ $lg-size: 1200px;
     .font-size-13-sm {
         font-size: 13px !important;
     }
-    /*.register {
-        a {
-            width: 40% !important;
-        }
-    }*/
+    .timetable-container {
+        min-width: 1248px;
+    }
 }
 // medium
 @media (max-width: $md-size) {
