@@ -4,6 +4,7 @@ module barcamp {
 
     export interface  IHomeControllerScope extends ng.IScope {
         speakers: any;
+        specialGuests: Array<Object>;
         keys: any;
         rooms: any;
         shcedulesRows: any;
@@ -47,6 +48,7 @@ module barcamp {
 
             this.speakerService.get()
                 .then((speakers: any) => {
+                    this.scope.specialGuests = speakers.data.splice(0, 6);
                     speakers = speakers.data;
                     this.scope.speakers = speakers;
                     return this.scheduleService.get();

@@ -77,9 +77,34 @@ section.schedule(ng-show='showHomeSchedule')
                 a.btn.btn-default.btn-orange.pull-right.btn-registration(href='http://www.eventbrite.co.uk/e/barcamp-yerevan-2016-tickets-24108420936', target='_blank', translate='home.register')
 
 .clearfix
+// special Guests
 section.special-guests
     .container.container-fixed
         h1(translate='home.specialGuests').text-center-xs
+        .row
+            ul
+                .col-lg-4.col-sm-6.col-xs-12(ng-repeat="speaker in specialGuests")
+                    li.text-center-xs.width-auto-xs
+                        img.display-inline-xs.speaker(ng-src="{{ speaker.photo || '/build/assets/images/user-avatar.jpg' }}")
+                        h3 {{speaker[currentLang].name}}
+                        p
+                            strong {{speaker[currentLang].topic}}
+                        .user-hover.hidden-xs
+                            .social-icons
+                                a(ng-if="speaker.socialnetworks.twitter", ng-href="{{speaker.socialnetworks.twitter}}", target='_blank' )
+                                    i.fa.fa-twitter
+                                a(ng-if="speaker.socialnetworks.facbook" ng-href="{{speaker.socialnetworks.facbook}}", target='_blank')
+                                    i.fa.fa-facebook-official
+                                a(ng-if="speaker.socialnetworks.linkedin" ng-href="{{speaker.socialnetworks.linkedin}}", target='_blank')
+                                    i.fa.fa-linkedin-square
+                                a(ng-if="speaker.socialnetworks.instagram" ng-href="{{speaker.socialnetworks.instagram}}", target='_blank')
+                                    i.fa.fa-instagram
+
+.clearfix
+
+section.special-guests.speakers
+    .container.container-fixed
+        h1(translate="home.speakers").text-center-xs
         .row
             ul
                 .col-lg-4.col-sm-6.col-xs-12(ng-repeat="speaker in speakers")
@@ -98,6 +123,7 @@ section.special-guests
                                     i.fa.fa-linkedin-square
                                 a(ng-if="speaker.socialnetworks.instagram" ng-href="{{speaker.socialnetworks.instagram}}", target='_blank')
                                     i.fa.fa-instagram
+
 
 .clearfix
 
