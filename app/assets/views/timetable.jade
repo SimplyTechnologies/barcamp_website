@@ -15,7 +15,15 @@ section.schedule.timetable
                 .clearfix
                 ul(ng-repeat="room in roomKeys", ng-class="room.trim().replace(' ','_').toLowerCase()")
 
-                    li.bg-cream(ng-repeat="event in getSchedules(room)")
+                    li.bg-cream
+                    li.bg-cream
+                    li.bg-cream
+                    li.bg-cream
+                    li.bg-cream
+                    li.bg-cream
+                    li.bg-cream
+                    li.bg-cream
+                    li.completed(ng-repeat="event in scheduleRooms[room]", ng-style="{ top: event.top, height: event.height }")
                         .table-content
                             p {{event[currentLang].topic}}
                             .time

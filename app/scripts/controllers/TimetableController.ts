@@ -18,6 +18,7 @@ module barcamp {
     }
 
     export class TimetableController implements ITimetableController {
+
         public scope:barcamp.ITimetableControllerScope;
         private scheduleService:barcamp.IScheduleService;
         private moment: any;
@@ -52,14 +53,14 @@ module barcamp {
                     };
 
                     scheduleList.forEach((schedule: any) => {
-                        var eventStart = this.moment(schedule.time_from.date);
-                        var eventEnd = this.moment(schedule.time_to.date);
+                        var eventStart = this.moment(schedule.time_from.date).startOf('minute');
+                        var eventEnd = this.moment(schedule.time_to.date).startOf('minute');
 
                         var height = this.timeToPx(eventEnd.diff(eventStart));
                         var top = this.timeToPx(eventStart.diff(startTime));
 
                         schedule.height = height + 'px';
-                        schedule.top = top + 'px';
+                        schedule.top = top - 202 - 1 + 'px';
 
                         var roomKey = '_' + schedule.room.trim().replace(' ','_').toLowerCase();
 

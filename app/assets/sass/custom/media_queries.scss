@@ -83,6 +83,11 @@ $lg-size: 1200px;
     .timetable-container {
         min-width: 1248px;
     }
+    .special-guests {
+        li {
+            margin-left: 50px;
+        }
+    }
 }
 // medium
 @media (max-width: $md-size) {
