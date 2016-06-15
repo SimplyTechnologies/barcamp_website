@@ -48,7 +48,7 @@ module barcamp {
 
             this.speakerService.get()
                 .then((speakers: any) => {
-                    this.scope.specialGuests = speakers.data.splice(0, 6);
+                    this.scope.specialGuests = speakers.data.splice(0, 5);
                     speakers = speakers.data;
                     this.scope.speakers = speakers;
                     return this.scheduleService.get();
