@@ -70,11 +70,11 @@ window.translations = {
 			title: "BLOG"
 		},
         livestreams: {
-            v1: "<iframe width='940' height='627' src='https://www.youtube.com/embed/aez-VvecB2U' frameborder='0' allowfullscreen></iframe>",
-            v2: "<iframe width='420' height='400' src='https://www.youtube.com/embed/iGX4__4H6RA' frameborder='0' allowfullscreen></iframe>",
-            v3: "<iframe width='420' height='400' src='https://www.youtube.com/embed/AVDKlBLPeE8' frameborder='0' allowfullscreen></iframe>",
-            v4: "<iframe width='420' height='400' src='https://www.youtube.com/embed/XB6R84ekUKM' frameborder='0' allowfullscreen></iframe>",
-            v5: "<iframe width='420' height='400' src='https://www.youtube.com/embed/fRYL_T1WuT0' frameborder='0' allowfullscreen></iframe>",
+            v1: "<iframe width='940' height='627' src='https://www.youtube.com/embed/videoseries?list=PLkaN8-chLmTRoZ0Wo_uCnxKvwpQOm1jST' frameborder='0' allowfullscreen></iframe>",
+            v2: "<iframe width='420' height='400' src='https://www.youtube.com/embed/videoseries?list=PLkaN8-chLmTQTuUOX2aCG-wiXHFJY3CNK' frameborder='0' allowfullscreen></iframe>",
+            v3: "<iframe width='420' height='400' src='https://www.youtube.com/embed/videoseries?list=PLkaN8-chLmTR_bYcf6AHXFrtBDJkcBcVu' frameborder='0' allowfullscreen></iframe>",
+            v4: "<iframe width='420' height='400' src='https://www.youtube.com/embed/videoseries?list=PLkaN8-chLmTQGnotGHZY-TVr8oPjPxWIS' frameborder='0' allowfullscreen></iframe>",
+            v5: "<iframe width='420' height='400' src='https://www.youtube.com/embed/videoseries?list=PLkaN8-chLmTQp2RWV9Jrof0_qoK_yx81-' frameborder='0' allowfullscreen></iframe>",
         },
 		about: {
 			title: "ABOUT",
@@ -247,11 +247,11 @@ window.translations = {
 			title: "Բլոգ"
 		},
         livestreams: {
-            v1: "<iframe width='940' height='627' src='https://www.youtube.com/embed/aez-VvecB2U' frameborder='0' allowfullscreen></iframe>",
-            v2: "<iframe width='420' height='400' src='https://www.youtube.com/embed/iGX4__4H6RA' frameborder='0' allowfullscreen></iframe>",
-            v3: "<iframe width='420' height='400' src='https://www.youtube.com/embed/AVDKlBLPeE8' frameborder='0' allowfullscreen></iframe>",
-            v4: "<iframe width='420' height='400' src='https://www.youtube.com/embed/XB6R84ekUKM' frameborder='0' allowfullscreen></iframe>",
-            v5: "<iframe width='420' height='400' src='https://www.youtube.com/embed/fRYL_T1WuT0' frameborder='0' allowfullscreen></iframe>",
+            v1: "<iframe width='940' height='627' src='https://www.youtube.com/embed/videoseries?list=PLkaN8-chLmTRoZ0Wo_uCnxKvwpQOm1jST' frameborder='0' allowfullscreen></iframe>",
+            v2: "<iframe width='420' height='400' src='https://www.youtube.com/embed/videoseries?list=PLkaN8-chLmTQTuUOX2aCG-wiXHFJY3CNK' frameborder='0' allowfullscreen></iframe>",
+            v3: "<iframe width='420' height='400' src='https://www.youtube.com/embed/videoseries?list=PLkaN8-chLmTR_bYcf6AHXFrtBDJkcBcVu' frameborder='0' allowfullscreen></iframe>",
+            v4: "<iframe width='420' height='400' src='https://www.youtube.com/embed/videoseries?list=PLkaN8-chLmTQGnotGHZY-TVr8oPjPxWIS' frameborder='0' allowfullscreen></iframe>",
+            v5: "<iframe width='420' height='400' src='https://www.youtube.com/embed/videoseries?list=PLkaN8-chLmTQp2RWV9Jrof0_qoK_yx81-' frameborder='0' allowfullscreen></iframe>",
         },
 		about: {
 			title: "ՄԵՐ ՄԱՍԻՆ",
