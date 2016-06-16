@@ -9,16 +9,18 @@ section.main-menu.build(ng-hide='daysLeft <= 0')
 
 // schedule //
 section.schedule(ng-show='showHomeSchedule')
+    // Head title
     .container.container-fixed
         .row
             .col-md-12
                 h1(translate='home.scheduleTitle').size-60-responsive.color-black
+    // mobile
     .container.schedule-container-xs.visible-xs
         .row
             .col-xs-12(ng-repeat="schedule in schedules")
                 h2(ng-bind="schedule.room").room
                 .row
-                    .col-xs-12.mobile-schedules(ng-repeat="sch in schedule.schedules track by $index", ng-init='rowIndex = $index',ng-class='{"bg-cream": rowIndex === 0, "bg-orange": rowIndex === 1, "bg-blue": rowIndex === 2}')
+                    .col-xs-12.mobile-schedules(ng-repeat="sch in schedule.schedules track by $index | limitTo: 3", ng-init='rowIndex = $index',ng-class='{"bg-cream": rowIndex === 0, "bg-orange": rowIndex === 1, "bg-blue": rowIndex === 2}')
                         div(ng-show='sch')
                             h2(translate='home.now', ng-show='rowIndex === 0')
                             h2(translate='home.next', ng-hide='rowIndex === 0')
@@ -34,20 +36,19 @@ section.schedule(ng-show='showHomeSchedule')
                             h2(translate='home.noSession')
             .to-full-schedule
                 a(ui-sref='timetable', translate='home.toFullSchedule')
+    // desktop
     .container.schedule-container.table-responsive.hidden-xs
         table.table
             thead
                 tr
                     th(ng-repeat='room in rooms') {{room}}
             tbody
-                tr(ng-repeat='shcedulesRow in shcedulesRows', ng-init='rowIndex = $index')
-                    td(ng-repeat='shcedule in shcedulesRow track by $index', ng-class='{"bg-cream": rowIndex === 0, "bg-orange": rowIndex === 1, "bg-blue": rowIndex === 2}')
-                        //.schedule-img(ng-show='shcedule')
-                            img(ng-src="{{shcedule.bg_image_url}}")
+                tr(ng-repeat='shcedulesRow in shcedulesRows', ng-if="$index !== 0" ng-init='rowIndex = $index')
+                    td(ng-repeat='shcedule in shcedulesRow track by $index',  ng-class='{"bg-cream": rowIndex === 1, "bg-orange": rowIndex === 2, "bg-blue": rowIndex === 3}')
                         .title
                             div(ng-show='shcedule')
-                                h2(translate='home.now', ng-show='rowIndex === 0')
-                                h2(translate='home.next', ng-hide='rowIndex === 0')
+                                h2(translate='home.now', ng-show='rowIndex === 1')
+                                h2(translate='home.next', ng-hide='rowIndex === 1')
                                 .time
                                     span {{shcedule.time_from.date | amDateFormat: 'HH:mm'}}
                                     span  -

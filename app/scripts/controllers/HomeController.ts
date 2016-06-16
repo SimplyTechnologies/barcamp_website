@@ -56,26 +56,9 @@ module barcamp {
                 .then((shcedules) => {
 
                     shcedules = shcedules.data;
-                    /**
-                     * @example {shcedules} Array
-                     * [{
-                     *  room: "208E",
-                     *  time_from: {
-                     *      date: Date
-                     *  },
-                     *  time_to: {
-                     *      date: Date
-                     *  },
-                     *  hy: {
-                     *      topic: String
-                     *  },
-                     *  en: {
-                     *      topic: String
-                     *  }
-                     * }]
-                     *
-                     * */
+
                     this.scope.shcedulesRows = [
+                        [null, null, null, null, null],
                         [null, null, null, null, null],
                         [null, null, null, null, null],
                         [null, null, null, null, null]
@@ -86,23 +69,32 @@ module barcamp {
                     for (var i: number = 0; i < this.scope.rooms.length; i++) {
                         var _object = {
                             room: this.scope.rooms[i],
-                            schedules: [null, null, null]
+                            schedules: []
                         };
                         var vIndex: number = 0;
+
                         //noinspection TypeScriptUnresolvedVariable
-                        for (var j: number = 0; j < shcedules.length && vIndex < 3; j++) {
+                        for (var j: number = 0; j < shcedules.length && vIndex < 4; j++) {
+
                             if(shcedules[j].room == this.scope.rooms[i]) {
                                 var startTime = this.moment(shcedules[j].time_from.date);
                                 if(this.moment().diff(startTime, 'seconds') < 0 && vIndex == 0) {
                                     vIndex++;
                                 }
 
-                                _object.schedules.push(shcedules[j]);
+                                if (angular.isObject(shcedules[j])) {
+                                    _object.schedules.push(shcedules[j]);
+                                }
                                 this.scope.shcedulesRows[vIndex++][i] = shcedules[j];
                             }
                         }
+                        if (!_object.schedules.length) {
+                            _object.schedules.push(null, null, null);
+                        }
                         this.scope.schedules.push(_object);
                     }
+
+                    console.log(this.scope.shcedulesRows)
                 });
         }
 
