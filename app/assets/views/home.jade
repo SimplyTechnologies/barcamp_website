@@ -66,9 +66,12 @@ section.schedule(ng-show='showHomeSchedule')
 
 //registration
 .container-fluid.register.no-padding-xs
-    .col-xs-12.text-center
-        a.text-center.btn.btn-default.btn-orange.btn-registration(href='http://www.eventbrite.co.uk/e/barcamp-yerevan-2016-tickets-24108420936', target='_blank')
-            span(translate='home.regForPartic')
+    .col-sm-5.col-xs-12.text-right.text-center-xs.no-padding-xs
+        a(href="https://play.google.com/store/apps/details?id=com.barcampevn", target="_blank")
+            img(src="build/assets/images/playmarket.png").height-75.img-responsive.display-inline-xs.m-l-20-xs
+    .col-xs-7.hidden-xs
+        a.text-center.btn.btn-default.btn-orange.btn-registration(ui-sref="livestream")
+            span(translate='home.livestream')
 //- .container-fluid.register
     .container.container-fixed
         .row

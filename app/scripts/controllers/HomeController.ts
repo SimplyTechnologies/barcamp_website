@@ -93,8 +93,6 @@ module barcamp {
                         }
                         this.scope.schedules.push(_object);
                     }
-
-                    console.log(this.scope.shcedulesRows)
                 });
         }
 

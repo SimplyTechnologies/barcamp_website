@@ -73,7 +73,12 @@ $lg-size: 1200px;
     .display-inline-xs {
         display: inline !important;
     }
-
+    .m-l-20-xs {
+        margin-left: 20px;
+    }
+    .display-inline-xs {
+        display: inline;
+    }
 }
 // small
 @media (min-width: $xs-size) {
