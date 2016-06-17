@@ -31,6 +31,8 @@ section.schedule.timetable
                             .creator
                                 //span(translate='home.by') &nbsp;
                                 span {{event[currentLang].speaker}}
+                            .rate
+                                iframe(ng-src="{{ event.rateUrl }}")
                     //li.completed(ng-repeat="event in scheduleRooms[room]", data-animation='am-fade-and-scale', data-placement='center', bs-modal='modal', data-template='/build/views/schedule-modal.html', ng-style="{top:'{{event.top}}', height:'{{event.height}}'}")
 
 
@@ -48,6 +50,8 @@ section.schedule.timetable
                                         //span(translate='home.by') &nbsp;
                                         span {{event[currentLang].speaker}}
 
+                                    .rate.margin-top-xs-20.text-center-xs
+                                        iframe(ng-src="{{ event.rateUrl }}")
             .clearfix
             .empty
 

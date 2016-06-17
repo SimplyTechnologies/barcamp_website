@@ -36,7 +36,7 @@ module barcamp {
             this.translate = $translate;
             this.moment = moment;
             this.scope.keys = Object.keys;
-            this.scope.rooms = ['Big Hall', '208E', '213W', '113W', '114W'];
+            this.scope.rooms = ['Big Hall', '215E', '315E', '113W', '114W'];
 
             var d = new Date();
             var h = d.getHours();

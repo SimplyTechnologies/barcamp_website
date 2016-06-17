@@ -1,5 +1,5 @@
 module barcamp {
-    
+
     declare var scheduleRooms;
 
     export interface  ITimetableControllerScope extends ng.IScope {
@@ -22,11 +22,13 @@ module barcamp {
     export class TimetableController implements ITimetableController {
 
         public scope:barcamp.ITimetableControllerScope;
+        public $sce: ng.ISCEService;
         private scheduleService:barcamp.IScheduleService;
         private moment: any;
 
-        constructor($scope:barcamp.ITimetableControllerScope, Schedule:barcamp.IScheduleService, moment: any) {
+        constructor($scope:barcamp.ITimetableControllerScope, Schedule:barcamp.IScheduleService, moment: any, $sce: ng.ISCEService) {
             this.scope = $scope;
+            this.$sce = $sce;
             this.scheduleService = Schedule;
             this.moment = moment;
             this.scope.rooms = ['Big Hall', '215E', '315E', '113W', '114W'];
@@ -62,8 +64,9 @@ module barcamp {
                         var top = this.timeToPx(eventStart.diff(startTime));
 
                         schedule.height = height + 'px';
-                        schedule.top = top - 202 - 1 + 'px';
+                        schedule.top = top - 252 - 1 + 'px';
 
+                        schedule.rateUrl = this.$sce.trustAsResourceUrl("https://www.truthly.me/embed/" + schedule.id);
                         var roomKey = '_' + schedule.room.trim().replace(' ','_').toLowerCase();
 
                         if (scheduleRooms[roomKey]) {
@@ -79,7 +82,7 @@ module barcamp {
 
         timeToPx(time: number): number {
             var h = (time/1000/60/60);
-            return h * 202 + h
+            return h * 252 + h
         }
 
         getSchedules(room: string): Object {

@@ -10,7 +10,7 @@
 
     .scheduled-room {
         width: 202px;
-        min-height: 202px;
+        min-height: 252px;
         padding: 12px;
         margin: 1px;
         position: relative;
@@ -28,7 +28,7 @@
 
     li  {
       width: 202px;
-      min-height: 202px;
+      min-height: 252px;
       padding: 12px;
       margin: 1px;
       position: relative;
@@ -92,7 +92,7 @@
     li {
       text-align: center;
       background-color: #ff6600;
-      height: 202px;
+      height: 252px;
       font-size: 26px;
       color: #fff;
       font-weight: 700;
@@ -133,6 +133,13 @@
 
   }
 
+    .rate {
+        iframe {
+            width: 80px;
+            height: 20px;
+            border: 0;
+        }
+    }
 }
 
 .day {
