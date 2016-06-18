@@ -16,8 +16,7 @@ module barcamp {
         private appLocale:barcamp.IAppLocaleService;
         private translate:any;
         private isDroppedMenu: boolean;
-
-
+        
         constructor($scope:barcamp.IMainControllerScope, $appLocale:barcamp.IAppLocaleService, $rootScope:any, $translate:any) {
             this.rootScope = $rootScope;
             this.scope = $scope;

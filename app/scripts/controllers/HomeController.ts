@@ -76,6 +76,10 @@ module barcamp {
                         for (var j: number = 0; j < shcedules.length && vIndex < 3; j++) {
 
                             if(shcedules[j].room == this.scope.rooms[i]) {
+                                //noinspection TypeScriptValidateTypes
+                                if (new Date(shcedules[j].time_from.date).getDay() != new Date().getDay()) {
+                                    continue;
+                                }
                                 var startTime = this.moment(shcedules[j].time_from.date);
                                 if(this.moment().diff(startTime, 'seconds') < 0 && vIndex == 0) {
                                     vIndex++;
@@ -105,13 +109,34 @@ module barcamp {
                         this.scope.schedules.push(_object);
                     }
 
-                    // for (var i: number = 0; i < this.scope.shcedulesRows.length; ++i) {
-                    //
-                    //     this.scope.shcedulesRows[i].forEach(function (item, ) {
-                    //
-                    //     })
-                    // }
-                });
+                })
+                .then(() => {
+                    for (var i: number = 0; i < 5; ++i) {
+                        var arr = [
+                            this.scope.shcedulesRows[0][i],
+                            this.scope.shcedulesRows[1][i],
+                            this.scope.shcedulesRows[2][i],
+                        ];
+
+                        arr.sort(function (a, b) {
+                            if (!!a && !!b) {
+                                //noinspection TypeScriptValidateTypes
+                                var c = new Date(a.time_from.date);
+                                //noinspection TypeScriptValidateTypes
+                                var d = new Date(b.time_from.date);
+
+                                return d>c ? -1 : d<c ? 1 : 0;
+                            }
+
+                            return a - b;
+                        });
+
+                        this.scope.shcedulesRows[0][i] = arr[0];
+                        this.scope.shcedulesRows[1][i] = arr[1];
+                        this.scope.shcedulesRows[2][i] = arr[2];
+
+                    }
+                })
         }
 
     }
