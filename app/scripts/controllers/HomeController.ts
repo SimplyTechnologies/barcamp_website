@@ -60,7 +60,6 @@ module barcamp {
                     this.scope.shcedulesRows = [
                         [null, null, null, null, null],
                         [null, null, null, null, null],
-                        [null, null, null, null, null],
                         [null, null, null, null, null]
                     ];
 
@@ -74,7 +73,7 @@ module barcamp {
                         var vIndex: number = 0;
 
                         //noinspection TypeScriptUnresolvedVariable
-                        for (var j: number = 0; j < shcedules.length && vIndex < 4; j++) {
+                        for (var j: number = 0; j < shcedules.length && vIndex < 3; j++) {
 
                             if(shcedules[j].room == this.scope.rooms[i]) {
                                 var startTime = this.moment(shcedules[j].time_from.date);
@@ -91,8 +90,27 @@ module barcamp {
                         if (!_object.schedules.length) {
                             _object.schedules.push(null, null, null);
                         }
+
+                        _object.schedules.sort(function (a, b) {
+                            if (a && b) {
+                                //noinspection TypeScriptValidateTypes
+                                var d = new Date(a.time_from.date);
+                                //noinspection TypeScriptValidateTypes
+                                var c = new Date(b.time_from.date);
+                                return c>d ? -1 : c<d ? 1 : 0;
+                            }
+
+                            return 0
+                        });
                         this.scope.schedules.push(_object);
                     }
+
+                    // for (var i: number = 0; i < this.scope.shcedulesRows.length; ++i) {
+                    //
+                    //     this.scope.shcedulesRows[i].forEach(function (item, ) {
+                    //
+                    //     })
+                    // }
                 });
         }
 

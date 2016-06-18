@@ -43,12 +43,12 @@ section.schedule(ng-show='showHomeSchedule')
                 tr
                     th(ng-repeat='room in rooms') {{room}}
             tbody
-                tr(ng-repeat='shcedulesRow in shcedulesRows', ng-if="$index !== 0" ng-init='rowIndex = $index')
-                    td(ng-repeat='shcedule in shcedulesRow track by $index',  ng-class='{"bg-cream": rowIndex === 1, "bg-orange": rowIndex === 2, "bg-blue": rowIndex === 3}')
+                tr(ng-repeat='shcedulesRow in shcedulesRows', ng-init='rowIndex = $index')
+                    td(ng-repeat='shcedule in shcedulesRow track by $index',  ng-class='{"bg-cream": rowIndex === 0, "bg-orange": rowIndex === 1, "bg-blue": rowIndex === 2}')
                         .title
                             div(ng-show='shcedule')
-                                h2(translate='home.now', ng-show='rowIndex === 1')
-                                h2(translate='home.next', ng-hide='rowIndex === 1')
+                                h2(translate='home.now', ng-show='rowIndex === 0')
+                                h2(translate='home.next', ng-hide='rowIndex === 0')
                                 .time
                                     span {{shcedule.time_from.date | amDateFormat: 'HH:mm'}}
                                     span  -
