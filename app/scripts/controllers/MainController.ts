@@ -29,7 +29,7 @@ module barcamp {
             var today:number = new Date().getTime();
             var timeDiff = Math.abs(today - endDay);
             // this.scope.daysLeft = endDay - today;
-            this.scope.daysLeft = Math.ceil(timeDiff / (1000 * 3600 * 24));
+            this.scope.daysLeft = Math.floor(timeDiff / (1000 * 3600 * 24));
         }
 
         changeLang(lang:string):void {
